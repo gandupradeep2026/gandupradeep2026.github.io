@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Pradeep Gandu - Data Engineer, Cloud Data Engineer, AI/ML and Automotive Software.">
+    <meta name="keywords" content="Pradeep Gandu, Data Engineer, GCP, AWS, Python, SQL, PySpark, AI, Machine Learning, Automotive Software, CARLA">
+    <title>Pradeep Gandu | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo">Pradeep Gandu</a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Language selector">
+        <button class="lang-btn active" id="langEn" data-lang="en">EN</button>
+        <span>|</span>
+        <button class="lang-btn" id="langDe" data-lang="de">DE</button>
+    </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+    <div class="hero-container">
+
+        <div class="hero-content">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Hello, I'm</p>
+
+            <h1>Pradeep Gandu</h1>
+
+            <h2>
+                <span data-i18n="hero.role1">Data Engineer</span>
+                <span class="role-dot">·</span>
+                <span data-i18n="hero.role2">AI / ML</span>
+                <span class="role-dot">·</span>
+                <span data-i18n="hero.role3">Automotive Software</span>
+            </h2>
+
+            <p class="hero-description" data-i18n="hero.description">
+                I build data pipelines, cloud-based data solutions, AI applications and scenario-centric datasets for autonomous-driving systems.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn" data-i18n="hero.projects">View Projects</a>
+
+                <a
+                    href="assets/Pradeep_Gandu_CV_EN.pdf"
+                    class="btn secondary-btn"
+                    id="cvButton"
+                    target="_blank"
+                    rel="noopener"
+                    data-i18n="hero.cv"
+                >
+                    View CV
+                </a>
+
+                <a href="#contact" class="btn text-btn" data-i18n="hero.contact">Contact Me</a>
+            </div>
+
+            <div class="quick-links">
+                <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span>•</span>
+                <span data-i18n="hero.location">Chemnitz, Germany</span>
+            </div>
+        </div>
+
+        <div class="hero-photo-wrapper">
+            <div class="hero-photo-frame">
+                <img
+                    src="assets/images/photo.jpeg"
+                    alt="Pradeep Gandu"
+                    class="profile-photo"
+                    id="profilePhoto"
+                >
+                <div class="photo-fallback" id="photoFallback">PG</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="about" class="section">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="about.label">ABOUT</p>
+        <h2 data-i18n="about.title">About Me</h2>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-main">
+            <p data-i18n="about.p1">
+                I am currently pursuing a Master's degree in Automotive Software Engineering at Technische Universität Chemnitz.
+            </p>
+
+            <p data-i18n="about.p2">
+                My technical work spans data engineering, cloud platforms, AI/ML and autonomous-driving applications. I particularly enjoy designing structured data-processing workflows and converting raw data into reliable, usable datasets.
+            </p>
+
+            <p data-i18n="about.p3">
+                My current work includes GCP-based data engineering, Spark and PySpark processing, AI applications and CARLA-based scenario generation and dataset annotation. I have also worked with GCP- and AWS-based cloud concepts in professional and project environments.
+            </p>
+        </div>
+
+        <div class="about-highlights">
+            <div class="highlight-box">
+                <strong data-i18n="about.based">Based in</strong>
+                <span data-i18n="about.location">Chemnitz, Germany</span>
+            </div>
+
+            <div class="highlight-box">
+                <strong data-i18n="about.focus">Current focus</strong>
+                <span data-i18n="about.focusValue">Data Engineering · Cloud · AI · Automotive</span>
+            </div>
+
+            <div class="highlight-box">
+                <strong data-i18n="about.cloud">Cloud</strong>
+                <span>GCP · AWS</span>
+            </div>
+
+            <div class="highlight-box">
+                <strong data-i18n="about.stack">Data stack</strong>
+                <span>Python · SQL · PySpark · Spark SQL</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="skills" class="section section-alt">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="skills.label">TOOLKIT</p>
+        <h2 data-i18n="skills.title">Technical Skills</h2>
+        <p data-i18n="skills.subtitle">
+            Technologies and concepts I have worked with across professional, academic and personal projects.
+        </p>
+    </div>
+
+    <div class="skills-grid">
+
+        <article class="skill-card">
+            <h3 data-i18n="skills.data.title">Data Engineering</h3>
+            <div class="tags">
+                <span>Python</span><span>SQL</span><span>PySpark</span><span>Spark SQL</span>
+                <span>ETL / ELT</span><span data-i18n="skills.data.pipeline">Data Pipelines</span>
+                <span data-i18n="skills.data.quality">Data Quality</span><span>Schema Validation</span>
+                <span>Parquet</span><span>JSON</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <h3 data-i18n="skills.cloud.title">Cloud Platforms</h3>
+            <div class="tags">
+                <span>GCP</span><span>BigQuery</span><span>Pub/Sub</span><span>Cloud Storage</span>
+                <span>Dataproc</span><span>Compute Engine</span><span>IAM</span><span>gcloud</span>
+                <span>AWS</span><span>EC2</span><span>S3</span><span>RDS</span><span>VPC</span><span>CloudWatch</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <h3 data-i18n="skills.spark.title">Spark & Big Data</h3>
+            <div class="tags">
+                <span>Spark DataFrames</span><span>Spark DSL</span><span>spark.sql()</span><span>spark-sql</span>
+                <span>Hadoop</span><span>HDFS</span><span>RDD</span><span>Lazy Evaluation</span>
+                <span>Joins</span><span data-i18n="skills.spark.aggregations">Aggregations</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <h3 data-i18n="skills.ai.title">AI & Machine Learning</h3>
+            <div class="tags">
+                <span>YOLOv8</span><span>Computer Vision</span><span>Pandas</span><span>NumPy</span>
+                <span>Ollama</span><span>Qwen3</span><span>Whisper</span>
+                <span data-i18n="skills.ai.evaluation">Model Evaluation</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <h3 data-i18n="skills.auto.title">Automotive</h3>
+            <div class="tags">
+                <span>CARLA</span><span>ADAS</span>
+                <span data-i18n="skills.auto.scenario">Scenario Generation</span>
+                <span data-i18n="skills.auto.trajectory">Trajectories</span>
+                <span data-i18n="skills.auto.annotation">Dataset Annotation</span>
+                <span data-i18n="skills.auto.lane">Lane Changes</span>
+                <span data-i18n="skills.auto.merge">Merge Scenarios</span>
+                <span data-i18n="skills.auto.validation">Data Validation</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <h3 data-i18n="skills.software.title">Software & Systems</h3>
+            <div class="tags">
+                <span>FastAPI</span><span>Streamlit</span><span>Pydantic</span><span>Pytest</span>
+                <span>Git</span><span>GitHub</span><span>Linux</span><span>SSH</span><span>PuTTY</span><span>Windows</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="experience" class="section">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="experience.label">CAREER</p>
+        <h2 data-i18n="experience.title">Professional Experience</h2>
+        <p data-i18n="experience.subtitle">
+            Professional experience across software, structured-data, technical and AI-assisted environments.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Working Student - AI-Assisted Software Solutions</h3>
+                        <p class="company">DiPP GmbH</p>
+                    </div>
+                    <span class="date" data-i18n="experience.dipp.date">Jan 2025 - Jul 2025</span>
+                </div>
+                <p class="location" data-i18n="experience.germany">Germany</p>
+                <ul>
+                    <li data-i18n="experience.dipp.b1">Worked with AI-assisted software solutions and technical-information processing workflows.</li>
+                    <li data-i18n="experience.dipp.b2">Analysed technical workflows, outputs and error patterns.</li>
+                    <li data-i18n="experience.dipp.b3">Supported structured technical documentation and project activities.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Translator - India Formatting Team</h3>
+                        <p class="company">Ascent Staffing Solutions Pvt. Ltd.</p>
+                    </div>
+                    <span class="date" data-i18n="experience.ascent.date">Dec 2021 - Jul 2022</span>
+                </div>
+                <p class="location" data-i18n="experience.ascent.location">Client assignment: Clarivate Analytics</p>
+                <ul>
+                    <li data-i18n="experience.ascent.b1">Worked with structured technical information in quality-focused processing workflows.</li>
+                    <li data-i18n="experience.ascent.b2">Supported formatting, validation and consistency-oriented tasks.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Associate Language Specialist, Content Engineering</h3>
+                        <p class="company">GlobalLogic Technologies Private Ltd.</p>
+                    </div>
+                    <span class="date" data-i18n="experience.globallogic.date">Oct 2020 - Dec 2021</span>
+                </div>
+                <p class="location" data-i18n="experience.india">India</p>
+                <ul>
+                    <li data-i18n="experience.globallogic.b1">Worked with structured datasets, data preparation and quality-oriented workflows.</li>
+                    <li data-i18n="experience.globallogic.b2">Performed systematic data checking, validation and error analysis.</li>
+                    <li data-i18n="experience.globallogic.b3">Supported data-oriented analysis and technical documentation.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Senior Process Executive</h3>
+                        <p class="company">Cognizant Technology Solutions India Pvt. Ltd.</p>
+                    </div>
+                    <span class="date" data-i18n="experience.cognizant.date">Sep 2017 - May 2019</span>
+                </div>
+                <p class="location" data-i18n="experience.hyderabad">Hyderabad, India</p>
+                <ul>
+                    <li data-i18n="experience.cognizant.b1">Worked with structured business, process and system data.</li>
+                    <li data-i18n="experience.cognizant.b2">Supported data maintenance, process tracking and quality controls.</li>
+                    <li data-i18n="experience.cognizant.b3">Documented process results and operational information.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Practitioner - CRM Operations</h3>
+                        <p class="company">Concentrix Daksh Services India Pvt. Ltd.</p>
+                    </div>
+                    <span class="date" data-i18n="experience.concentrix.date">Mar 2016 - May 2017</span>
+                </div>
+                <p class="location" data-i18n="experience.india">India</p>
+                <ul>
+                    <li data-i18n="experience.concentrix.b1">Worked in structured digital and process-oriented operational workflows.</li>
+                    <li data-i18n="experience.concentrix.b2">Supported data quality, issue analysis and structured information handling.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Associate Software Engineer</h3>
+                        <p class="company">Magus IT Solutions Pvt. Ltd.</p>
+                    </div>
+                    <span class="date" data-i18n="experience.magus.date">Jun 2013 - Jun 2015</span>
+                </div>
+                <p class="location" data-i18n="experience.hyderabad">Hyderabad, India</p>
+                <ul>
+                    <li data-i18n="experience.magus.b1">Gained professional experience in a software-engineering environment.</li>
+                    <li data-i18n="experience.magus.b2">Supported technical software and project-related activities.</li>
+                </ul>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="projects" class="section section-alt">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="projects.label">PROJECTS</p>
+        <h2 data-i18n="projects.title">Featured Projects</h2>
+        <p data-i18n="projects.subtitle">
+            Selected practical projects across cloud data engineering, AI and autonomous-driving technologies.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <article class="project-card">
+            <div class="project-top"><span class="project-number">01</span><span class="project-year">2026</span></div>
+            <h3 data-i18n="projects.telemetry.title">Automotive Telemetry Streaming Platform</h3>
+            <p class="project-description" data-i18n="projects.telemetry.desc">
+                Designed a cloud-based architecture for ingesting, validating and storing vehicle telemetry data.
+            </p>
+            <div class="project-tags">
+                <span>GCP</span><span>Pub/Sub</span><span>BigQuery</span><span>Cloud Storage</span><span>Python</span><span>SQL</span>
+            </div>
+            <ul>
+                <li data-i18n="projects.telemetry.b1">Created Pub/Sub topics and subscriptions.</li>
+                <li data-i18n="projects.telemetry.b2">Designed partitioned and clustered BigQuery tables.</li>
+                <li data-i18n="projects.telemetry.b3">Created a separate path for invalid events.</li>
+                <li data-i18n="projects.telemetry.b4">Worked with IAM and GCP command-line tools.</li>
+            </ul>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top"><span class="project-number">02</span><span class="project-year">2026</span></div>
+            <h3 data-i18n="projects.spark.title">Dataproc / PySpark Retail Data Pipeline</h3>
+            <p class="project-description" data-i18n="projects.spark.desc">
+                Built an end-to-end Spark ETL workflow using customer, order and salesman datasets.
+            </p>
+            <div class="project-tags">
+                <span>PySpark</span><span>Spark SQL</span><span>Dataproc</span><span>GCS</span><span>HDFS</span><span>Parquet</span>
+            </div>
+            <ul>
+                <li data-i18n="projects.spark.b1">Loaded JSON data from GCS and HDFS.</li>
+                <li data-i18n="projects.spark.b2">Converted source datasets to Parquet.</li>
+                <li data-i18n="projects.spark.b3">Combined regional datasets using UNION.</li>
+                <li data-i18n="projects.spark.b4">Joined customer, order and salesman data and generated an aggregated Retail Summary.</li>
+            </ul>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top"><span class="project-number">03</span><span class="project-year" data-i18n="projects.thesis.year">Master Thesis</span></div>
+            <h3 data-i18n="projects.thesis.title">Scenario-Centric Autonomous Driving Dataset Pipeline</h3>
+            <p class="project-description" data-i18n="projects.thesis.desc">
+                Developing a CARLA-based dataset-generation and annotation pipeline for environment prediction.
+            </p>
+            <div class="project-tags">
+                <span>Python</span><span>CARLA</span><span>Pandas</span><span>YAML</span><span>JSON</span>
+            </div>
+            <ul>
+                <li data-i18n="projects.thesis.b1">Generated highway lane-change and merge scenarios.</li>
+                <li data-i18n="projects.thesis.b2">Recorded actor trajectories and lane information.</li>
+                <li data-i18n="projects.thesis.b3">Generated structured scene and frame annotations.</li>
+                <li data-i18n="projects.thesis.b4">Implemented dataset quality and continuity checks.</li>
+            </ul>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top"><span class="project-number">04</span><span class="project-year">2026</span></div>
+            <h3>YOLOv8 Bicycle Detection</h3>
+            <p class="project-description" data-i18n="projects.yolo.desc">
+                Trained and evaluated a computer-vision model for bicycle detection using approximately 1,000 images.
+            </p>
+            <div class="project-tags"><span>Python</span><span>YOLOv8</span><span>Computer Vision</span><span>NVIDIA GPU</span></div>
+            <ul>
+                <li data-i18n="projects.yolo.b1">Prepared and validated image datasets.</li>
+                <li data-i18n="projects.yolo.b2">Trained and evaluated a YOLOv8 model.</li>
+                <li data-i18n="projects.yolo.b3">Achieved approximately 0.51 mAP50.</li>
+                <li data-i18n="projects.yolo.b4">Analysed inference errors and model results.</li>
+            </ul>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top"><span class="project-number">05</span><span class="project-year">2026</span></div>
+            <h3 data-i18n="projects.interview.title">AI Interview Practice Agent</h3>
+            <p class="project-description" data-i18n="projects.interview.desc">
+                Built a local AI interview-practice workflow with speech input, local LLM processing and structured feedback.
+            </p>
+            <div class="project-tags">
+                <span>Python</span><span>FastAPI</span><span>Qwen3</span><span>Ollama</span><span>Whisper</span><span>Kokoro TTS</span>
+            </div>
+            <ul>
+                <li data-i18n="projects.interview.b1">Added speech-to-text using Whisper.</li>
+                <li data-i18n="projects.interview.b2">Integrated local Qwen3 through Ollama.</li>
+                <li data-i18n="projects.interview.b3">Implemented text-to-speech feedback.</li>
+                <li data-i18n="projects.interview.b4">Built API endpoints using FastAPI.</li>
+            </ul>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top"><span class="project-number">06</span><span class="project-year">2026</span></div>
+            <h3 data-i18n="projects.jobmatch.title">AI Job Match Agent</h3>
+            <p class="project-description" data-i18n="projects.jobmatch.desc">
+                Developed an AI application for CV-to-job matching using structured LLM outputs and rule-based fallbacks.
+            </p>
+            <div class="project-tags">
+                <span>Python</span><span>Streamlit</span><span>Ollama</span><span>Pydantic</span><span>JSON Schema</span>
+            </div>
+            <ul>
+                <li data-i18n="projects.jobmatch.b1">Implemented structured skill matching.</li>
+                <li data-i18n="projects.jobmatch.b2">Integrated local LLM processing.</li>
+                <li data-i18n="projects.jobmatch.b3">Added JSON Schema and Pydantic validation.</li>
+                <li data-i18n="projects.jobmatch.b4">Developed rule-based fallback behaviour.</li>
+            </ul>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="education" class="section">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="education.label">EDUCATION</p>
+        <h2 data-i18n="education.title">Education</h2>
+    </div>
+
+    <div class="education-grid">
+
+        <article class="education-card">
+            <span class="education-status" data-i18n="education.progress">In Progress</span>
+            <h3 data-i18n="education.master.title">Master - Automotive Software Engineering</h3>
+            <p class="institution">Technische Universität Chemnitz</p>
+            <p data-i18n="education.germany">Germany</p>
+            <p class="education-detail" data-i18n="education.master.ects">90 / 120 ECTS completed</p>
+            <p class="education-detail" data-i18n="education.master.thesis">
+                Current thesis: Generation and Annotation of Scenario-Centric Datasets for Environment Prediction in Autonomous Driving
+            </p>
+        </article>
+
+        <article class="education-card">
+            <span class="education-status completed" data-i18n="education.completed">Completed</span>
+            <h3 data-i18n="education.mtech.title">M.Tech - Embedded Systems</h3>
+            <p class="institution">MLR Institute of Technology</p>
+            <p data-i18n="education.mtech.meta">India · 2017 - 2019</p>
+            <p class="education-detail" data-i18n="education.mtech.grade">First Class · CGPA 7.33</p>
+        </article>
+
+        <article class="education-card">
+            <span class="education-status completed" data-i18n="education.completed">Completed</span>
+            <h3 data-i18n="education.btech.title">B.Tech - Electrical & Electronics Engineering</h3>
+            <p class="institution">Jawaharlal Nehru Technological University Hyderabad</p>
+            <p data-i18n="education.btech.meta">India · 2009 - 2013</p>
+            <p class="education-detail" data-i18n="education.btech.grade">First Class · 62.67%</p>
+        </article>
+
+    </div>
+</section>
+
+
+<section class="section section-alt">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="certs.label">LEARNING</p>
+        <h2 data-i18n="certs.title">Certifications & Programs</h2>
+    </div>
+
+    <div class="certification-grid">
+        <article class="cert-card">
+            <h3>Google Cloud Data Engineering Program</h3>
+            <p data-i18n="certs.gcp">Data engineering, GCP, Dataproc, PySpark and Spark SQL</p>
+        </article>
+
+        <article class="cert-card">
+            <h3>Python Essentials 1 & 2</h3>
+            <p>Cisco / OpenEDG</p>
+        </article>
+
+        <article class="cert-card">
+            <h3>SQL Basic</h3>
+            <p>HackerRank</p>
+        </article>
+
+        <article class="cert-card">
+            <h3>Goethe-Zertifikat B1</h3>
+            <p data-i18n="certs.german">German language certification</p>
+        </article>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="languages.label">LANGUAGES</p>
+        <h2 data-i18n="languages.title">Languages</h2>
+    </div>
+
+    <div class="language-grid">
+        <article class="language-card">
+            <h3 data-i18n="languages.german">German</h3>
+            <p data-i18n="languages.germanLevel">Goethe B1 certified</p>
+        </article>
+
+        <article class="language-card">
+            <h3 data-i18n="languages.english">English</h3>
+            <p data-i18n="languages.englishLevel">IELTS B2</p>
+        </article>
+
+        <article class="language-card">
+            <h3>Telugu</h3>
+            <p data-i18n="languages.teluguLevel">First language</p>
+        </article>
+    </div>
+</section>
+
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <p class="section-label light-label" data-i18n="contact.label">CONTACT</p>
+        <h2 data-i18n="contact.title">Let's Connect</h2>
+
+        <p data-i18n="contact.p1">
+            I am interested in opportunities in data engineering, cloud technologies, AI/ML and automotive software.
+        </p>
+
+        <p data-i18n="contact.p2">
+            If you would like to discuss a position, technical project or collaboration, feel free to contact me.
+        </p>
+
+        <div class="contact-actions">
+            <a href="mailto:gandupradeep2026@gmail.com" class="btn contact-primary" data-i18n="contact.email">Email Me</a>
+
+            <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer" class="btn contact-secondary">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer" class="btn contact-secondary">
+                GitHub
+            </a>
+
+            <a
+                href="assets/Pradeep_Gandu_CV_EN.pdf"
+                target="_blank"
+                rel="noopener"
+                class="btn contact-secondary"
+                id="contactCvButton"
+                data-i18n="contact.cv"
+            >
+                CV
+            </a>
+        </div>
+
+        <div class="contact-details">
+            <span data-i18n="contact.location">Chemnitz, Germany</span>
+            <span>gandupradeep2026@gmail.com</span>
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+<footer>
+    <p>
+        © <span id="currentYear"></span> Pradeep Gandu.
+        <span data-i18n="footer.text">Built with HTML, CSS & JavaScript.</span>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
