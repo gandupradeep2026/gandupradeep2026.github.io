@@ -29,8 +29,8 @@ const translations = {
         "stats.ects": "ECTS · TU Chemnitz",
         "stats.cloud": "Cloud & Dataflow",
         "stats.repos": "Projects with CI/CD",
-        "stats.languages": "C1 Certified Languages",
-        "stats.languagesValue": "German C1 · English C1",
+        "stats.languages": "German C1 · English Fluent",
+        "stats.languagesValue": "C1 · Fluent",
 
         // Recruiter Fast-Track (Snapshot)
         "snapshot.badge": "Recruiter Fast-Track",
@@ -235,8 +235,8 @@ const translations = {
         "stats.ects": "ECTS · TU Chemnitz",
         "stats.cloud": "Cloud & Dataflow",
         "stats.repos": "Projekte mit CI/CD",
-        "stats.languages": "C1 Zertifizierte Sprachen",
-        "stats.languagesValue": "Deutsch C1 · Englisch C1",
+        "stats.languages": "Deutsch C1 · Englisch Fließend",
+        "stats.languagesValue": "C1 · Fließend",
 
         // Recruiter Fast-Track (Snapshot)
         "snapshot.badge": "Recruiter Schnellübersicht",
