@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Pradeep Gandu - Data Engineer, Cloud Data Engineer, AI/ML and Automotive Software.">
-    <meta name="keywords" content="Pradeep Gandu, Data Engineer, GCP, AWS, Python, SQL, PySpark, AI, Machine Learning, Automotive Software, CARLA">
-    <title>Pradeep Gandu | Portfolio</title>
+    <meta name="description" content="Portfolio of Pradeep Gandu - Cloud Data Engineer, AI/ML, and Automotive Software Engineer based in Chemnitz, Germany.">
+    <meta name="keywords" content="Pradeep Gandu, Cloud Data Engineer, GCP, BigQuery, PubSub, Apache Beam, PySpark, AI, Machine Learning, Automotive Software, CAN-Bus, CARLA, Chemnitz, Germany">
+    <meta name="author" content="Pradeep Gandu">
+    <title>Pradeep Gandu | Cloud Data & Automotive Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
-    <a href="#home" class="logo">Pradeep Gandu</a>
+<header class="navbar" id="navbar">
+    <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>Pradeep Gandu<span class="logo-accent">/&gt;</span>
+    </a>
 
     <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
         ☰
@@ -20,45 +26,60 @@
 
     <nav class="nav-links" id="navLinks">
         <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#snapshot" data-i18n="nav.snapshot">Recruiter Fast-Track</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#education" data-i18n="nav.education">Education</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
-    <div class="language-switcher" aria-label="Language selector">
-        <button class="lang-btn active" id="langEn" data-lang="en">EN</button>
-        <span>|</span>
-        <button class="lang-btn" id="langDe" data-lang="de">DE</button>
+    <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode" title="Toggle theme">
+            <span class="theme-icon" id="themeIcon">☀️</span>
+        </button>
+
+        <div class="language-switcher" aria-label="Language selector">
+            <button class="lang-btn active" id="langEn" data-lang="en">EN</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" id="langDe" data-lang="de">DE</button>
+        </div>
     </div>
 </header>
 
 <main>
 
+<!-- HERO SECTION -->
 <section id="home" class="hero">
     <div class="hero-container">
 
         <div class="hero-content">
+            <div class="status-badge">
+                <span class="status-pulse"></span>
+                <span data-i18n="hero.status">Available for Master Thesis / Full-Time in Germany</span>
+            </div>
+
             <p class="eyebrow" data-i18n="hero.eyebrow">Hello, I'm</p>
 
-            <h1>Pradeep Gandu</h1>
+            <h1 class="hero-title">Pradeep Gandu</h1>
 
-            <h2>
-                <span data-i18n="hero.role1">Data Engineer</span>
+            <h2 class="hero-subtitle">
+                <span class="highlight-role" data-i18n="hero.role1">Cloud Data Engineer</span>
                 <span class="role-dot">·</span>
-                <span data-i18n="hero.role2">AI / ML</span>
+                <span class="highlight-role" data-i18n="hero.role2">AI / Machine Learning</span>
                 <span class="role-dot">·</span>
-                <span data-i18n="hero.role3">Automotive Software</span>
+                <span class="highlight-role" data-i18n="hero.role3">Automotive Software</span>
             </h2>
 
             <p class="hero-description" data-i18n="hero.description">
-                I build data pipelines, cloud-based data solutions, AI applications and scenario-centric datasets for autonomous-driving systems.
+                M.Sc. student at TU Chemnitz architecting event-driven data streaming pipelines, cloud big-data platforms on GCP & AWS, and AI-driven autonomous vehicle diagnostic systems.
             </p>
 
             <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn" data-i18n="hero.projects">View Projects</a>
+                <a href="#projects" class="btn primary-btn" data-i18n="hero.projects">
+                    <span>View Projects</span>
+                    <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
 
                 <a
                     href="assets/Pradeep_Gandu_CV_EN.pdf"
@@ -68,23 +89,54 @@
                     rel="noopener"
                     data-i18n="hero.cv"
                 >
-                    View CV
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Download CV</span>
                 </a>
 
-                <a href="#contact" class="btn text-btn" data-i18n="hero.contact">Contact Me</a>
+                <a href="#snapshot" class="btn outline-btn" data-i18n="hero.snapshotBtn">⚡ 30s Summary</a>
             </div>
 
             <div class="quick-links">
-                <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <span>•</span>
-                <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <span>•</span>
-                <span data-i18n="hero.location">Chemnitz, Germany</span>
+                <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer" class="link-item">
+                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                </a>
+                <span class="dot-separator">•</span>
+                <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer" class="link-item">
+                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <span class="dot-separator">•</span>
+                <span class="location-badge">
+                    <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span data-i18n="hero.location">Chemnitz, Germany</span>
+                </span>
+            </div>
+
+            <!-- HERO STAT RIBBON -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-value">90 / 120</span>
+                    <span class="stat-label" data-i18n="stats.ects">ECTS · TU Chemnitz</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">GCP & AWS</span>
+                    <span class="stat-label" data-i18n="stats.cloud">Cloud & Dataflow</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label" data-i18n="stats.repos">Projects with CI/CD</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">B1 · Fluent</span>
+                    <span class="stat-label" data-i18n="stats.languages">German & English</span>
+                </div>
             </div>
         </div>
 
         <div class="hero-photo-wrapper">
             <div class="hero-photo-frame">
+                <div class="photo-glow"></div>
                 <img
                     src="assets/images/photo.jpeg"
                     alt="Pradeep Gandu"
@@ -92,138 +144,473 @@
                     id="profilePhoto"
                 >
                 <div class="photo-fallback" id="photoFallback">PG</div>
+                <div class="photo-badge">
+                    <span>TU Chemnitz</span>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
 
+<!-- RECRUITER FAST-TRACK SECTION -->
+<section id="snapshot" class="section snapshot-section">
+    <div class="snapshot-card">
+        <div class="snapshot-header">
+            <div class="snapshot-badge">
+                <span class="pulse-icon">⚡</span>
+                <span data-i18n="snapshot.badge">Recruiter Fast-Track</span>
+            </div>
+            <h2 data-i18n="snapshot.title">30-Second Candidate Summary</h2>
+            <p data-i18n="snapshot.subtitle">Essential facts for tech recruiters, hiring managers, and engineering leads.</p>
+        </div>
 
+        <div class="snapshot-grid">
+            <div class="snapshot-item">
+                <div class="snapshot-icon">🎯</div>
+                <div class="snapshot-content">
+                    <h3 data-i18n="snapshot.targetRolesTitle">Target Roles</h3>
+                    <p data-i18n="snapshot.targetRolesDesc">Cloud Data Engineer · Data Platform Engineer · AI/ML Engineer · Automotive Software Engineer</p>
+                </div>
+            </div>
+
+            <div class="snapshot-item">
+                <div class="snapshot-icon">📍</div>
+                <div class="snapshot-content">
+                    <h3 data-i18n="snapshot.locationTitle">Location & Mobility</h3>
+                    <p data-i18n="snapshot.locationDesc">Chemnitz, Germany · Willing to relocate nationwide (Munich, Stuttgart, Berlin, Frankfurt, etc.) · Hybrid or Remote</p>
+                </div>
+            </div>
+
+            <div class="snapshot-item">
+                <div class="snapshot-icon">📑</div>
+                <div class="snapshot-content">
+                    <h3 data-i18n="snapshot.visaTitle">Work Authorization & Availability</h3>
+                    <p data-i18n="snapshot.visaDesc">Eligible for Master Thesis / Working Student / Full-Time upon thesis in Germany (EU Student Visa & 18-month Jobseeker entitlement)</p>
+                </div>
+            </div>
+
+            <div class="snapshot-item">
+                <div class="snapshot-icon">⚙️</div>
+                <div class="snapshot-content">
+                    <h3 data-i18n="snapshot.stackTitle">Core Technology Stack</h3>
+                    <p data-i18n="snapshot.stackDesc">GCP (BigQuery, Pub/Sub, Dataflow), Apache Beam, PySpark, Python, SQL, CARLA, Docker, CI/CD, UDS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="snapshot-footer">
+            <a href="#projects" class="btn primary-btn" data-i18n="snapshot.btnProjects">Explore Flagship Projects</a>
+            <button class="btn secondary-btn copy-email-btn" data-email="gandupradeep2026@gmail.com">
+                <span class="copy-icon">📋</span>
+                <span data-i18n="snapshot.copyEmail">Copy Email Address</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section section-alt">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="projects.label">PORTFOLIO</p>
+        <h2 data-i18n="projects.title">Featured Engineering Projects</h2>
+        <p data-i18n="projects.subtitle">
+            Verified, production-grade projects across event-driven cloud data pipelines, predictive AI, and autonomous systems.
+        </p>
+
+        <!-- CATEGORY FILTERS -->
+        <div class="project-filters" role="tablist">
+            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects (6)</button>
+            <button class="filter-btn" data-filter="cloud" data-i18n="projects.filterCloud">Cloud & Data Engineering</button>
+            <button class="filter-btn" data-filter="automotive" data-i18n="projects.filterAuto">Automotive & ADAS</button>
+            <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">AI & Diagnostics</button>
+        </div>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+        <!-- PROJECT 1: Automotive Telemetry GCP -->
+        <article class="project-card" data-category="cloud automotive">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
+                    <span class="project-category-tag">Cloud Data</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.telemetry.title">Automotive Telemetry Streaming Platform</h3>
+            
+            <p class="project-description" data-i18n="projects.telemetry.desc">
+                Event-driven Google Cloud streaming pipeline ingesting CARLA vehicle telemetry with Apache Beam, Pub/Sub, stateful deduplication, dead-letter routing, and partitioned BigQuery analytics.
+            </p>
+
+            <div class="project-tags">
+                <span>GCP Pub/Sub</span>
+                <span>Apache Beam</span>
+                <span>BigQuery</span>
+                <span>Apache Airflow</span>
+                <span>Pydantic</span>
+                <span>Pytest CI</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.telemetry.b1">Architected end-to-end streaming ingestion using Pub/Sub attributes and event-time semantics in Apache Beam / Dataflow.</li>
+                <li data-i18n="projects.telemetry.b2">Implemented stateful event-ID deduplication and automated dead-letter queue (DLQ) routing for corrupted payloads.</li>
+                <li data-i18n="projects.telemetry.b3">Designed partitioned and clustered BigQuery analytics warehouse with mandatory partition filtering for cost optimization.</li>
+                <li data-i18n="projects.telemetry.b4">Orchestrated daily data quality reporting with Apache Airflow and automated verification via GitHub Actions CI.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026/automotive-telemetry-gcp" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="telemetry">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 2: AutoSense AI -->
+        <article class="project-card" data-category="automotive ai">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
+                    <span class="project-category-tag">AI & Diagnostics</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.autosense.title">AutoSense AI: Predictive Vehicle Diagnostics</h3>
+            
+            <p class="project-description" data-i18n="projects.autosense.desc">
+                Explainable pre-fault vehicle diagnostics system combining IsolationForest anomaly detection, RAG knowledge retrieval, local LLM reasoning (Ollama), MCP tools, and a React telemetry dashboard.
+            </p>
+
+            <div class="project-tags">
+                <span>FastAPI</span>
+                <span>IsolationForest</span>
+                <span>RAG</span>
+                <span>Ollama LLM</span>
+                <span>MCP Tools</span>
+                <span>React / Vite</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.autosense.b1">Engineered predictive diagnostic baseline detecting abnormal component degradation before DTC fault triggers.</li>
+                <li data-i18n="projects.autosense.b2">Audited on 39,779 real public OBD dataset rows with a 5-of-7 temporal stabilization policy reducing nuisance alerts by 93.4%.</li>
+                <li data-i18n="projects.autosense.b3">Built local RAG pipeline with TF-IDF similarity to retrieve OEM diagnostic troubleshooting procedures.</li>
+                <li data-i18n="projects.autosense.b4">Equipped autonomous agent with MCP tools and deterministic safety gates ensuring evidence-grounded hypotheses.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026/autosense-ai" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="autosense">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 3: CAN-Bus Simulator -->
+        <article class="project-card" data-category="automotive">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
+                    <span class="project-category-tag">Automotive</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.canbus.title">CAN-Bus Diagnostic & Health Simulator</h3>
+            
+            <p class="project-description" data-i18n="projects.canbus.desc">
+                Production-quality in-vehicle network simulator implementing CAN DBC messaging, UDS diagnostic protocols (ISO 14229), fault injection, and a real-time Streamlit diagnostic tester.
+            </p>
+
+            <div class="project-tags">
+                <span>python-can</span>
+                <span>UDS (ISO 14229)</span>
+                <span>DBC Network</span>
+                <span>Streamlit</span>
+                <span>SocketCAN</span>
+                <span>70%+ CI Coverage</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.canbus.b1">Simulated multi-ECU CAN communication (Engine, Dynamics, Battery) with modulo-16 alive counters and checksum verification.</li>
+                <li data-i18n="projects.canbus.b2">Implemented UDS diagnostic services including Session Control (0x10), Read Data By ID (0x22), and DTC Info (0x19).</li>
+                <li data-i18n="projects.canbus.b3">Engineered automated YAML fault injection for sensor freeze, checksum corruption, and ECU silence scenarios.</li>
+                <li data-i18n="projects.canbus.b4">Tested with Linux SocketCAN & virtual transports; maintained &gt;70% branch coverage with Ruff, Black, and MyPy CI.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026/CAN-Bus_diagnostic_and_Health-Monitoring_Simulator_Dashboard" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="canbus">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: CARLA Master Thesis Pipeline -->
+        <article class="project-card" data-category="automotive cloud">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-research" data-i18n="projects.thesis.badge">🎓 Master Thesis</span>
+                    <span class="project-category-tag">Autonomous Driving</span>
+                </div>
+                <span class="project-year">TU Chemnitz</span>
+            </div>
+
+            <h3 data-i18n="projects.thesis.title">Scenario-Centric AD Dataset & Trajectory Pipeline</h3>
+            
+            <p class="project-description" data-i18n="projects.thesis.desc">
+                High-fidelity simulation and data pipeline in CARLA generating structured, annotated multi-agent trajectory datasets for environment prediction in automated driving.
+            </p>
+
+            <div class="project-tags">
+                <span>CARLA 0.9.x</span>
+                <span>ADAS</span>
+                <span>Python</span>
+                <span>3D Trajectories</span>
+                <span>OpenDRIVE</span>
+                <span>Parquet</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.thesis.b1">Generated complex highway lane-change and high-speed merge scenarios using CARLA Scenario Runner.</li>
+                <li data-i18n="projects.thesis.b2">Extracted synchronized ground-truth actor trajectories, velocities, headings, and road topology coordinates.</li>
+                <li data-i18n="projects.thesis.b3">Constructed automated pipeline transforming raw simulation sensor frames into structured JSON and Parquet schemas.</li>
+                <li data-i18n="projects.thesis.b4">Implemented strict temporal continuity and collision-free validation routines for ML training data readiness.</li>
+            </ul>
+
+            <div class="project-actions">
+                <button class="project-btn modal-trigger-btn primary-action" data-project="carla">
+                    <span data-i18n="projects.btnThesisDetails">Explore Thesis Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 5: Dataproc / PySpark Retail Pipeline -->
+        <article class="project-card" data-category="cloud">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="project-category-tag">Big Data Engineering</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.spark.title">Dataproc & PySpark Retail Data Warehouse</h3>
+            
+            <p class="project-description" data-i18n="projects.spark.desc">
+                Distributed big-data pipeline on Google Cloud Dataproc executing PySpark and Spark SQL transformations across high-volume customer, order, and sales datasets.
+            </p>
+
+            <div class="project-tags">
+                <span>PySpark</span>
+                <span>Spark SQL</span>
+                <span>GCP Dataproc</span>
+                <span>Cloud Storage</span>
+                <span>HDFS</span>
+                <span>Apache Parquet</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.spark.b1">Ingested multi-format raw datasets from GCS buckets and distributed HDFS clusters.</li>
+                <li data-i18n="projects.spark.b2">Optimized query performance by converting semi-structured JSON into compressed, partitioned Parquet columnar formats.</li>
+                <li data-i18n="projects.spark.b3">Leveraged Spark DataFrame DSL and Spark SQL for multi-table relational joins, broadcast joins, and regional unions.</li>
+                <li data-i18n="projects.spark.b4">Aggregated executive retail KPIs and customer summary tables with lazy evaluation and memory management.</li>
+            </ul>
+
+            <div class="project-actions">
+                <button class="project-btn modal-trigger-btn primary-action" data-project="pyspark">
+                    <span data-i18n="projects.btnPipelineDetails">View Pipeline Workflow 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 6: AI Interview Practice & Job Match Agents -->
+        <article class="project-card" data-category="ai">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="project-category-tag">AI & NLP</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.interview.title">Voice AI Interview & Resume Intelligence Agents</h3>
+            
+            <p class="project-description" data-i18n="projects.interview.desc">
+                Suite of local AI agents featuring real-time Whisper speech-to-text, local LLM evaluation (Qwen3/Ollama), Kokoro TTS feedback, and Pydantic-validated CV matching.
+            </p>
+
+            <div class="project-tags">
+                <span>FastAPI</span>
+                <span>Whisper STT</span>
+                <span>Ollama (Qwen3)</span>
+                <span>Kokoro TTS</span>
+                <span>Streamlit</span>
+                <span>Pydantic</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.interview.b1">Developed an interactive voice-driven interview simulation using OpenAI Whisper for low-latency speech transcription.</li>
+                <li data-i18n="projects.interview.b2">Integrated local Qwen3 model via Ollama to generate structured, STAR-method interview evaluation feedback.</li>
+                <li data-i18n="projects.interview.b3">Engineered automated text-to-speech audio playback using lightweight Kokoro TTS synthesis.</li>
+                <li data-i18n="projects.interview.b4">Built ATS job-match agent with strict JSON Schema and Pydantic validation with rule-based fallback handling.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026/pradeep-ai-interview-agent" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="aiagent">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
 <section id="about" class="section">
     <div class="section-heading">
-        <p class="section-label" data-i18n="about.label">ABOUT</p>
+        <p class="section-label" data-i18n="about.label">PROFILE</p>
         <h2 data-i18n="about.title">About Me</h2>
     </div>
 
     <div class="about-grid">
         <div class="about-main">
             <p data-i18n="about.p1">
-                I am currently pursuing a Master's degree in Automotive Software Engineering at Technische Universität Chemnitz.
+                I am pursuing an M.Sc. in Automotive Software Engineering at Technische Universität Chemnitz (90 / 120 ECTS completed).
             </p>
 
             <p data-i18n="about.p2">
-                My technical work spans data engineering, cloud platforms, AI/ML and autonomous-driving applications. I particularly enjoy designing structured data-processing workflows and converting raw data into reliable, usable datasets.
+                My technical engineering focus bridges <strong>Cloud Data Platforms</strong>, <strong>Distributed Big Data (PySpark/Beam)</strong>, and <strong>Automotive Software Systems</strong>. I specialize in designing scalable ingestion architectures that convert raw sensor feeds and telemetry into reliable, analytics-ready datasets.
             </p>
 
             <p data-i18n="about.p3">
-                My current work includes GCP-based data engineering, Spark and PySpark processing, AI applications and CARLA-based scenario generation and dataset annotation. I have also worked with GCP- and AWS-based cloud concepts in professional and project environments.
+                My recent implementations include production-style GCP streaming pipelines (Pub/Sub, Beam, BigQuery, Airflow), CARLA autonomous driving scenario generation, CAN-Bus UDS diagnostic simulators, and explainable AI diagnostic systems audited on real OBD vehicle data.
             </p>
         </div>
 
         <div class="about-highlights">
             <div class="highlight-box">
-                <strong data-i18n="about.based">Based in</strong>
-                <span data-i18n="about.location">Chemnitz, Germany</span>
+                <strong data-i18n="about.based">Location</strong>
+                <span data-i18n="about.location">Chemnitz, Germany (Open to Relocation)</span>
             </div>
 
             <div class="highlight-box">
-                <strong data-i18n="about.focus">Current focus</strong>
-                <span data-i18n="about.focusValue">Data Engineering · Cloud · AI · Automotive</span>
+                <strong data-i18n="about.focus">Engineering Focus</strong>
+                <span data-i18n="about.focusValue">Cloud Data · Streaming · AI/ML · Automotive</span>
             </div>
 
             <div class="highlight-box">
-                <strong data-i18n="about.cloud">Cloud</strong>
-                <span>GCP · AWS</span>
+                <strong data-i18n="about.cloud">Cloud Platforms</strong>
+                <span>Google Cloud Platform (GCP) · AWS</span>
             </div>
 
             <div class="highlight-box">
-                <strong data-i18n="about.stack">Data stack</strong>
-                <span>Python · SQL · PySpark · Spark SQL</span>
+                <strong data-i18n="about.stack">Data & Processing Stack</strong>
+                <span>Python · PySpark · Apache Beam · BigQuery · SQL</span>
             </div>
         </div>
     </div>
 </section>
 
-
+<!-- SKILLS SECTION -->
 <section id="skills" class="section section-alt">
     <div class="section-heading">
         <p class="section-label" data-i18n="skills.label">TOOLKIT</p>
         <h2 data-i18n="skills.title">Technical Skills</h2>
         <p data-i18n="skills.subtitle">
-            Technologies and concepts I have worked with across professional, academic and personal projects.
+            Core technologies and tools applied across cloud, big data, automotive systems, and AI engineering.
         </p>
     </div>
 
     <div class="skills-grid">
 
         <article class="skill-card">
+            <div class="skill-card-icon">⚡</div>
             <h3 data-i18n="skills.data.title">Data Engineering</h3>
             <div class="tags">
                 <span>Python</span><span>SQL</span><span>PySpark</span><span>Spark SQL</span>
-                <span>ETL / ELT</span><span data-i18n="skills.data.pipeline">Data Pipelines</span>
+                <span>ETL / ELT</span><span data-i18n="skills.data.pipeline">Data Streaming</span>
                 <span data-i18n="skills.data.quality">Data Quality</span><span>Schema Validation</span>
-                <span>Parquet</span><span>JSON</span>
+                <span>Apache Parquet</span><span>JSON Schema</span>
             </div>
         </article>
 
         <article class="skill-card">
+            <div class="skill-card-icon">☁️</div>
             <h3 data-i18n="skills.cloud.title">Cloud Platforms</h3>
             <div class="tags">
                 <span>GCP</span><span>BigQuery</span><span>Pub/Sub</span><span>Cloud Storage</span>
-                <span>Dataproc</span><span>Compute Engine</span><span>IAM</span><span>gcloud</span>
-                <span>AWS</span><span>EC2</span><span>S3</span><span>RDS</span><span>VPC</span><span>CloudWatch</span>
+                <span>Dataproc</span><span>Apache Beam</span><span>Dataflow</span><span>IAM</span>
+                <span>AWS</span><span>S3</span><span>EC2</span><span>RDS</span>
             </div>
         </article>
 
         <article class="skill-card">
-            <h3 data-i18n="skills.spark.title">Spark & Big Data</h3>
+            <div class="skill-card-icon">🚗</div>
+            <h3 data-i18n="skills.auto.title">Automotive Software</h3>
             <div class="tags">
-                <span>Spark DataFrames</span><span>Spark DSL</span><span>spark.sql()</span><span>spark-sql</span>
-                <span>Hadoop</span><span>HDFS</span><span>RDD</span><span>Lazy Evaluation</span>
-                <span>Joins</span><span data-i18n="skills.spark.aggregations">Aggregations</span>
+                <span>CARLA Simulator</span><span>ADAS</span><span>CAN-Bus</span>
+                <span>UDS (ISO 14229)</span><span>DBC Files</span><span>SocketCAN</span>
+                <span data-i18n="skills.auto.scenario">Scenario Runner</span>
+                <span data-i18n="skills.auto.trajectory">3D Trajectories</span>
+                <span data-i18n="skills.auto.annotation">Dataset Annotation</span>
             </div>
         </article>
 
         <article class="skill-card">
+            <div class="skill-card-icon">🧠</div>
             <h3 data-i18n="skills.ai.title">AI & Machine Learning</h3>
             <div class="tags">
-                <span>YOLOv8</span><span>Computer Vision</span><span>Pandas</span><span>NumPy</span>
-                <span>Ollama</span><span>Qwen3</span><span>Whisper</span>
-                <span data-i18n="skills.ai.evaluation">Model Evaluation</span>
+                <span>IsolationForest</span><span>RAG</span><span>Ollama</span><span>Qwen3</span>
+                <span>YOLOv8</span><span>Computer Vision</span><span>Whisper</span>
+                <span>Pandas</span><span>NumPy</span><span>Scikit-Learn</span>
             </div>
         </article>
 
         <article class="skill-card">
-            <h3 data-i18n="skills.auto.title">Automotive</h3>
+            <div class="skill-card-icon">🔥</div>
+            <h3 data-i18n="skills.spark.title">Big Data & Orchestration</h3>
             <div class="tags">
-                <span>CARLA</span><span>ADAS</span>
-                <span data-i18n="skills.auto.scenario">Scenario Generation</span>
-                <span data-i18n="skills.auto.trajectory">Trajectories</span>
-                <span data-i18n="skills.auto.annotation">Dataset Annotation</span>
-                <span data-i18n="skills.auto.lane">Lane Changes</span>
-                <span data-i18n="skills.auto.merge">Merge Scenarios</span>
-                <span data-i18n="skills.auto.validation">Data Validation</span>
+                <span>Apache Airflow</span><span>Dataproc</span><span>Hadoop / HDFS</span>
+                <span>Partitioning & Clustering</span><span>Broadcast Joins</span>
+                <span>Lazy Evaluation</span><span>Dead-Letter Queues</span>
             </div>
         </article>
 
         <article class="skill-card">
-            <h3 data-i18n="skills.software.title">Software & Systems</h3>
+            <div class="skill-card-icon">🛠️</div>
+            <h3 data-i18n="skills.software.title">Software Engineering</h3>
             <div class="tags">
-                <span>FastAPI</span><span>Streamlit</span><span>Pydantic</span><span>Pytest</span>
-                <span>Git</span><span>GitHub</span><span>Linux</span><span>SSH</span><span>PuTTY</span><span>Windows</span>
+                <span>FastAPI</span><span>Docker</span><span>Docker Compose</span><span>Streamlit</span>
+                <span>Pydantic</span><span>Pytest</span><span>GitHub Actions CI</span>
+                <span>Git</span><span>Linux / Bash</span><span>Ruff & MyPy</span>
             </div>
         </article>
 
     </div>
 </section>
 
-
+<!-- EXPERIENCE SECTION -->
 <section id="experience" class="section">
     <div class="section-heading">
         <p class="section-label" data-i18n="experience.label">CAREER</p>
         <h2 data-i18n="experience.title">Professional Experience</h2>
         <p data-i18n="experience.subtitle">
-            Professional experience across software, structured-data, technical and AI-assisted environments.
+            Demonstrated background spanning AI solutions, technical data workflows, and software quality assurance.
         </p>
     </div>
 
@@ -241,9 +628,9 @@
                 </div>
                 <p class="location" data-i18n="experience.germany">Germany</p>
                 <ul>
-                    <li data-i18n="experience.dipp.b1">Worked with AI-assisted software solutions and technical-information processing workflows.</li>
-                    <li data-i18n="experience.dipp.b2">Analysed technical workflows, outputs and error patterns.</li>
-                    <li data-i18n="experience.dipp.b3">Supported structured technical documentation and project activities.</li>
+                    <li data-i18n="experience.dipp.b1">Engineered AI-assisted software routines and automated pipelines for structured technical data processing.</li>
+                    <li data-i18n="experience.dipp.b2">Conducted systematic error pattern analyses and output verification across software workflows.</li>
+                    <li data-i18n="experience.dipp.b3">Co-authored structured technical documentation and engineering specifications for software modules.</li>
                 </ul>
             </div>
         </article>
@@ -258,10 +645,10 @@
                     </div>
                     <span class="date" data-i18n="experience.ascent.date">Dec 2021 - Jul 2022</span>
                 </div>
-                <p class="location" data-i18n="experience.ascent.location">Client assignment: Clarivate Analytics</p>
+                <p class="location" data-i18n="experience.ascent.location">Client: Clarivate Analytics</p>
                 <ul>
-                    <li data-i18n="experience.ascent.b1">Worked with structured technical information in quality-focused processing workflows.</li>
-                    <li data-i18n="experience.ascent.b2">Supported formatting, validation and consistency-oriented tasks.</li>
+                    <li data-i18n="experience.ascent.b1">Processed large-scale structured patent and technical datasets under rigorous quality SLA standards.</li>
+                    <li data-i18n="experience.ascent.b2">Conducted data schema validation, cross-source consistency checks, and formatting verification.</li>
                 </ul>
             </div>
         </article>
@@ -278,9 +665,8 @@
                 </div>
                 <p class="location" data-i18n="experience.india">India</p>
                 <ul>
-                    <li data-i18n="experience.globallogic.b1">Worked with structured datasets, data preparation and quality-oriented workflows.</li>
-                    <li data-i18n="experience.globallogic.b2">Performed systematic data checking, validation and error analysis.</li>
-                    <li data-i18n="experience.globallogic.b3">Supported data-oriented analysis and technical documentation.</li>
+                    <li data-i18n="experience.globallogic.b1">Managed structured data preparation, labeling pipelines, and systematic quality assurance checks.</li>
+                    <li data-i18n="experience.globallogic.b2">Conducted rigorous error analysis on data feeds to identify anomalies and improve data cleanliness.</li>
                 </ul>
             </div>
         </article>
@@ -297,27 +683,8 @@
                 </div>
                 <p class="location" data-i18n="experience.hyderabad">Hyderabad, India</p>
                 <ul>
-                    <li data-i18n="experience.cognizant.b1">Worked with structured business, process and system data.</li>
-                    <li data-i18n="experience.cognizant.b2">Supported data maintenance, process tracking and quality controls.</li>
-                    <li data-i18n="experience.cognizant.b3">Documented process results and operational information.</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-                <div class="timeline-header">
-                    <div>
-                        <h3>Practitioner - CRM Operations</h3>
-                        <p class="company">Concentrix Daksh Services India Pvt. Ltd.</p>
-                    </div>
-                    <span class="date" data-i18n="experience.concentrix.date">Mar 2016 - May 2017</span>
-                </div>
-                <p class="location" data-i18n="experience.india">India</p>
-                <ul>
-                    <li data-i18n="experience.concentrix.b1">Worked in structured digital and process-oriented operational workflows.</li>
-                    <li data-i18n="experience.concentrix.b2">Supported data quality, issue analysis and structured information handling.</li>
+                    <li data-i18n="experience.cognizant.b1">Maintained business-critical relational datasets and executed data verification protocols.</li>
+                    <li data-i18n="experience.cognizant.b2">Monitored process tracking, automated reporting, and operational SLA adherence.</li>
                 </ul>
             </div>
         </article>
@@ -334,8 +701,8 @@
                 </div>
                 <p class="location" data-i18n="experience.hyderabad">Hyderabad, India</p>
                 <ul>
-                    <li data-i18n="experience.magus.b1">Gained professional experience in a software-engineering environment.</li>
-                    <li data-i18n="experience.magus.b2">Supported technical software and project-related activities.</li>
+                    <li data-i18n="experience.magus.b1">Developed foundational software engineering capabilities in software implementation and testing environments.</li>
+                    <li data-i18n="experience.magus.b2">Assisted in debugging, technical issue resolution, and system maintenance tasks.</li>
                 </ul>
             </div>
         </article>
@@ -343,267 +710,175 @@
     </div>
 </section>
 
-
-<section id="projects" class="section section-alt">
+<!-- EDUCATION SECTION -->
+<section id="education" class="section section-alt">
     <div class="section-heading">
-        <p class="section-label" data-i18n="projects.label">PROJECTS</p>
-        <h2 data-i18n="projects.title">Featured Projects</h2>
-        <p data-i18n="projects.subtitle">
-            Selected practical projects across cloud data engineering, AI and autonomous-driving technologies.
-        </p>
-    </div>
-
-    <div class="projects-grid">
-
-        <article class="project-card">
-            <div class="project-top"><span class="project-number">01</span><span class="project-year">2026</span></div>
-            <h3 data-i18n="projects.telemetry.title">Automotive Telemetry Streaming Platform</h3>
-            <p class="project-description" data-i18n="projects.telemetry.desc">
-                Designed a cloud-based architecture for ingesting, validating and storing vehicle telemetry data.
-            </p>
-            <div class="project-tags">
-                <span>GCP</span><span>Pub/Sub</span><span>BigQuery</span><span>Cloud Storage</span><span>Python</span><span>SQL</span>
-            </div>
-            <ul>
-                <li data-i18n="projects.telemetry.b1">Created Pub/Sub topics and subscriptions.</li>
-                <li data-i18n="projects.telemetry.b2">Designed partitioned and clustered BigQuery tables.</li>
-                <li data-i18n="projects.telemetry.b3">Created a separate path for invalid events.</li>
-                <li data-i18n="projects.telemetry.b4">Worked with IAM and GCP command-line tools.</li>
-            </ul>
-        </article>
-
-        <article class="project-card">
-            <div class="project-top"><span class="project-number">02</span><span class="project-year">2026</span></div>
-            <h3 data-i18n="projects.spark.title">Dataproc / PySpark Retail Data Pipeline</h3>
-            <p class="project-description" data-i18n="projects.spark.desc">
-                Built an end-to-end Spark ETL workflow using customer, order and salesman datasets.
-            </p>
-            <div class="project-tags">
-                <span>PySpark</span><span>Spark SQL</span><span>Dataproc</span><span>GCS</span><span>HDFS</span><span>Parquet</span>
-            </div>
-            <ul>
-                <li data-i18n="projects.spark.b1">Loaded JSON data from GCS and HDFS.</li>
-                <li data-i18n="projects.spark.b2">Converted source datasets to Parquet.</li>
-                <li data-i18n="projects.spark.b3">Combined regional datasets using UNION.</li>
-                <li data-i18n="projects.spark.b4">Joined customer, order and salesman data and generated an aggregated Retail Summary.</li>
-            </ul>
-        </article>
-
-        <article class="project-card">
-            <div class="project-top"><span class="project-number">03</span><span class="project-year" data-i18n="projects.thesis.year">Master Thesis</span></div>
-            <h3 data-i18n="projects.thesis.title">Scenario-Centric Autonomous Driving Dataset Pipeline</h3>
-            <p class="project-description" data-i18n="projects.thesis.desc">
-                Developing a CARLA-based dataset-generation and annotation pipeline for environment prediction.
-            </p>
-            <div class="project-tags">
-                <span>Python</span><span>CARLA</span><span>Pandas</span><span>YAML</span><span>JSON</span>
-            </div>
-            <ul>
-                <li data-i18n="projects.thesis.b1">Generated highway lane-change and merge scenarios.</li>
-                <li data-i18n="projects.thesis.b2">Recorded actor trajectories and lane information.</li>
-                <li data-i18n="projects.thesis.b3">Generated structured scene and frame annotations.</li>
-                <li data-i18n="projects.thesis.b4">Implemented dataset quality and continuity checks.</li>
-            </ul>
-        </article>
-
-        <article class="project-card">
-            <div class="project-top"><span class="project-number">04</span><span class="project-year">2026</span></div>
-            <h3>YOLOv8 Bicycle Detection</h3>
-            <p class="project-description" data-i18n="projects.yolo.desc">
-                Trained and evaluated a computer-vision model for bicycle detection using approximately 1,000 images.
-            </p>
-            <div class="project-tags"><span>Python</span><span>YOLOv8</span><span>Computer Vision</span><span>NVIDIA GPU</span></div>
-            <ul>
-                <li data-i18n="projects.yolo.b1">Prepared and validated image datasets.</li>
-                <li data-i18n="projects.yolo.b2">Trained and evaluated a YOLOv8 model.</li>
-                <li data-i18n="projects.yolo.b3">Achieved approximately 0.51 mAP50.</li>
-                <li data-i18n="projects.yolo.b4">Analysed inference errors and model results.</li>
-            </ul>
-        </article>
-
-        <article class="project-card">
-            <div class="project-top"><span class="project-number">05</span><span class="project-year">2026</span></div>
-            <h3 data-i18n="projects.interview.title">AI Interview Practice Agent</h3>
-            <p class="project-description" data-i18n="projects.interview.desc">
-                Built a local AI interview-practice workflow with speech input, local LLM processing and structured feedback.
-            </p>
-            <div class="project-tags">
-                <span>Python</span><span>FastAPI</span><span>Qwen3</span><span>Ollama</span><span>Whisper</span><span>Kokoro TTS</span>
-            </div>
-            <ul>
-                <li data-i18n="projects.interview.b1">Added speech-to-text using Whisper.</li>
-                <li data-i18n="projects.interview.b2">Integrated local Qwen3 through Ollama.</li>
-                <li data-i18n="projects.interview.b3">Implemented text-to-speech feedback.</li>
-                <li data-i18n="projects.interview.b4">Built API endpoints using FastAPI.</li>
-            </ul>
-        </article>
-
-        <article class="project-card">
-            <div class="project-top"><span class="project-number">06</span><span class="project-year">2026</span></div>
-            <h3 data-i18n="projects.jobmatch.title">AI Job Match Agent</h3>
-            <p class="project-description" data-i18n="projects.jobmatch.desc">
-                Developed an AI application for CV-to-job matching using structured LLM outputs and rule-based fallbacks.
-            </p>
-            <div class="project-tags">
-                <span>Python</span><span>Streamlit</span><span>Ollama</span><span>Pydantic</span><span>JSON Schema</span>
-            </div>
-            <ul>
-                <li data-i18n="projects.jobmatch.b1">Implemented structured skill matching.</li>
-                <li data-i18n="projects.jobmatch.b2">Integrated local LLM processing.</li>
-                <li data-i18n="projects.jobmatch.b3">Added JSON Schema and Pydantic validation.</li>
-                <li data-i18n="projects.jobmatch.b4">Developed rule-based fallback behaviour.</li>
-            </ul>
-        </article>
-
-    </div>
-</section>
-
-
-<section id="education" class="section">
-    <div class="section-heading">
-        <p class="section-label" data-i18n="education.label">EDUCATION</p>
+        <p class="section-label" data-i18n="education.label">ACADEMICS</p>
         <h2 data-i18n="education.title">Education</h2>
     </div>
 
     <div class="education-grid">
 
-        <article class="education-card">
-            <span class="education-status" data-i18n="education.progress">In Progress</span>
-            <h3 data-i18n="education.master.title">Master - Automotive Software Engineering</h3>
+        <article class="education-card highlight-card">
+            <span class="education-status in-progress" data-i18n="education.progress">In Progress · 90/120 ECTS</span>
+            <h3 data-i18n="education.master.title">M.Sc. Automotive Software Engineering</h3>
             <p class="institution">Technische Universität Chemnitz</p>
-            <p data-i18n="education.germany">Germany</p>
-            <p class="education-detail" data-i18n="education.master.ects">90 / 120 ECTS completed</p>
-            <p class="education-detail" data-i18n="education.master.thesis">
-                Current thesis: Generation and Annotation of Scenario-Centric Datasets for Environment Prediction in Autonomous Driving
-            </p>
+            <p class="location-tag" data-i18n="education.germany">Germany</p>
+            <div class="education-detail">
+                <p><strong>Master Thesis:</strong> Generation and Annotation of Scenario-Centric Datasets for Environment Prediction in Autonomous Driving (CARLA simulator).</p>
+            </div>
         </article>
 
         <article class="education-card">
-            <span class="education-status completed" data-i18n="education.completed">Completed</span>
-            <h3 data-i18n="education.mtech.title">M.Tech - Embedded Systems</h3>
+            <span class="education-status completed" data-i18n="education.completed">Completed · First Class</span>
+            <h3 data-i18n="education.mtech.title">M.Tech. Embedded Systems</h3>
             <p class="institution">MLR Institute of Technology</p>
-            <p data-i18n="education.mtech.meta">India · 2017 - 2019</p>
-            <p class="education-detail" data-i18n="education.mtech.grade">First Class · CGPA 7.33</p>
+            <p class="location-tag" data-i18n="education.mtech.meta">India · 2017 - 2019</p>
+            <div class="education-detail">
+                <p>First Class with Distinction · CGPA 7.33</p>
+            </div>
         </article>
 
         <article class="education-card">
-            <span class="education-status completed" data-i18n="education.completed">Completed</span>
-            <h3 data-i18n="education.btech.title">B.Tech - Electrical & Electronics Engineering</h3>
-            <p class="institution">Jawaharlal Nehru Technological University Hyderabad</p>
-            <p data-i18n="education.btech.meta">India · 2009 - 2013</p>
-            <p class="education-detail" data-i18n="education.btech.grade">First Class · 62.67%</p>
+            <span class="education-status completed" data-i18n="education.completed">Completed · First Class</span>
+            <h3 data-i18n="education.btech.title">B.Tech. Electrical & Electronics Engineering</h3>
+            <p class="institution">JNTU Hyderabad</p>
+            <p class="location-tag" data-i18n="education.btech.meta">India · 2009 - 2013</p>
+            <div class="education-detail">
+                <p>First Class · 62.67%</p>
+            </div>
         </article>
 
     </div>
 </section>
 
-
-<section class="section section-alt">
-    <div class="section-heading">
-        <p class="section-label" data-i18n="certs.label">LEARNING</p>
-        <h2 data-i18n="certs.title">Certifications & Programs</h2>
-    </div>
-
-    <div class="certification-grid">
-        <article class="cert-card">
-            <h3>Google Cloud Data Engineering Program</h3>
-            <p data-i18n="certs.gcp">Data engineering, GCP, Dataproc, PySpark and Spark SQL</p>
-        </article>
-
-        <article class="cert-card">
-            <h3>Python Essentials 1 & 2</h3>
-            <p>Cisco / OpenEDG</p>
-        </article>
-
-        <article class="cert-card">
-            <h3>SQL Basic</h3>
-            <p>HackerRank</p>
-        </article>
-
-        <article class="cert-card">
-            <h3>Goethe-Zertifikat B1</h3>
-            <p data-i18n="certs.german">German language certification</p>
-        </article>
-    </div>
-</section>
-
-
+<!-- CERTIFICATIONS & LANGUAGES SECTION -->
 <section class="section">
     <div class="section-heading">
-        <p class="section-label" data-i18n="languages.label">LANGUAGES</p>
-        <h2 data-i18n="languages.title">Languages</h2>
+        <p class="section-label" data-i18n="certs.label">CREDENTIALS</p>
+        <h2 data-i18n="certs.title">Certifications & Languages</h2>
     </div>
 
-    <div class="language-grid">
-        <article class="language-card">
-            <h3 data-i18n="languages.german">German</h3>
-            <p data-i18n="languages.germanLevel">Goethe B1 certified</p>
-        </article>
+    <div class="credentials-wrapper">
+        <div class="certification-grid">
+            <article class="cert-card">
+                <div class="cert-badge">GCP</div>
+                <h3>Google Cloud Data Engineering</h3>
+                <p data-i18n="certs.gcp">Dataproc, PySpark, BigQuery, Pub/Sub & Dataflow pipelines</p>
+            </article>
 
-        <article class="language-card">
-            <h3 data-i18n="languages.english">English</h3>
-            <p data-i18n="languages.englishLevel">IELTS B2</p>
-        </article>
+            <article class="cert-card">
+                <div class="cert-badge">Python</div>
+                <h3>Python Essentials 1 & 2</h3>
+                <p>Cisco / OpenEDG</p>
+            </article>
 
-        <article class="language-card">
-            <h3>Telugu</h3>
-            <p data-i18n="languages.teluguLevel">First language</p>
-        </article>
+            <article class="cert-card">
+                <div class="cert-badge">SQL</div>
+                <h3>SQL Certified</h3>
+                <p>HackerRank (Intermediate / Advanced Problem Solving)</p>
+            </article>
+
+            <article class="cert-card">
+                <div class="cert-badge">DE</div>
+                <h3>Goethe-Zertifikat B1</h3>
+                <p data-i18n="certs.german">German language certified (Goethe-Institut)</p>
+            </article>
+        </div>
+
+        <div class="language-grid">
+            <article class="language-card">
+                <div class="lang-flag">🇩🇪</div>
+                <h3 data-i18n="languages.german">German</h3>
+                <p class="lang-level" data-i18n="languages.germanLevel">Goethe B1 Certified</p>
+            </article>
+
+            <article class="language-card">
+                <div class="lang-flag">🇬🇧</div>
+                <h3 data-i18n="languages.english">English</h3>
+                <p class="lang-level" data-i18n="languages.englishLevel">IELTS B2 (Professional Working Proficiency)</p>
+            </article>
+
+            <article class="language-card">
+                <div class="lang-flag">🇮🇳</div>
+                <h3>Telugu</h3>
+                <p class="lang-level" data-i18n="languages.teluguLevel">Native / First Language</p>
+            </article>
+        </div>
     </div>
 </section>
 
-
+<!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
     <div class="contact-container">
-        <p class="section-label light-label" data-i18n="contact.label">CONTACT</p>
-        <h2 data-i18n="contact.title">Let's Connect</h2>
-
-        <p data-i18n="contact.p1">
-            I am interested in opportunities in data engineering, cloud technologies, AI/ML and automotive software.
-        </p>
-
-        <p data-i18n="contact.p2">
-            If you would like to discuss a position, technical project or collaboration, feel free to contact me.
-        </p>
+        <div class="contact-header">
+            <p class="section-label light-label" data-i18n="contact.label">LET'S CONNECT</p>
+            <h2 data-i18n="contact.title">Ready to Add Value to Your Team</h2>
+            <p data-i18n="contact.p1">
+                I am actively seeking Master Thesis, Working Student, or Full-Time opportunities in Cloud Data Engineering, AI/ML, and Automotive Software Engineering across Germany.
+            </p>
+        </div>
 
         <div class="contact-actions">
-            <a href="mailto:gandupradeep2026@gmail.com" class="btn contact-primary" data-i18n="contact.email">Email Me</a>
+            <a href="mailto:gandupradeep2026@gmail.com" class="btn contact-primary" data-i18n="contact.email">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Send Email</span>
+            </a>
+
+            <button class="btn contact-secondary copy-email-btn" data-email="gandupradeep2026@gmail.com" id="contactCopyBtn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span data-i18n="contact.copy">Copy Email Address</span>
+            </button>
 
             <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer" class="btn contact-secondary">
-                LinkedIn
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
             </a>
 
             <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer" class="btn contact-secondary">
-                GitHub
-            </a>
-
-            <a
-                href="assets/Pradeep_Gandu_CV_EN.pdf"
-                target="_blank"
-                rel="noopener"
-                class="btn contact-secondary"
-                id="contactCvButton"
-                data-i18n="contact.cv"
-            >
-                CV
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
             </a>
         </div>
 
         <div class="contact-details">
-            <span data-i18n="contact.location">Chemnitz, Germany</span>
-            <span>gandupradeep2026@gmail.com</span>
+            <span class="detail-item">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span data-i18n="contact.location">Chemnitz, Germany (Open to Relocation)</span>
+            </span>
+            <span class="detail-item">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>gandupradeep2026@gmail.com</span>
+            </span>
         </div>
     </div>
 </section>
 
 </main>
 
+<!-- INTERACTIVE ARCHITECTURE MODAL -->
+<div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+        <div id="modalBody" class="modal-body">
+            <!-- Dynamically populated by script.js -->
+        </div>
+    </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toastMessage">Email copied to clipboard!</span>
+</div>
 
 <footer>
-    <p>
-        © <span id="currentYear"></span> Pradeep Gandu.
-        <span data-i18n="footer.text">Built with HTML, CSS & JavaScript.</span>
-    </p>
+    <div class="footer-container">
+        <p>
+            © <span id="currentYear"></span> Pradeep Gandu. 
+            <span data-i18n="footer.text">Designed & built for high-performance engineering roles.</span>
+        </p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
