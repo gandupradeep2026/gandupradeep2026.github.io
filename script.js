@@ -1,5 +1,5 @@
 /* =========================================================
-   BILINGUAL DATA (EN & DE) WITH FLAGSHIP PROJECTS
+   BILINGUAL DATA (EN & DE) DERIVED FROM CANDIDATE.MD
 ========================================================= */
 
 const translations = {
@@ -29,7 +29,8 @@ const translations = {
         "stats.ects": "ECTS · TU Chemnitz",
         "stats.cloud": "Cloud & Dataflow",
         "stats.repos": "Projects with CI/CD",
-        "stats.languages": "German & English",
+        "stats.languages": "C1 Certified Languages",
+        "stats.languagesValue": "German C1 · English C1",
 
         // Recruiter Fast-Track (Snapshot)
         "snapshot.badge": "Recruiter Fast-Track",
@@ -38,11 +39,13 @@ const translations = {
         "snapshot.targetRolesTitle": "Target Roles",
         "snapshot.targetRolesDesc": "Cloud Data Engineer · Data Platform Engineer · AI/ML Engineer · Automotive Software Engineer",
         "snapshot.locationTitle": "Location & Mobility",
-        "snapshot.locationDesc": "Chemnitz, Germany · Open to nationwide relocation (Munich, Stuttgart, Berlin, Frankfurt, etc.) · Hybrid or Remote",
+        "snapshot.locationDesc": "Chemnitz, Germany · Willing to relocate nationwide (Munich, Stuttgart, Berlin, Frankfurt, etc.) · Hybrid or Remote",
         "snapshot.visaTitle": "Work Authorization & Availability",
-        "snapshot.visaDesc": "Eligible for Master Thesis / Working Student / Full-Time upon thesis in Germany (EU Student Visa & 18-month Jobseeker entitlement)",
+        "snapshot.visaDesc": "Legal resident in Germany (§16b AufenthG). Immediately available for Working Student (up to 20h/wk) or Master Thesis. Permanent full-time available from Jan 01, 2027 (immediately upon thesis submission Dec 28, 2026), with immediate dual-track onboarding as working student or project associate. 18-month German Jobseeker Visa (§20 Abs. 3 Nr. 1) & EU Blue Card with NO labor market priority check.",
+        "snapshot.langTitle": "Verified Language Proficiencies",
+        "snapshot.langDesc": "German: C1 (TU Chemnitz UNIcert III / Niveau C1 passed 31.08.2026; Goethe certified) · English: C1 / Fluent (Professional working proficiency; international master's degree in English) · Hindi: Fluent · Telugu: Native",
         "snapshot.stackTitle": "Core Technology Stack",
-        "snapshot.stackDesc": "GCP (BigQuery, Pub/Sub, Dataflow), Apache Beam, PySpark, Python, SQL, CARLA, Docker, CI/CD, UDS",
+        "snapshot.stackDesc": "GCP (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS (EC2, S3, RDS), Apache Beam, PySpark, Spark SQL, Python, SQL, CARLA Simulator, Docker, Apache Airflow, Linux/Bash, UDS (ISO 14229), CAN-Bus, CI/CD Actions",
         "snapshot.btnProjects": "Explore Flagship Projects",
         "snapshot.copyEmail": "Copy Email Address",
 
@@ -60,6 +63,7 @@ const translations = {
         "projects.btnArchitecture": "View Architecture 📐",
         "projects.btnThesisDetails": "Explore Thesis Architecture 📐",
         "projects.btnPipelineDetails": "View Pipeline Workflow 📐",
+        "projects.btnScenarioDetails": "View Scenario Specs 📐",
 
         // Project 1: Automotive Telemetry GCP
         "projects.telemetry.title": "Automotive Telemetry Streaming Platform",
@@ -101,13 +105,13 @@ const translations = {
         "projects.spark.b3": "Leveraged Spark DataFrame DSL and Spark SQL for multi-table relational joins, broadcast joins, and regional unions.",
         "projects.spark.b4": "Aggregated executive retail KPIs and customer summary tables with lazy evaluation and memory management.",
 
-        // Project 6: AI Interview Practice & Job Match Agents
-        "projects.interview.title": "Voice AI Interview & Resume Intelligence Agents",
-        "projects.interview.desc": "Suite of local AI agents featuring real-time Whisper speech-to-text, local LLM evaluation (Qwen3/Ollama), Kokoro TTS feedback, and Pydantic-validated CV matching.",
-        "projects.interview.b1": "Developed an interactive voice-driven interview simulation using OpenAI Whisper for low-latency speech transcription.",
-        "projects.interview.b2": "Integrated local Qwen3 model via Ollama to generate structured, STAR-method interview evaluation feedback.",
-        "projects.interview.b3": "Engineered automated text-to-speech audio playback using lightweight Kokoro TTS synthesis.",
-        "projects.interview.b4": "Built ATS job-match agent with strict JSON Schema and Pydantic validation with rule-based fallback handling.",
+        // Project 6: CARLA Autonomous Driving Scenario Development
+        "projects.carlaScenarios.title": "CARLA Autonomous Driving Scenario Development",
+        "projects.carlaScenarios.desc": "Engineered complex autonomous vehicle control logic and multi-agent simulation scenarios in CARLA including pedestrian detection, traffic-light interaction, and collision avoidance.",
+        "projects.carlaScenarios.b1": "Developed multiple autonomous driving scenarios in CARLA: pedestrian crossing, traffic-light detection, and vehicle following.",
+        "projects.carlaScenarios.b2": "Implemented dynamic vehicle-control behaviour responding to road users, speed regulations, and emergency braking.",
+        "projects.carlaScenarios.b3": "Engineered overtaking, safe lane changing, and multi-bus-stop navigation and stopping sequences.",
+        "projects.carlaScenarios.b4": "Calibrated sensor inputs, weather models, and simulation maps for reproducible test scenarios.",
 
         // About Section
         "about.label": "PROFILE",
@@ -141,27 +145,33 @@ const translations = {
         // Experience Section
         "experience.label": "CAREER",
         "experience.title": "Professional Experience",
-        "experience.subtitle": "Demonstrated background spanning AI solutions, technical data workflows, and software quality assurance.",
+        "experience.subtitle": "Demonstrated engineering background spanning AI solutions, machine learning data workflows, and corporate client engagements.",
         "experience.germany": "Germany",
         "experience.india": "India",
         "experience.hyderabad": "Hyderabad, India",
         "experience.dipp.date": "Jan 2025 - Jul 2025",
-        "experience.dipp.b1": "Engineered AI-assisted software routines and automated pipelines for structured technical data processing.",
-        "experience.dipp.b2": "Conducted systematic error pattern analyses and output verification across software workflows.",
-        "experience.dipp.b3": "Co-authored structured technical documentation and engineering specifications for software modules.",
+        "experience.dipp.b1": "Integrated AI capabilities into an existing CRM/business platform using Python, FastAPI, and local LLMs via Ollama.",
+        "experience.dipp.b2": "Engineered Retrieval-Augmented Generation (RAG) pipelines including text processing, chunking, embeddings, and vector retrieval.",
+        "experience.dipp.b3": "Implemented Model Context Protocol (MCP) tooling and IONOS cloud AI services to connect enterprise data with AI components.",
         "experience.ascent.date": "Dec 2021 - Jul 2022",
         "experience.ascent.location": "Client: Clarivate Analytics",
-        "experience.ascent.b1": "Processed large-scale structured patent and technical datasets under rigorous quality SLA standards.",
-        "experience.ascent.b2": "Conducted data schema validation, cross-source consistency checks, and formatting verification.",
+        "experience.ascent.b1": "Analyzed, translated, and normalized German patent abstracts, claims, technical descriptions, and metadata into English.",
+        "experience.ascent.b2": "Extracted and validated structured technical patent information under rigorous SLA quality controls.",
         "experience.globallogic.date": "Oct 2020 - Dec 2021",
-        "experience.globallogic.b1": "Managed structured data preparation, labeling pipelines, and systematic quality assurance checks.",
-        "experience.globallogic.b2": "Conducted rigorous error analysis on data feeds to identify anomalies and improve data cleanliness.",
+        "experience.globallogic.b1": "Curated, annotated, cleaned, and classified German retail datasets for machine-learning model training and NLP pipelines.",
+        "experience.globallogic.b2": "Utilized Python, Pandas, NumPy, and scikit-learn for dataset preparation, train/test splitting, and hyperparameter tuning.",
+        "experience.globallogic.b3": "Evaluated classification models using accuracy, precision, recall, and F1-score matrices to optimize automation workflows.",
         "experience.cognizant.date": "Sep 2017 - May 2019",
-        "experience.cognizant.b1": "Maintained business-critical relational datasets and executed data verification protocols.",
-        "experience.cognizant.b2": "Monitored process tracking, automated reporting, and operational SLA adherence.",
+        "experience.cognizant.b1": "Supported Facebook Marketplace automation through human-in-the-loop ML evaluation, metadata processing, and validation.",
+        "experience.cognizant.b2": "Reviewed automated classification outputs, corrected errors, and provided human feedback to train ML algorithms.",
+        "experience.cognizant.b3": "Contributed to measurably improving Facebook Marketplace automation accuracy from ~64% to 76%.",
+        "experience.concentrix.date": "Mar 2016 - May 2017",
+        "experience.concentrix.b1": "Supported automation quality for Google AdWords / Ads processes through systematic data annotation and validation.",
+        "experience.concentrix.b2": "Evaluated model predictions, investigated edge-case errors, and supplied verified training datasets.",
+        "experience.concentrix.b3": "Helped drive automation accuracy improvements from approximately 72% to 79%.",
         "experience.magus.date": "Jun 2013 - Jun 2015",
-        "experience.magus.b1": "Developed foundational software engineering capabilities in software implementation and testing environments.",
-        "experience.magus.b2": "Assisted in debugging, technical issue resolution, and system maintenance tasks.",
+        "experience.magus.b1": "Developed full-stack enterprise web application modules using Python, SQL Server, and RESTful web services.",
+        "experience.magus.b2": "Integrated external APIs, SOAP/JSON endpoints, and managed deployments on Apache Tomcat and AWS Linux environments.",
 
         // Education Section
         "education.label": "ACADEMICS",
@@ -179,11 +189,11 @@ const translations = {
         "certs.label": "CREDENTIALS",
         "certs.title": "Certifications & Languages",
         "certs.gcp": "Dataproc, PySpark, BigQuery, Pub/Sub & Dataflow pipelines",
-        "certs.german": "German language certified (Goethe-Institut)",
         "languages.german": "German",
-        "languages.germanLevel": "Goethe B1 Certified",
+        "languages.germanLevel": "C1 Certified (TU Chemnitz UNIcert III / Goethe certified)",
         "languages.english": "English",
-        "languages.englishLevel": "IELTS B2 (Professional Working Proficiency)",
+        "languages.englishLevel": "C1 / Fluent (Professional Working Proficiency; Master's in English)",
+        "languages.hindiLevel": "Fluent",
         "languages.teluguLevel": "Native / First Language",
 
         // Contact
@@ -225,7 +235,8 @@ const translations = {
         "stats.ects": "ECTS · TU Chemnitz",
         "stats.cloud": "Cloud & Dataflow",
         "stats.repos": "Projekte mit CI/CD",
-        "stats.languages": "Deutsch & Englisch",
+        "stats.languages": "C1 Zertifizierte Sprachen",
+        "stats.languagesValue": "Deutsch C1 · Englisch C1",
 
         // Recruiter Fast-Track (Snapshot)
         "snapshot.badge": "Recruiter Schnellübersicht",
@@ -236,9 +247,11 @@ const translations = {
         "snapshot.locationTitle": "Standort & Mobilität",
         "snapshot.locationDesc": "Chemnitz, Deutschland · Deutschlandweit umzugsbereit (München, Stuttgart, Berlin, Frankfurt usw.) · Hybrid oder Remote",
         "snapshot.visaTitle": "Arbeitserlaubnis & Verfügbarkeit",
-        "snapshot.visaDesc": "Berechtigt für Masterarbeit / Werkstudent / Vollzeit nach Masterabschluss in Deutschland (EU-Studentenvisum & 18 Monate Arbeitsplatzsuche-Anspruch)",
+        "snapshot.visaDesc": "Rechtmäßiger Aufenthalt in Deutschland (§16b AufenthG). Ab sofort verfügbar als Werkstudent (bis zu 20 Std./Woche) oder für eine Masterarbeit. Vollzeit-Festeinstieg ab dem 01. Januar 2027 (sofort nach Abgabe der Masterarbeit am 28.12.2026), gerne mit sofortigem Dual-Track Einstieg als Werkstudent oder Projektmitarbeiter. 18-monatiger Anspruch auf Arbeitsplatzsuche-Visum (§20 Abs. 3 Nr. 1) & Blaue Karte EU ohne Vorrangprüfung.",
+        "snapshot.langTitle": "Verifizierte Sprachkenntnisse",
+        "snapshot.langDesc": "Deutsch: C1 (TU Chemnitz UNIcert III / Niveau C1 bestanden am 31.08.2026; Goethe zertifiziert) · Englisch: C1 / Fließend (Verhandlungssicher im Beruf; internationales englischsprachiges Masterstudium) · Hindi: Fließend · Telugu: Muttersprache",
         "snapshot.stackTitle": "Technologie-Kernstack",
-        "snapshot.stackDesc": "GCP (BigQuery, Pub/Sub, Dataflow), Apache Beam, PySpark, Python, SQL, CARLA, Docker, CI/CD, UDS",
+        "snapshot.stackDesc": "GCP (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS (EC2, S3, RDS), Apache Beam, PySpark, Spark SQL, Python, SQL, CARLA Simulator, Docker, Apache Airflow, Linux/Bash, UDS (ISO 14229), CAN-Bus, CI/CD Actions",
         "snapshot.btnProjects": "Flagship-Projekte ansehen",
         "snapshot.copyEmail": "E-Mail-Adresse kopieren",
 
@@ -256,6 +269,7 @@ const translations = {
         "projects.btnArchitecture": "Architektur ansehen 📐",
         "projects.btnThesisDetails": "Masterarbeits-Architektur 📐",
         "projects.btnPipelineDetails": "Pipeline-Workflow ansehen 📐",
+        "projects.btnScenarioDetails": "Szenario-Spezifikation 📐",
 
         // Project 1: Automotive Telemetry GCP
         "projects.telemetry.title": "Automotive Telemetrie-Streaming-Plattform",
@@ -297,13 +311,13 @@ const translations = {
         "projects.spark.b3": "Nutzte Spark DataFrame DSL und Spark SQL für relationale Joins, Broadcast-Joins und regionale Unions.",
         "projects.spark.b4": "Erzeugte aggregierte Retail-Kennzahlen und Kundenübersichten mit optimiertem Speichermanagement.",
 
-        // Project 6: AI Interview Practice & Job Match Agents
-        "projects.interview.title": "Sprachgestützte KI-Interview- & Matching-Agenten",
-        "projects.interview.desc": "Lokale KI-Agenten mit Whisper Speech-to-Text in Echtzeit, lokaler LLM-Evaluierung (Qwen3/Ollama), Kokoro TTS-Feedback und Pydantic-validiertem CV-Matching.",
-        "projects.interview.b1": "Entwickelte interaktive Sprach-Interviewsimulation mit OpenAI Whisper für latenzarme Transkription.",
-        "projects.interview.b2": "Integrierte lokales Qwen3-Modell über Ollama zur Erzeugung strukturierter STAR-Feedbackberichte.",
-        "projects.interview.b3": "Implementierte automatisierte Sprachausgabe mit leichtgewichtigem Kokoro Text-to-Speech.",
-        "projects.interview.b4": "Konzipierte ATS-Job-Matching-Agenten mit strikter JSON Schema- und Pydantic-Validierung.",
+        // Project 6: CARLA Autonomous Driving Scenario Development
+        "projects.carlaScenarios.title": "CARLA Szenariodesign für autonomes Fahren",
+        "projects.carlaScenarios.desc": "Entwicklung komplexer Fahrzeugsteuerungslogik und Multi-Agenten-Simulationsszenarien in CARLA inklusive Fußgängererkennung, Ampelsteuerung und Kollisionsvermeidung.",
+        "projects.carlaScenarios.b1": "Entwickelte diverse Szenarien in CARLA: Fußgängerüberwege, Ampelerkennung und Fahrzeugfolgeverhalten.",
+        "projects.carlaScenarios.b2": "Implementierte dynamisches Steuerungsverhalten in Reaktion auf Verkehrsteilnehmer und Notbremsungen.",
+        "projects.carlaScenarios.b3": "Konzipierte Überholmanöver, sichere Spurwechsel und Haltestellen-Navigationsabläufe.",
+        "projects.carlaScenarios.b4": "Kalibrierte Sensordaten, Wettermodelle und Simulationskarten für reproduzierbare Testläufe.",
 
         // About Section
         "about.label": "PROFIL",
@@ -337,27 +351,33 @@ const translations = {
         // Experience Section
         "experience.label": "KARRIERE",
         "experience.title": "Berufserfahrung",
-        "experience.subtitle": "Erfahrung in Softwareentwicklung, technischen Datenprozessen und Qualitätssicherung.",
+        "experience.subtitle": "Erfahrung in Softwareentwicklung, technischen Datenprozessen und Unternehmensprojekten.",
         "experience.germany": "Deutschland",
         "experience.india": "Indien",
         "experience.hyderabad": "Hyderabad, Indien",
         "experience.dipp.date": "Jan. 2025 - Jul. 2025",
-        "experience.dipp.b1": "Entwickelte KI-gestützte Softwareroutinen und Workflows zur strukturierten Verarbeitung technischer Daten.",
-        "experience.dipp.b2": "Führte systematische Fehlermusteranalysen und Qualitätsprüfungen durch.",
-        "experience.dipp.b3": "Erstellte strukturierte technische Dokumentationen und Spezifikationen.",
+        "experience.dipp.b1": "Integrierte KI-Funktionen in eine CRM-/Unternehmensplattform mittels Python, FastAPI und lokaler LLMs über Ollama.",
+        "experience.dipp.b2": "Entwickelte Retrieval-Augmented Generation (RAG) Pipelines mit Dokumentenverarbeitung, Chunking und Vektorsuche.",
+        "experience.dipp.b3": "Implementierte Model Context Protocol (MCP) Tools und IONOS Cloud KI-Dienste zur Verknüpfung von Geschäftsdaten mit KI.",
         "experience.ascent.date": "Dez. 2021 - Jul. 2022",
         "experience.ascent.location": "Kunde: Clarivate Analytics",
-        "experience.ascent.b1": "Verarbeitete strukturierte Patent- und Fachdatensätze unter Einhaltung strenger Qualitäts-SLAs.",
-        "experience.ascent.b2": "Führte Schemavalidierung, Quellabgleiche und Formatierungsprüfungen durch.",
+        "experience.ascent.b1": "Analysierte, übersetzte und normalisierte deutsche Patenttexte, Ansprüche, Beschreibungen und Metadaten ins Englische.",
+        "experience.ascent.b2": "Extrahierte und validierte strukturierte Fachdaten unter Einhaltung strenger Qualitäts-SLAs.",
         "experience.globallogic.date": "Okt. 2020 - Dez. 2021",
-        "experience.globallogic.b1": "Verwaltete Datensatzaufbereitung, Annotationspipelines und Qualitätskontrollen.",
-        "experience.globallogic.b2": "Analysierte Datenströme systematisch zur Erkennung von Datenanomalien.",
+        "experience.globallogic.b1": "Kuratierte, annotierte und bereinigte deutsche Retail-Datensätze für ML-Modelltraining und NLP-Pipelines.",
+        "experience.globallogic.b2": "Nutzte Python, Pandas, NumPy und scikit-learn für Datenaufbereitung, Train/Test-Splitting und Hyperparameter-Tuning.",
+        "experience.globallogic.b3": "Evaluierte Klassifikationsmodelle anhand von Accuracy, Precision, Recall und F1-Score zur Prozessoptimierung.",
         "experience.cognizant.date": "Sep. 2017 - Mai 2019",
-        "experience.cognizant.b1": "Pflegte relationale Geschäftsdaten und führte Verifikationsprotokolle aus.",
-        "experience.cognizant.b2": "Verfolgte Prozessabläufe und stellte operative SLA-Konformität sicher.",
+        "experience.cognizant.b1": "Unterstützte die Facebook Marketplace Automatisierung durch Human-in-the-Loop ML-Evaluation und Validierung.",
+        "experience.cognizant.b2": "Überprüfte automatische Klassifikationsergebnisse, korrigierte Fehler und lieferte Feedback für Algorithmen.",
+        "experience.cognizant.b3": "Trug zur messbaren Steigerung der Facebook Marketplace Automatisierungsgenauigkeit von ~64 % auf 76 % bei.",
+        "experience.concentrix.date": "Mär. 2016 - Mai 2017",
+        "experience.concentrix.b1": "Unterstützte Automatisierungsqualität bei Google AdWords / Ads durch systematische Datenannotation und Validierung.",
+        "experience.concentrix.b2": "Evaluierte Modellvorhersagen, untersuchte Randfälle und stellte geprüfte Trainingsdaten bereit.",
+        "experience.concentrix.b3": "Trug zur Steigerung der Automatisierungsqualität von ca. 72 % auf 79 % bei.",
         "experience.magus.date": "Jun. 2013 - Jun. 2015",
-        "experience.magus.b1": "Sammelte praktische Erfahrungen in Implementierungs- und Testumgebungen.",
-        "experience.magus.b2": "Unterstützte bei Fehleranalysen und Softwarewartungsaufgaben.",
+        "experience.magus.b1": "Entwickelte Full-Stack Webanwendungsmodule mit Python, SQL Server und RESTful Web Services.",
+        "experience.magus.b2": "Integrierte externe APIs, SOAP/JSON-Endpunkte und betreute Bereitstellungen unter Apache Tomcat und AWS Linux.",
 
         // Education Section
         "education.label": "AUSBILDUNG",
@@ -375,11 +395,11 @@ const translations = {
         "certs.label": "WEITERBILDUNG",
         "certs.title": "Zertifikate & Sprachen",
         "certs.gcp": "Dataproc, PySpark, BigQuery, Pub/Sub und Dataflow-Pipelines",
-        "certs.german": "Deutsch-Zertifikat (Goethe-Institut)",
         "languages.german": "Deutsch",
-        "languages.germanLevel": "Goethe B1 zertifiziert",
+        "languages.germanLevel": "C1 zertifiziert (TU Chemnitz UNIcert III / Goethe zertifiziert)",
         "languages.english": "Englisch",
-        "languages.englishLevel": "IELTS B2 (Verhandlungssicher im Beruf)",
+        "languages.englishLevel": "C1 / Fließend (Verhandlungssicher im Beruf; Masterstudium auf Englisch)",
+        "languages.hindiLevel": "Fließend",
         "languages.teluguLevel": "Erstsprache / Muttersprache",
 
         // Contact
@@ -746,66 +766,68 @@ const projectArchitectures = {
         }
     },
 
-    aiagent: {
+    carlaScenarios: {
         en: {
-            title: "Voice AI Interview & Resume Intelligence Agents",
-            subtitle: "FastAPI · Whisper STT · Ollama (Qwen3) · Kokoro TTS · Streamlit · Pydantic",
-            flow: `[User Voice Input via Web Audio / Microphone]
+            title: "CARLA Autonomous Driving Scenario Development",
+            subtitle: "Python · CARLA Simulator · ADAS Vehicle-Control Logic · Scenario Development",
+            flow: `[CARLA Open-Source Autonomous Driving Simulation Environment]
                                 │
                                 ▼
-         [OpenAI Whisper: Low-Latency Speech-to-Text Transcription]
+         [Scenario Configuration & Road Environment Setup]
+            ├─ Town Maps, Weather Models & Actor Spawning
+            ├─ Pedestrians, Bicycles, Surrounding Vehicles & Buses
+            └─ Traffic Signal Systems & Zebra-Crossing Infrastructure
                                 │
                                 ▼
-         [FastAPI Application Controller]
-            ├─ Prompt Engineering with STAR Interview Criteria
-            ├─ Local LLM Reasoning: Qwen3 via Ollama Engine
-            └─ Pydantic / JSON Schema Validation Layer
+         [Vehicle Control Logic & Decision-Making Layer]
+            ├─ Dynamic Distance Monitoring & Collision Avoidance
+            ├─ Controlled Overtaking & Lane-Change Execution
+            └─ Bus-Stop Navigation & Precision Parking Manoeuvres
                                 │
                                 ▼
-         [Feedback & Audio Synthesis]
-            ├─ Real-Time Text Evaluation Breakdown
-            └─ Kokoro TTS: Audio Response Playback`,
+         [Continuous Evaluation: Telemetry Logs & Performance Metrics]`,
             challenges: [
-                "Achieving responsive voice interaction with local model execution without cloud API dependency.",
-                "Enforcing structured JSON outputs from local LLMs using Pydantic models with robust fallback handlers.",
-                "Designing semantic skill matching between candidate CVs and complex job descriptions."
+                "Developing deterministic autonomous vehicle-control behavior in response to unexpected pedestrian crossings and traffic signals.",
+                "Implementing multi-agent decision logic for safe overtaking and lane-change maneuvers without simulator collisions.",
+                "Calibrating sensor detection parameters across diverse simulated weather and lighting conditions."
             ],
             metrics: [
-                { val: "100% Local", label: "No Cloud API Costs / Private" },
-                { val: "Whisper", label: "High-Accuracy Speech-to-Text" },
-                { val: "Pydantic", label: "Guaranteed Schema Validation" }
+                { val: "9+ Scenarios", label: "Implemented Driving Scenarios" },
+                { val: "CARLA", label: "Simulation Platform" },
+                { val: "Python", label: "Vehicle Control Logic" }
             ],
-            githubUrl: "https://github.com/gandupradeep2026/pradeep-ai-interview-agent"
+            githubUrl: "https://github.com/gandupradeep2026"
         },
         de: {
-            title: "Sprachgestützte KI-Interview- & Matching-Agenten",
-            subtitle: "FastAPI · Whisper STT · Ollama (Qwen3) · Kokoro TTS · Streamlit · Pydantic",
-            flow: `[Spracheingabe des Nutzers über Mikrofon]
+            title: "CARLA Szenariodesign für autonomes Fahren",
+            subtitle: "Python · CARLA Simulator · ADAS Fahrzeugsteuerungslogik · Szenariodesign",
+            flow: `[CARLA Simulationsumgebung für autonomes Fahren]
                                 │
                                 ▼
-         [OpenAI Whisper: Latenzarme Speech-to-Text Transkription]
+         [Szenariokonfiguration & Umgebungsparameter]
+            ├─ Karten, Wettermodelle & Akteur-Spawning
+            ├─ Fußgänger, Fahrräder, Umgebungsfahrzeuge & Busse
+            └─ Ampelsysteme & Zebrastreifen-Infrastruktur
                                 │
                                 ▼
-         [FastAPI Anwendungs-Controller]
-            ├─ Prompt Engineering mit STAR-Interviewkriterien
-            ├─ Lokale LLM-Inferenz: Qwen3 über Ollama
-            └─ Pydantic / JSON Schema Validierungsschicht
+         [Fahrzeugsteuerungslogik & Entscheidungsschicht]
+            ├─ Dynamische Abstandsüberwachung & Kollisionsvermeidung
+            ├─ Kontrollierte Überhol- & Spurwechselmanöver
+            └─ Haltestellen-Navigation & Einparksequenzen
                                 │
                                 ▼
-         [Feedback-Generierung & Audiosynthese]
-            ├─ Strukturierte Textbewertung
-            └─ Kokoro TTS: Natürliche Sprachausgabe`,
+         [Evaluation & Logging von Telemetriedaten]`,
             challenges: [
-                "Latenzarme Sprachverarbeitung ausschließlich auf lokaler Hardware ohne externe API-Kosten.",
-                "Erzwingung strukturierter JSON-Antworten aus dem lokalen Sprachmodell durch Pydantic-Validierung.",
-                "Semantisches Skill-Matching zwischen Lebenslaufdaten und Anforderungsprofilen."
+                "Deterministische Fahrzeugreaktionen auf plötzliche Fußgängerquerungen und Ampelschaltungen.",
+                "Multi-Agenten-Entscheidungslogik für sichere Überhol- und Spurwechselmanöver ohne Kollisionen.",
+                "Feinabstimmung von Sensorerfassungen unter wechselnden Wetter- und Lichtbedingungen."
             ],
             metrics: [
-                { val: "100 % Lokal", label: "Keine Cloud-Kosten / Datenschutz" },
-                { val: "Whisper", label: "Präzise Spracherkennung" },
-                { val: "Pydantic", label: "Strikte Datenvalidierung" }
+                { val: "9+ Szenarien", label: "Implementierte Szenarien" },
+                { val: "CARLA", label: "Simulationsplattform" },
+                { val: "Python", label: "Steuerungslogik" }
             ],
-            githubUrl: "https://github.com/gandupradeep2026/pradeep-ai-interview-agent"
+            githubUrl: "https://github.com/gandupradeep2026"
         }
     }
 };

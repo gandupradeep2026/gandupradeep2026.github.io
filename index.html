@@ -102,7 +102,7 @@
                     <span>GitHub</span>
                 </a>
                 <span class="dot-separator">•</span>
-                <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer" class="link-item">
+                <a href="https://www.linkedin.com/in/pradeep-gandu/" target="_blank" rel="noopener noreferrer" class="link-item">
                     <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     <span>LinkedIn</span>
                 </a>
@@ -128,8 +128,8 @@
                     <span class="stat-label" data-i18n="stats.repos">Projects with CI/CD</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-value">B1 · Fluent</span>
-                    <span class="stat-label" data-i18n="stats.languages">German & English</span>
+                    <span class="stat-value" data-i18n="stats.languagesValue">German C1 · English C1</span>
+                    <span class="stat-label" data-i18n="stats.languages">C1 Certified Languages</span>
                 </div>
             </div>
         </div>
@@ -186,15 +186,23 @@
                 <div class="snapshot-icon">📑</div>
                 <div class="snapshot-content">
                     <h3 data-i18n="snapshot.visaTitle">Work Authorization & Availability</h3>
-                    <p data-i18n="snapshot.visaDesc">Eligible for Master Thesis / Working Student / Full-Time upon thesis in Germany (EU Student Visa & 18-month Jobseeker entitlement)</p>
+                    <p data-i18n="snapshot.visaDesc">Legal resident in Germany (§16b AufenthG). Immediately available for Working Student (up to 20h/wk) or Master Thesis. Permanent full-time available from Jan 01, 2027 (immediately upon thesis submission Dec 28, 2026), with immediate dual-track onboarding as working student or project associate. 18-month German Jobseeker Visa (§20 Abs. 3 Nr. 1) & EU Blue Card with NO labor market priority check.</p>
                 </div>
             </div>
 
             <div class="snapshot-item">
+                <div class="snapshot-icon">🗣️</div>
+                <div class="snapshot-content">
+                    <h3 data-i18n="snapshot.langTitle">Verified Language Proficiencies</h3>
+                    <p data-i18n="snapshot.langDesc">German: C1 (TU Chemnitz UNIcert III / Niveau C1 passed 31.08.2026; Goethe certified) · English: C1 / Fluent (Professional working proficiency; international master's degree in English) · Hindi: Fluent · Telugu: Native</p>
+                </div>
+            </div>
+
+            <div class="snapshot-item" style="grid-column: 1 / -1;">
                 <div class="snapshot-icon">⚙️</div>
                 <div class="snapshot-content">
                     <h3 data-i18n="snapshot.stackTitle">Core Technology Stack</h3>
-                    <p data-i18n="snapshot.stackDesc">GCP (BigQuery, Pub/Sub, Dataflow), Apache Beam, PySpark, Python, SQL, CARLA, Docker, CI/CD, UDS</p>
+                    <p data-i18n="snapshot.stackDesc">GCP (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS (EC2, S3, RDS), Apache Beam, PySpark, Spark SQL, Python, SQL, CARLA Simulator, Docker, Apache Airflow, Linux/Bash, UDS (ISO 14229), CAN-Bus, CI/CD Actions</p>
                 </div>
             </div>
         </div>
@@ -435,44 +443,40 @@
             </div>
         </article>
 
-        <!-- PROJECT 6: AI Interview Practice & Job Match Agents -->
-        <article class="project-card" data-category="ai">
+        <!-- PROJECT 6: CARLA Autonomous Driving Scenario Development -->
+        <article class="project-card" data-category="automotive ai">
             <div class="project-top">
                 <div class="project-badge-group">
-                    <span class="project-category-tag">AI & NLP</span>
+                    <span class="project-category-tag">ADAS & Simulation</span>
                 </div>
-                <span class="project-year">2026</span>
+                <span class="project-year">Completed</span>
             </div>
 
-            <h3 data-i18n="projects.interview.title">Voice AI Interview & Resume Intelligence Agents</h3>
+            <h3 data-i18n="projects.carlaScenarios.title">CARLA Autonomous Driving Scenario Development</h3>
             
-            <p class="project-description" data-i18n="projects.interview.desc">
-                Suite of local AI agents featuring real-time Whisper speech-to-text, local LLM evaluation (Qwen3/Ollama), Kokoro TTS feedback, and Pydantic-validated CV matching.
+            <p class="project-description" data-i18n="projects.carlaScenarios.desc">
+                Engineered complex autonomous vehicle control logic and multi-agent simulation scenarios in CARLA including pedestrian detection, traffic-light interaction, and collision avoidance.
             </p>
 
             <div class="project-tags">
-                <span>FastAPI</span>
-                <span>Whisper STT</span>
-                <span>Ollama (Qwen3)</span>
-                <span>Kokoro TTS</span>
-                <span>Streamlit</span>
-                <span>Pydantic</span>
+                <span>CARLA Simulator</span>
+                <span>Python</span>
+                <span>ADAS Logic</span>
+                <span>Collision Avoidance</span>
+                <span>Traffic Flow</span>
+                <span>Vehicle Control</span>
             </div>
 
             <ul class="project-bullets">
-                <li data-i18n="projects.interview.b1">Developed an interactive voice-driven interview simulation using OpenAI Whisper for low-latency speech transcription.</li>
-                <li data-i18n="projects.interview.b2">Integrated local Qwen3 model via Ollama to generate structured, STAR-method interview evaluation feedback.</li>
-                <li data-i18n="projects.interview.b3">Engineered automated text-to-speech audio playback using lightweight Kokoro TTS synthesis.</li>
-                <li data-i18n="projects.interview.b4">Built ATS job-match agent with strict JSON Schema and Pydantic validation with rule-based fallback handling.</li>
+                <li data-i18n="projects.carlaScenarios.b1">Developed multiple autonomous driving scenarios in CARLA: pedestrian crossing, traffic-light detection, and vehicle following.</li>
+                <li data-i18n="projects.carlaScenarios.b2">Implemented dynamic vehicle-control behaviour responding to road users, speed regulations, and emergency braking.</li>
+                <li data-i18n="projects.carlaScenarios.b3">Engineered overtaking, safe lane changing, and multi-bus-stop navigation and stopping sequences.</li>
+                <li data-i18n="projects.carlaScenarios.b4">Calibrated sensor inputs, weather models, and simulation maps for reproducible test scenarios.</li>
             </ul>
 
             <div class="project-actions">
-                <a href="https://github.com/gandupradeep2026/pradeep-ai-interview-agent" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub Repository</span>
-                </a>
-                <button class="project-btn modal-trigger-btn" data-project="aiagent">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                <button class="project-btn modal-trigger-btn primary-action" data-project="carlaScenarios">
+                    <span data-i18n="projects.btnScenarioDetails">View Scenario Specs 📐</span>
                 </button>
             </div>
         </article>
@@ -610,7 +614,7 @@
         <p class="section-label" data-i18n="experience.label">CAREER</p>
         <h2 data-i18n="experience.title">Professional Experience</h2>
         <p data-i18n="experience.subtitle">
-            Demonstrated background spanning AI solutions, technical data workflows, and software quality assurance.
+            Demonstrated engineering background spanning AI solutions, machine learning data workflows, and corporate client engagements.
         </p>
     </div>
 
@@ -628,9 +632,9 @@
                 </div>
                 <p class="location" data-i18n="experience.germany">Germany</p>
                 <ul>
-                    <li data-i18n="experience.dipp.b1">Engineered AI-assisted software routines and automated pipelines for structured technical data processing.</li>
-                    <li data-i18n="experience.dipp.b2">Conducted systematic error pattern analyses and output verification across software workflows.</li>
-                    <li data-i18n="experience.dipp.b3">Co-authored structured technical documentation and engineering specifications for software modules.</li>
+                    <li data-i18n="experience.dipp.b1">Integrated AI capabilities into an existing CRM/business platform using Python, FastAPI, and local LLMs via Ollama.</li>
+                    <li data-i18n="experience.dipp.b2">Engineered Retrieval-Augmented Generation (RAG) pipelines including text processing, chunking, embeddings, and vector retrieval.</li>
+                    <li data-i18n="experience.dipp.b3">Implemented Model Context Protocol (MCP) tooling and IONOS cloud AI services to connect enterprise data with AI components.</li>
                 </ul>
             </div>
         </article>
@@ -640,15 +644,15 @@
             <div class="timeline-content">
                 <div class="timeline-header">
                     <div>
-                        <h3>Translator - India Formatting Team</h3>
-                        <p class="company">Ascent Staffing Solutions Pvt. Ltd.</p>
+                        <h3>Translator & Data Specialist</h3>
+                        <p class="company">Ascent Staffing Solutions (Client: Clarivate Analytics)</p>
                     </div>
                     <span class="date" data-i18n="experience.ascent.date">Dec 2021 - Jul 2022</span>
                 </div>
-                <p class="location" data-i18n="experience.ascent.location">Client: Clarivate Analytics</p>
+                <p class="location" data-i18n="experience.india">India</p>
                 <ul>
-                    <li data-i18n="experience.ascent.b1">Processed large-scale structured patent and technical datasets under rigorous quality SLA standards.</li>
-                    <li data-i18n="experience.ascent.b2">Conducted data schema validation, cross-source consistency checks, and formatting verification.</li>
+                    <li data-i18n="experience.ascent.b1">Analyzed, translated, and normalized German patent abstracts, claims, technical descriptions, and metadata into English.</li>
+                    <li data-i18n="experience.ascent.b2">Extracted and validated structured technical patent information under rigorous SLA quality controls.</li>
                 </ul>
             </div>
         </article>
@@ -665,8 +669,9 @@
                 </div>
                 <p class="location" data-i18n="experience.india">India</p>
                 <ul>
-                    <li data-i18n="experience.globallogic.b1">Managed structured data preparation, labeling pipelines, and systematic quality assurance checks.</li>
-                    <li data-i18n="experience.globallogic.b2">Conducted rigorous error analysis on data feeds to identify anomalies and improve data cleanliness.</li>
+                    <li data-i18n="experience.globallogic.b1">Curated, annotated, cleaned, and classified German retail datasets for machine-learning model training and NLP pipelines.</li>
+                    <li data-i18n="experience.globallogic.b2">Utilized Python, Pandas, NumPy, and scikit-learn for dataset preparation, train/test splitting, and hyperparameter tuning.</li>
+                    <li data-i18n="experience.globallogic.b3">Evaluated classification models using accuracy, precision, recall, and F1-score matrices to optimize automation workflows.</li>
                 </ul>
             </div>
         </article>
@@ -677,14 +682,34 @@
                 <div class="timeline-header">
                     <div>
                         <h3>Senior Process Executive</h3>
-                        <p class="company">Cognizant Technology Solutions India Pvt. Ltd.</p>
+                        <p class="company">Cognizant Technology Solutions (Client: Meta / Facebook)</p>
                     </div>
                     <span class="date" data-i18n="experience.cognizant.date">Sep 2017 - May 2019</span>
                 </div>
                 <p class="location" data-i18n="experience.hyderabad">Hyderabad, India</p>
                 <ul>
-                    <li data-i18n="experience.cognizant.b1">Maintained business-critical relational datasets and executed data verification protocols.</li>
-                    <li data-i18n="experience.cognizant.b2">Monitored process tracking, automated reporting, and operational SLA adherence.</li>
+                    <li data-i18n="experience.cognizant.b1">Supported Facebook Marketplace automation through human-in-the-loop ML evaluation, metadata processing, and validation.</li>
+                    <li data-i18n="experience.cognizant.b2">Reviewed automated classification outputs, corrected errors, and provided human feedback to train ML algorithms.</li>
+                    <li data-i18n="experience.cognizant.b3">Contributed to measurably improving Facebook Marketplace automation accuracy from ~64% to 76%.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div>
+                        <h3>Practitioner - CRM Operations</h3>
+                        <p class="company">Concentrix Daksh Services (Client: Google)</p>
+                    </div>
+                    <span class="date" data-i18n="experience.concentrix.date">Mar 2016 - May 2017</span>
+                </div>
+                <p class="location" data-i18n="experience.india">India</p>
+                <ul>
+                    <li data-i18n="experience.concentrix.b1">Supported automation quality for Google AdWords / Ads processes through systematic data annotation and validation.</li>
+                    <li data-i18n="experience.concentrix.b2">Evaluated model predictions, investigated edge-case errors, and supplied verified training datasets.</li>
+                    <li data-i18n="experience.concentrix.b3">Helped drive automation accuracy improvements from approximately 72% to 79%.</li>
                 </ul>
             </div>
         </article>
@@ -701,8 +726,8 @@
                 </div>
                 <p class="location" data-i18n="experience.hyderabad">Hyderabad, India</p>
                 <ul>
-                    <li data-i18n="experience.magus.b1">Developed foundational software engineering capabilities in software implementation and testing environments.</li>
-                    <li data-i18n="experience.magus.b2">Assisted in debugging, technical issue resolution, and system maintenance tasks.</li>
+                    <li data-i18n="experience.magus.b1">Developed full-stack enterprise web application modules using Python, SQL Server, and RESTful web services.</li>
+                    <li data-i18n="experience.magus.b2">Integrated external APIs, SOAP/JSON endpoints, and managed deployments on Apache Tomcat and AWS Linux environments.</li>
                 </ul>
             </div>
         </article>
@@ -735,7 +760,7 @@
             <p class="institution">MLR Institute of Technology</p>
             <p class="location-tag" data-i18n="education.mtech.meta">India · 2017 - 2019</p>
             <div class="education-detail">
-                <p>First Class with Distinction · CGPA 7.33</p>
+                <p>First Class with Distinction · CGPA 7.33 (90 / 90 Credits)</p>
             </div>
         </article>
 
@@ -745,7 +770,7 @@
             <p class="institution">JNTU Hyderabad</p>
             <p class="location-tag" data-i18n="education.btech.meta">India · 2009 - 2013</p>
             <div class="education-detail">
-                <p>First Class · 62.67%</p>
+                <p>First Class · 62.67% Aggregate</p>
             </div>
         </article>
 
@@ -770,33 +795,39 @@
             <article class="cert-card">
                 <div class="cert-badge">Python</div>
                 <h3>Python Essentials 1 & 2</h3>
-                <p>Cisco / OpenEDG</p>
+                <p>Cisco Networking Academy / OpenEDG Python Institute</p>
             </article>
 
             <article class="cert-card">
-                <div class="cert-badge">SQL</div>
-                <h3>SQL Certified</h3>
-                <p>HackerRank (Intermediate / Advanced Problem Solving)</p>
+                <div class="cert-badge">HackerRank</div>
+                <h3>Problem Solving & SQL</h3>
+                <p>Problem Solving (Intermediate) & SQL Certified</p>
             </article>
 
             <article class="cert-card">
-                <div class="cert-badge">DE</div>
-                <h3>Goethe-Zertifikat B1</h3>
-                <p data-i18n="certs.german">German language certified (Goethe-Institut)</p>
+                <div class="cert-badge">IBM</div>
+                <h3>Generative AI & RAG</h3>
+                <p>Retrieval-Augmented Generation & Intro to AI (IBM SkillsBuild)</p>
             </article>
         </div>
 
-        <div class="language-grid">
+        <div class="language-grid" style="grid-template-columns: repeat(4, 1fr);">
             <article class="language-card">
                 <div class="lang-flag">🇩🇪</div>
                 <h3 data-i18n="languages.german">German</h3>
-                <p class="lang-level" data-i18n="languages.germanLevel">Goethe B1 Certified</p>
+                <p class="lang-level" data-i18n="languages.germanLevel">C1 Certified (TU Chemnitz UNIcert III / Goethe certified)</p>
             </article>
 
             <article class="language-card">
                 <div class="lang-flag">🇬🇧</div>
                 <h3 data-i18n="languages.english">English</h3>
-                <p class="lang-level" data-i18n="languages.englishLevel">IELTS B2 (Professional Working Proficiency)</p>
+                <p class="lang-level" data-i18n="languages.englishLevel">C1 / Fluent (Professional Working Proficiency; Master's in English)</p>
+            </article>
+
+            <article class="language-card">
+                <div class="lang-flag">🇮🇳</div>
+                <h3>Hindi</h3>
+                <p class="lang-level" data-i18n="languages.hindiLevel">Fluent</p>
             </article>
 
             <article class="language-card">
@@ -830,7 +861,7 @@
                 <span data-i18n="contact.copy">Copy Email Address</span>
             </button>
 
-            <a href="https://www.linkedin.com/in/pradeep-gandu-150801394/" target="_blank" rel="noopener noreferrer" class="btn contact-secondary">
+            <a href="https://www.linkedin.com/in/pradeep-gandu/" target="_blank" rel="noopener noreferrer" class="btn contact-secondary">
                 <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 <span>LinkedIn</span>
             </a>

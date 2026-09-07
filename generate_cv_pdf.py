@@ -1,4 +1,4 @@
-import os
+﻿import os
 import subprocess
 import pypdf
 
@@ -10,7 +10,7 @@ HTML_EN = """<!DOCTYPE html>
 <style>
   @page {
     size: A4 portrait;
-    margin: 8mm 10mm 8mm 10mm;
+    margin: 6.5mm 9mm 6.5mm 9mm;
   }
   * {
     margin: 0;
@@ -23,44 +23,48 @@ HTML_EN = """<!DOCTYPE html>
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #1a202c;
     background: #ffffff;
-    font-size: 8.4pt;
-    line-height: 1.32;
+    font-size: 8.2pt;
+    line-height: 1.30;
   }
   
   /* HEADER */
   .header {
     text-align: center;
     border-bottom: 2px solid #0056b3;
-    padding-bottom: 5px;
-    margin-bottom: 6px;
+    padding-bottom: 4px;
+    margin-bottom: 5px;
   }
   .name {
-    font-size: 19pt;
+    font-size: 18pt;
     font-weight: 800;
     letter-spacing: -0.01em;
     color: #0f172a;
     text-transform: uppercase;
   }
   .title {
-    font-size: 10.2pt;
+    font-size: 9.8pt;
     font-weight: 700;
     color: #0056b3;
     margin-top: 1px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     letter-spacing: 0.02em;
   }
   .contact-bar {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 7px;
-    font-size: 8pt;
+    gap: 6px;
+    font-size: 7.7pt;
     color: #334155;
   }
   .contact-bar a {
     color: #0056b3;
     text-decoration: none;
     font-weight: 600;
+  }
+  .lang-badge {
+    font-weight: 700;
+    color: #0f172a;
   }
   .sep {
     color: #94a3b8;
@@ -69,24 +73,24 @@ HTML_EN = """<!DOCTYPE html>
 
   /* SUMMARY */
   .summary {
-    font-size: 8pt;
+    font-size: 7.8pt;
     color: #334155;
-    line-height: 1.34;
-    margin-bottom: 6px;
+    line-height: 1.30;
+    margin-bottom: 5px;
     text-align: justify;
   }
 
   /* SECTION HEADERS */
   .section-title {
-    font-size: 8.8pt;
+    font-size: 8.5pt;
     font-weight: 800;
     color: #0f172a;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     border-bottom: 1px solid #cbd5e1;
     padding-bottom: 1.5px;
-    margin-top: 5px;
-    margin-bottom: 4px;
+    margin-top: 4px;
+    margin-bottom: 3.5px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -95,7 +99,7 @@ HTML_EN = """<!DOCTYPE html>
     content: "";
     display: inline-block;
     width: 3px;
-    height: 10px;
+    height: 9px;
     background: #0056b3;
     border-radius: 1px;
   }
@@ -103,12 +107,12 @@ HTML_EN = """<!DOCTYPE html>
   /* SKILLS TABLE */
   .skills-table {
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 7.8pt;
+    margin-bottom: 4px;
+    font-size: 7.6pt;
     border-collapse: collapse;
   }
   .skills-table td {
-    padding: 1.5px 0;
+    padding: 1px 0;
     vertical-align: top;
   }
   .skill-cat {
@@ -124,7 +128,7 @@ HTML_EN = """<!DOCTYPE html>
 
   /* PROJECTS */
   .item {
-    margin-bottom: 4.5px;
+    margin-bottom: 4px;
   }
   .item-header {
     display: flex;
@@ -133,7 +137,7 @@ HTML_EN = """<!DOCTYPE html>
     margin-bottom: 1px;
   }
   .item-title {
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     font-weight: 750;
     color: #0f172a;
   }
@@ -145,25 +149,25 @@ HTML_EN = """<!DOCTYPE html>
     color: #0056b3;
   }
   .item-tech {
-    font-size: 7.4pt;
+    font-size: 7.2pt;
     font-weight: 600;
     color: #0284c7;
-    margin-left: 4px;
+    margin-left: 3px;
   }
   .item-meta {
-    font-size: 7.6pt;
+    font-size: 7.4pt;
     font-weight: 600;
     color: #64748b;
     white-space: nowrap;
   }
   .bullets {
-    padding-left: 12px;
-    font-size: 7.8pt;
+    padding-left: 11px;
+    font-size: 7.6pt;
     color: #334155;
-    line-height: 1.28;
+    line-height: 1.25;
   }
   .bullets li {
-    margin-bottom: 1px;
+    margin-bottom: 0.8px;
   }
   .bullets strong {
     color: #0f172a;
@@ -173,7 +177,7 @@ HTML_EN = """<!DOCTYPE html>
   .grid-2col {
     display: grid;
     grid-template-columns: 58% 40%;
-    gap: 12px;
+    gap: 10px;
     margin-top: 2px;
   }
 </style>
@@ -186,11 +190,13 @@ HTML_EN = """<!DOCTYPE html>
   <div class="contact-bar">
     <span>Chemnitz, Germany (Open to Relocation)</span>
     <span class="sep">·</span>
+    <span class="lang-badge">German — C1 | English — Fluent</span>
+    <span class="sep">·</span>
     <span>+49 176 59677415</span>
     <span class="sep">·</span>
     <span><a href="mailto:gandupradeep2026@gmail.com">gandupradeep2026@gmail.com</a></span>
     <span class="sep">·</span>
-    <span><a href="https://linkedin.com/in/pradeep-gandu-150801394" target="_blank">LinkedIn</a></span>
+    <span><a href="https://linkedin.com/in/pradeep-gandu" target="_blank">LinkedIn</a></span>
     <span class="sep">·</span>
     <span><a href="https://github.com/gandupradeep2026" target="_blank">GitHub</a></span>
     <span class="sep">·</span>
@@ -199,7 +205,7 @@ HTML_EN = """<!DOCTYPE html>
 </div>
 
 <div class="summary">
-  Master's student in Automotive Software Engineering at TU Chemnitz (90/120 ECTS) with a strong engineering focus in cloud data engineering (GCP/AWS), distributed stream processing (Apache Beam, PySpark), and autonomous vehicle systems (CARLA, CAN-Bus UDS). Proven track record developing production-style streaming pipelines, explainable vehicle diagnostics audited on 39k+ real OBD records, and automated CI/CD workflows. Eligible for Master Thesis, Working Student, and Full-Time roles in Germany.
+  Master's student in Automotive Software Engineering at TU Chemnitz (90/120 ECTS completed) with an engineering focus on cloud data engineering (GCP/AWS), distributed stream processing (Apache Beam, PySpark), and autonomous vehicle systems (CARLA, CAN-Bus UDS). Proven track record developing production-style streaming pipelines, explainable vehicle diagnostics audited on 39k+ real OBD records, and automated CI/CD workflows. Certified German C1 & English Fluent. Eligible for Master Thesis, Working Student, and Full-Time permanent roles in Germany.
 </div>
 
 <div class="section-title">Technical Skills</div>
@@ -214,7 +220,7 @@ HTML_EN = """<!DOCTYPE html>
   </tr>
   <tr>
     <td class="skill-cat">Automotive & AI:</td>
-    <td class="skill-items"><strong>CARLA Simulator</strong>, 3D Trajectories, <strong>CAN-Bus</strong>, <strong>UDS (ISO 14229)</strong>, DBC Networks, SocketCAN, IsolationForest, RAG, Ollama (Qwen3), Whisper STT, YOLOv8.</td>
+    <td class="skill-items"><strong>CARLA Simulator</strong>, 3D Trajectories, <strong>CAN-Bus</strong>, <strong>UDS (ISO 14229)</strong>, DBC Networks, SocketCAN, IsolationForest, RAG, Ollama (Qwen3), MCP, YOLOv8.</td>
   </tr>
 </table>
 
@@ -231,7 +237,7 @@ HTML_EN = """<!DOCTYPE html>
   <ul class="bullets">
     <li>Architected an event-driven streaming pipeline ingesting CARLA-style telemetry using Pub/Sub attributes and event-time semantics in <strong>Apache Beam</strong>.</li>
     <li>Implemented stateful <code>event_id</code> deduplication, JSON schema validation, and automated Dead-Letter Queue (DLQ) routing for corrupted payloads.</li>
-    <li>Engineered partitioned and clustered <strong>BigQuery</strong> tables with mandatory partition filters to prevent costly full-table scans.</li>
+    <li>Engineered partitioned and clustered <strong>BigQuery</strong> tables with mandatory partition filters to optimize analytical performance and cost.</li>
     <li>Orchestrated daily data quality reporting with <strong>Apache Airflow</strong> in Docker Compose with automated verification in GitHub Actions CI.</li>
   </ul>
 </div>
@@ -245,9 +251,9 @@ HTML_EN = """<!DOCTYPE html>
     <span class="item-meta">2026 · GitHub</span>
   </div>
   <ul class="bullets">
-    <li>Engineered a pre-fault diagnostic system combining IsolationForest anomaly detection and personalized vehicle baselines to detect degradation before DTCs.</li>
-    <li>Audited on <strong>39,779 real OBD records</strong>; developed a 5-of-7 temporal alert stabilization filter that reduced nuisance false alarms by <strong>93.44%</strong>.</li>
-    <li>Integrated local TF-IDF RAG retrieval for OEM repair procedures and an autonomous agent equipped with MCP tools and deterministic safety gates.</li>
+    <li>Engineered a pre-fault diagnostic system combining IsolationForest anomaly detection and vehicle baselines to detect degradation before DTCs.</li>
+    <li>Audited on <strong>39,779 real OBD records</strong>; developed a 5-of-7 temporal alert stabilization filter reducing nuisance false alarms by <strong>93.44%</strong>.</li>
+    <li>Integrated local TF-IDF RAG retrieval for OEM repair procedures and an autonomous agent with MCP tools and deterministic safety gates.</li>
   </ul>
 </div>
 
@@ -260,8 +266,8 @@ HTML_EN = """<!DOCTYPE html>
     <span class="item-meta">2026 · GitHub</span>
   </div>
   <ul class="bullets">
-    <li>Simulated multi-ECU CAN communication (Engine, Dynamics, Battery) using DBC definitions with modulo-16 alive counters and checksum verification.</li>
-    <li>Implemented UDS application services (0x10 Session Control, 0x22 Read Data By ID, 0x19 DTC Info) with automated YAML fault injection and Streamlit UI.</li>
+    <li>Simulated multi-ECU CAN communication (Engine, Dynamics, Battery) using DBC definitions with modulo-16 alive counters and checksum validation.</li>
+    <li>Implemented UDS application services (0x10 Session Control, 0x22 Read Data By ID, 0x19 DTC Info) with automated YAML fault injection.</li>
     <li>Maintained <strong>>70% branch test coverage</strong> with strict Ruff, Black, and MyPy quality gates executed in Linux/Windows GitHub Actions CI.</li>
   </ul>
 </div>
@@ -275,8 +281,8 @@ HTML_EN = """<!DOCTYPE html>
     <span class="item-meta">TU Chemnitz · Current</span>
   </div>
   <ul class="bullets">
-    <li>Generating complex highway merge and lane-change scenarios in CARLA Scenario Runner, extracting synchronized 3D actor trajectories and road topology.</li>
-    <li>Building an automated ingestion pipeline structuring raw simulation sensor frames into validated, columnar <strong>Parquet</strong> schemas for ML prediction models.</li>
+    <li>Generated highway merge, lane-change, and collision-avoidance scenarios in CARLA, extracting synchronized 3D actor trajectories and road topology.</li>
+    <li>Engineered an automated ingestion pipeline structuring raw simulation sensor frames into validated, columnar <strong>Parquet</strong> schemas for ML models.</li>
   </ul>
 </div>
 
@@ -287,42 +293,52 @@ HTML_EN = """<!DOCTYPE html>
     
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Working Student - AI-Assisted Software</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">DiPP GmbH</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Working Student — AI Software Solutions</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">DiPP GmbH</span></div>
         <span class="item-meta">Jan 2025 – Jul 2025<br>Germany</span>
       </div>
       <ul class="bullets">
-        <li>Developed AI-assisted routines and automated workflows for technical data processing and systematic error analysis.</li>
-        <li>Co-authored structured technical documentation and verification procedures.</li>
+        <li>Integrated AI & RAG capabilities into CRM with FastAPI, Ollama LLMs, MCP tooling, and IONOS Cloud services.</li>
+        <li>Implemented document chunking, embeddings retrieval, and automated technical data workflows.</li>
       </ul>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Translator & Data Specialist</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">Ascent Staffing (Client: Clarivate Analytics)</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Translator — German Patent & Technical Data</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">Ascent Staffing (Client: Clarivate Analytics)</span></div>
         <span class="item-meta">Dec 2021 – Jul 2022<br>India</span>
       </div>
       <ul class="bullets">
-        <li>Processed large-scale technical and patent datasets with strict schema validation and quality SLA controls.</li>
+        <li>Analyzed and translated German patent claims/specifications into English with strict technical terminology validation and QA.</li>
       </ul>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Associate Language Specialist</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">GlobalLogic Technologies</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Associate Language Specialist — ML Data</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">GlobalLogic Technologies</span></div>
         <span class="item-meta">Oct 2020 – Dec 2021<br>India</span>
       </div>
       <ul class="bullets">
-        <li>Managed structured data preparation, labeling verification, and data anomaly analysis.</li>
+        <li>Processed German retail datasets for NLP/ML pipelines; performed data annotation, classification, and model evaluation.</li>
       </ul>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Senior Process Executive</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">Cognizant Technology Solutions</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Senior Process Executive (Client: Meta / Facebook)</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">Cognizant Technology Solutions</span></div>
         <span class="item-meta">Sep 2017 – May 2019<br>India</span>
       </div>
       <ul class="bullets">
-        <li>Maintained relational operational datasets, process tracking, and QA controls.</li>
+        <li>Automated Marketplace data workflows and human-in-the-loop evaluation; improved accuracy from ~64% to 76%.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Practitioner (Client: Google)</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">Concentrix Daksh Services</span></div>
+        <span class="item-meta">Mar 2016 – May 2017<br>India</span>
+      </div>
+      <ul class="bullets">
+        <li>Supported Google Ads automation via quality checks and error analysis; improved results from ~72% to 79%.</li>
       </ul>
     </div>
   </div>
@@ -333,38 +349,38 @@ HTML_EN = """<!DOCTYPE html>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">M.Sc. Automotive Software Engineering</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">TU Chemnitz, Germany</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">M.Sc. Automotive Software Engineering</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">TU Chemnitz, Germany</span></div>
         <span class="item-meta">Current<br>90/120 ECTS</span>
       </div>
-      <p style="font-size:7.4pt; color:#475569; margin-top:1px;">Thesis: Scenario-Centric Datasets & Trajectories for AD in CARLA.</p>
+      <p style="font-size:7.2pt; color:#475569; margin-top:1px;">Thesis: Scenario-Centric Datasets & Trajectories for AD in CARLA.</p>
     </div>
 
-    <div class="item" style="margin-top:4px;">
+    <div class="item" style="margin-top:3px;">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">M.Tech. Embedded Systems</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">MLR Institute of Technology, India</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">M.Tech. Embedded Systems</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">MLR Institute of Technology, India</span></div>
         <span class="item-meta">2017 – 2019<br>First Class (CGPA 7.33)</span>
       </div>
     </div>
 
-    <div class="item" style="margin-top:4px;">
+    <div class="item" style="margin-top:3px;">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">B.Tech. Electrical & Electronics Eng.</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">JNTU Hyderabad, India</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">B.Tech. Electrical & Electronics Eng.</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">JNTU Hyderabad, India</span></div>
         <span class="item-meta">2009 – 2013<br>First Class (62.67%)</span>
       </div>
     </div>
 
-    <div class="section-title" style="margin-top:7px;">Credentials</div>
-    <div style="font-size:7.5pt; color:#334155; line-height:1.35;">
+    <div class="section-title" style="margin-top:5px;">Credentials</div>
+    <div style="font-size:7.3pt; color:#334155; line-height:1.32;">
       <div>• <strong>Google Cloud Data Engineering Program</strong></div>
       <div>• <strong>Python Essentials 1 & 2</strong> (Cisco / OpenEDG)</div>
       <div>• <strong>SQL Certified</strong> (HackerRank)</div>
     </div>
 
-    <div class="section-title" style="margin-top:7px;">Languages</div>
-    <div style="font-size:7.5pt; color:#334155; line-height:1.35;">
-      <div>• <strong>German:</strong> Goethe-Zertifikat B1 Certified</div>
-      <div>• <strong>English:</strong> IELTS B2 (Professional Working)</div>
-      <div>• <strong>Telugu:</strong> Native / First Language</div>
+    <div class="section-title" style="margin-top:5px;">Languages</div>
+    <div style="font-size:7.3pt; color:#334155; line-height:1.32;">
+      <div>• <strong>German:</strong> C1 (TU Chemnitz UNIcert III / Goethe certified)</div>
+      <div>• <strong>English:</strong> C1 / Fluent (Master's conducted in English)</div>
+      <div>• <strong>Hindi:</strong> Fluent · <strong>Telugu:</strong> Native</div>
     </div>
   </div>
 </div>
@@ -381,7 +397,7 @@ HTML_DE = """<!DOCTYPE html>
 <style>
   @page {
     size: A4 portrait;
-    margin: 8mm 10mm 8mm 10mm;
+    margin: 6.5mm 9mm 6.5mm 9mm;
   }
   * {
     margin: 0;
@@ -394,44 +410,48 @@ HTML_DE = """<!DOCTYPE html>
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #1a202c;
     background: #ffffff;
-    font-size: 8.4pt;
-    line-height: 1.32;
+    font-size: 8.2pt;
+    line-height: 1.30;
   }
   
   /* HEADER */
   .header {
     text-align: center;
     border-bottom: 2px solid #0056b3;
-    padding-bottom: 5px;
-    margin-bottom: 6px;
+    padding-bottom: 4px;
+    margin-bottom: 5px;
   }
   .name {
-    font-size: 19pt;
+    font-size: 18pt;
     font-weight: 800;
     letter-spacing: -0.01em;
     color: #0f172a;
     text-transform: uppercase;
   }
   .title {
-    font-size: 10.2pt;
+    font-size: 9.8pt;
     font-weight: 700;
     color: #0056b3;
     margin-top: 1px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     letter-spacing: 0.02em;
   }
   .contact-bar {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 7px;
-    font-size: 8pt;
+    gap: 6px;
+    font-size: 7.7pt;
     color: #334155;
   }
   .contact-bar a {
     color: #0056b3;
     text-decoration: none;
     font-weight: 600;
+  }
+  .lang-badge {
+    font-weight: 700;
+    color: #0f172a;
   }
   .sep {
     color: #94a3b8;
@@ -440,24 +460,24 @@ HTML_DE = """<!DOCTYPE html>
 
   /* SUMMARY */
   .summary {
-    font-size: 8pt;
+    font-size: 7.8pt;
     color: #334155;
-    line-height: 1.34;
-    margin-bottom: 6px;
+    line-height: 1.30;
+    margin-bottom: 5px;
     text-align: justify;
   }
 
   /* SECTION HEADERS */
   .section-title {
-    font-size: 8.8pt;
+    font-size: 8.5pt;
     font-weight: 800;
     color: #0f172a;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     border-bottom: 1px solid #cbd5e1;
     padding-bottom: 1.5px;
-    margin-top: 5px;
-    margin-bottom: 4px;
+    margin-top: 4px;
+    margin-bottom: 3.5px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -466,7 +486,7 @@ HTML_DE = """<!DOCTYPE html>
     content: "";
     display: inline-block;
     width: 3px;
-    height: 10px;
+    height: 9px;
     background: #0056b3;
     border-radius: 1px;
   }
@@ -474,12 +494,12 @@ HTML_DE = """<!DOCTYPE html>
   /* SKILLS TABLE */
   .skills-table {
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 7.8pt;
+    margin-bottom: 4px;
+    font-size: 7.6pt;
     border-collapse: collapse;
   }
   .skills-table td {
-    padding: 1.5px 0;
+    padding: 1px 0;
     vertical-align: top;
   }
   .skill-cat {
@@ -495,7 +515,7 @@ HTML_DE = """<!DOCTYPE html>
 
   /* PROJECTS */
   .item {
-    margin-bottom: 4.5px;
+    margin-bottom: 4px;
   }
   .item-header {
     display: flex;
@@ -504,7 +524,7 @@ HTML_DE = """<!DOCTYPE html>
     margin-bottom: 1px;
   }
   .item-title {
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     font-weight: 750;
     color: #0f172a;
   }
@@ -516,25 +536,25 @@ HTML_DE = """<!DOCTYPE html>
     color: #0056b3;
   }
   .item-tech {
-    font-size: 7.4pt;
+    font-size: 7.2pt;
     font-weight: 600;
     color: #0284c7;
-    margin-left: 4px;
+    margin-left: 3px;
   }
   .item-meta {
-    font-size: 7.6pt;
+    font-size: 7.4pt;
     font-weight: 600;
     color: #64748b;
     white-space: nowrap;
   }
   .bullets {
-    padding-left: 12px;
-    font-size: 7.8pt;
+    padding-left: 11px;
+    font-size: 7.6pt;
     color: #334155;
-    line-height: 1.28;
+    line-height: 1.25;
   }
   .bullets li {
-    margin-bottom: 1px;
+    margin-bottom: 0.8px;
   }
   .bullets strong {
     color: #0f172a;
@@ -544,7 +564,7 @@ HTML_DE = """<!DOCTYPE html>
   .grid-2col {
     display: grid;
     grid-template-columns: 58% 40%;
-    gap: 12px;
+    gap: 10px;
     margin-top: 2px;
   }
 </style>
@@ -557,11 +577,13 @@ HTML_DE = """<!DOCTYPE html>
   <div class="contact-bar">
     <span>Chemnitz, Deutschland (umzugsbereit)</span>
     <span class="sep">·</span>
+    <span class="lang-badge">Deutsch — C1 | Englisch — Fließend</span>
+    <span class="sep">·</span>
     <span>+49 176 59677415</span>
     <span class="sep">·</span>
     <span><a href="mailto:gandupradeep2026@gmail.com">gandupradeep2026@gmail.com</a></span>
     <span class="sep">·</span>
-    <span><a href="https://linkedin.com/in/pradeep-gandu-150801394" target="_blank">LinkedIn</a></span>
+    <span><a href="https://linkedin.com/in/pradeep-gandu" target="_blank">LinkedIn</a></span>
     <span class="sep">·</span>
     <span><a href="https://github.com/gandupradeep2026" target="_blank">GitHub</a></span>
     <span class="sep">·</span>
@@ -570,7 +592,7 @@ HTML_DE = """<!DOCTYPE html>
 </div>
 
 <div class="summary">
-  Masterstudent im Studiengang Automotive Software Engineering an der TU Chemnitz (90/120 ECTS) mit technischem Schwerpunkt auf Cloud Data Engineering (GCP/AWS), verteilter Datenverarbeitung (Apache Beam, PySpark) und autonomen Fahrsystemen (CARLA, CAN-Bus UDS). Nachgewiesene Praxis bei ereignisgesteuerten Streaming-Pipelines, erklärbarer Fahrzeugdiagnose auf 39k+ realen OBD-Daten und automatisierten CI/CD-Pipelines. Berechtigt für Masterarbeit, Werkstudent und Festeinstieg in Deutschland.
+  Masterstudent im Studiengang Automotive Software Engineering an der TU Chemnitz (90/120 ECTS abgeschlossen) mit technischem Schwerpunkt auf Cloud Data Engineering (GCP/AWS), verteilter Datenverarbeitung (Apache Beam, PySpark) und autonomen Fahrsystemen (CARLA, CAN-Bus UDS). Nachgewiesene Praxis bei ereignisgesteuerten Streaming-Pipelines, erklärbarer Fahrzeugdiagnose auf 39k+ realen OBD-Daten und automatisierten CI/CD-Pipelines. Zertifiziertes Deutsch C1 & Englisch Fließend. Berechtigt für Masterarbeit, Werkstudent und Festeinstieg in Deutschland.
 </div>
 
 <div class="section-title">Technische Kenntnisse</div>
@@ -585,7 +607,7 @@ HTML_DE = """<!DOCTYPE html>
   </tr>
   <tr>
     <td class="skill-cat">Automotive & KI:</td>
-    <td class="skill-items"><strong>CARLA Simulator</strong>, 3D-Trajektorien, <strong>CAN-Bus</strong>, <strong>UDS (ISO 14229)</strong>, DBC-Netzwerke, SocketCAN, IsolationForest, RAG, Ollama (Qwen3), Whisper, YOLOv8.</td>
+    <td class="skill-items"><strong>CARLA Simulator</strong>, 3D-Trajektorien, <strong>CAN-Bus</strong>, <strong>UDS (ISO 14229)</strong>, DBC-Netzwerke, SocketCAN, IsolationForest, RAG, Ollama (Qwen3), MCP, YOLOv8.</td>
   </tr>
 </table>
 
@@ -618,7 +640,7 @@ HTML_DE = """<!DOCTYPE html>
   <ul class="bullets">
     <li>Entwickelte ein Pre-Fault Diagnosesystem mit IsolationForest-Anomalieerkennung zur Erkennung von Bauteildegradation vor DTC-Auslösung.</li>
     <li>Auditiert anhand von <strong>39.779 realen OBD-Datenzeilen</strong>; ein 5-aus-7 zeitlicher Stabilisierungsfilter senkte Fehlalarme um <strong>93,44 %</strong>.</li>
-    <li>Integrierte lokales TF-IDF RAG zum Abruf von OEM-Reparaturanleitungen und einen autonomen Agenten mit MCP-Tools und deterministischem Sicherheits-Gate.</li>
+    <li>Integrierte lokales TF-IDF RAG zum Abruf von OEM-Reparaturanleitungen und einen autonomen Agenten mit MCP-Tools und Sicherheits-Gate.</li>
   </ul>
 </div>
 
@@ -658,41 +680,52 @@ HTML_DE = """<!DOCTYPE html>
     
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Werkstudent - KI-Softwarelösungen</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">DiPP GmbH</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Werkstudent — KI-Softwarelösungen</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">DiPP GmbH</span></div>
         <span class="item-meta">Jan. 2025 – Jul. 2025<br>Deutschland</span>
       </div>
       <ul class="bullets">
-        <li>Entwickelte KI-gestützte Routinen zur Verarbeitung technischer Daten sowie strukturierte Fehleranalysen und Dokumentationen.</li>
+        <li>Integrierte KI- & RAG-Funktionen in CRM mit FastAPI, Ollama-LLMs, MCP-Tools und IONOS-Cloud-Diensten.</li>
+        <li>Implementierte Dokumenten-Chunking, Vektorsuche und automatisierte technische Datenanalysen.</li>
       </ul>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Translator & Datenspezialist</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">Ascent Staffing (Kunde: Clarivate Analytics)</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Translator — Deutsche Patent- & Fachdaten</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">Ascent Staffing (Kunde: Clarivate Analytics)</span></div>
         <span class="item-meta">Dez. 2021 – Jul. 2022<br>Indien</span>
       </div>
       <ul class="bullets">
-        <li>Verarbeitete strukturierte Patent- und Fachdatensätze unter Einhaltung strenger Qualitäts-SLAs und Schemavalidierungen.</li>
+        <li>Analysierte und übersetzte deutsche Patentansprüche ins Englische mit technischer Terminologievalidierung und QA.</li>
       </ul>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Associate Language Specialist</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">GlobalLogic Technologies</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Associate Language Specialist — ML-Daten</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">GlobalLogic Technologies</span></div>
         <span class="item-meta">Okt. 2020 – Dez. 2021<br>Indien</span>
       </div>
       <ul class="bullets">
-        <li>Verwaltete Datensatzaufbereitung, Annotationsvalidierung und systematische Datenanomalieanalysen.</li>
+        <li>Verarbeitete deutsche Handelsdaten für NLP/ML-Pipelines; Datenannotation, Klassifikation und Modellevaluation.</li>
       </ul>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">Senior Process Executive</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">Cognizant Technology Solutions</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Senior Process Executive (Kunde: Meta / Facebook)</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">Cognizant Technology Solutions</span></div>
         <span class="item-meta">Sep. 2017 – Mai 2019<br>Indien</span>
       </div>
       <ul class="bullets">
-        <li>Pflegte relationale Geschäftsdaten und führte Verifikations- und QA-Protokolle aus.</li>
+        <li>Marketplace-Datenworkflows und Human-in-the-Loop-Evaluation; Genauigkeitssteigerung von ~64 % auf 76 %.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div><strong style="color:#0f172a; font-size:8.0pt;">Practitioner (Kunde: Google)</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">Concentrix Daksh Services</span></div>
+        <span class="item-meta">Mär. 2016 – Mai 2017<br>Indien</span>
+      </div>
+      <ul class="bullets">
+        <li>Unterstützte Google Ads-Automatisierung durch Qualitätsprüfungen und Fehleranalysen; Steigerung von ~72 % auf 79 %.</li>
       </ul>
     </div>
   </div>
@@ -703,38 +736,38 @@ HTML_DE = """<!DOCTYPE html>
 
     <div class="item">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">M.Sc. Automotive Software Engineering</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">TU Chemnitz, Deutschland</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">M.Sc. Automotive Software Engineering</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">TU Chemnitz, Deutschland</span></div>
         <span class="item-meta">Aktuell<br>90/120 ECTS</span>
       </div>
-      <p style="font-size:7.4pt; color:#475569; margin-top:1px;">Masterarbeit: CARLA-Datenpipeline für Environment Prediction.</p>
+      <p style="font-size:7.2pt; color:#475569; margin-top:1px;">Masterarbeit: CARLA-Datenpipeline für Environment Prediction.</p>
     </div>
 
-    <div class="item" style="margin-top:4px;">
+    <div class="item" style="margin-top:3px;">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">M.Tech. Embedded Systems</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">MLR Institute of Technology, Indien</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">M.Tech. Embedded Systems</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">MLR Institute of Technology, Indien</span></div>
         <span class="item-meta">2017 – 2019<br>First Class (CGPA 7,33)</span>
       </div>
     </div>
 
-    <div class="item" style="margin-top:4px;">
+    <div class="item" style="margin-top:3px;">
       <div class="item-header">
-        <div><strong style="color:#0f172a; font-size:8.2pt;">B.Tech. Electrical & Electronics Eng.</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.6pt;">JNTU Hyderabad, Indien</span></div>
+        <div><strong style="color:#0f172a; font-size:8.0pt;">B.Tech. Electrical & Electronics Eng.</strong><br><span style="color:#0056b3; font-weight:600; font-size:7.4pt;">JNTU Hyderabad, Indien</span></div>
         <span class="item-meta">2009 – 2013<br>First Class (62,67 %)</span>
       </div>
     </div>
 
-    <div class="section-title" style="margin-top:7px;">Zertifikate</div>
-    <div style="font-size:7.5pt; color:#334155; line-height:1.35;">
+    <div class="section-title" style="margin-top:5px;">Zertifikate</div>
+    <div style="font-size:7.3pt; color:#334155; line-height:1.32;">
       <div>• <strong>Google Cloud Data Engineering Program</strong></div>
       <div>• <strong>Python Essentials 1 & 2</strong> (Cisco / OpenEDG)</div>
       <div>• <strong>SQL Certified</strong> (HackerRank)</div>
     </div>
 
-    <div class="section-title" style="margin-top:7px;">Sprachen</div>
-    <div style="font-size:7.5pt; color:#334155; line-height:1.35;">
-      <div>• <strong>Deutsch:</strong> Goethe-Zertifikat B1 zertifiziert</div>
-      <div>• <strong>Englisch:</strong> IELTS B2 (Verhandlungssicher im Beruf)</div>
-      <div>• <strong>Telugu:</strong> Erstsprache / Muttersprache</div>
+    <div class="section-title" style="margin-top:5px;">Sprachkenntnisse</div>
+    <div style="font-size:7.3pt; color:#334155; line-height:1.32;">
+      <div>• <strong>Deutsch:</strong> C1 (TU Chemnitz UNIcert III / Goethe-Zertifikat)</div>
+      <div>• <strong>Englisch:</strong> C1 / Fließend (Masterstudium auf Englisch)</div>
+      <div>• <strong>Hindi:</strong> Fließend · <strong>Telugu:</strong> Muttersprache</div>
     </div>
   </div>
 </div>
