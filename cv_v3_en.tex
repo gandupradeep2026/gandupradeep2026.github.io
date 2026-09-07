@@ -1,0 +1,152 @@
+\documentclass[9.6pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.16in,bottom=0.14in,left=0.44in,right=0.44in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\definecolor{sectionrule}{RGB}{132,132,132}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+
+\titleformat{\section}
+  {\normalsize\bfseries}{}{0pt}{\MakeUppercase}
+  [\vspace{-0.56em}\textcolor{sectionrule}{\rule{\textwidth}{0.45pt}}\vspace{-0.10em}]
+\titlespacing*{\section}{0pt}{0.22em}{0.06em}
+
+\newcommand{\cvheaderwithphoto}[6]{%
+  \noindent
+  \begin{minipage}[c]{0.78\textwidth}
+    {\fontsize{20}{23}\selectfont\bfseries #1}\\[0.12em]
+    {\normalsize\textbf{#2}}\\[0.18em]
+    {\small #3}\\[0.04em]
+    {\small #4}\\[0.04em]
+    {\small #5}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{0.20\textwidth}
+    \raggedleft
+    \begin{tikzpicture}
+      \clip (0,0) circle (1.08cm);
+      \node[inner sep=0pt] at (0.42cm, -0.52cm) {\includegraphics[height=3.2cm,keepaspectratio]{#6}};
+      \draw[draw=sectionrule!40, line width=0.8pt] (0,0) circle (1.08cm);
+    \end{tikzpicture}
+  \end{minipage}
+  \vspace{0.02em}
+}
+
+\newcommand{\experienceitem}[5]{%
+  \textbf{#1}\hfill\textbf{#2}\\[-0.03em]
+  {\small\textit{#3}}\hfill{\small #4}\\[-0.02em]
+  \if\relax\detokenize{#5}\relax\else{\small\textit{#5}}\\[-0.42em]\fi
+}
+
+\newcommand{\educationitem}[4]{%
+  \textbf{#1}\hfill\textbf{#2}\\[-0.02em]
+  {\small\textit{#3}}\hfill{\small #4}\\[0.12em]
+}
+
+\newcommand{\compactliststart}{%
+  \begin{itemize}[leftmargin=1.15em,labelsep=0.38em,topsep=0pt,itemsep=0.01em,parsep=0pt,partopsep=0pt]
+}
+\newcommand{\compactlistend}{\end{itemize}}
+\newcommand{\competency}[1]{{\textbullet\enspace#1\enspace}}
+\newcommand{\skillrow}[2]{\textbf{#1:}\enspace #2\\[-0.02em]}
+
+\begin{document}
+
+\cvheaderwithphoto
+  {Pradeep Gandu}
+  {Cloud Data Engineer \enspace\textbar\enspace Automotive Software \enspace\textbar\enspace AI / Machine Learning}
+  {Chemnitz, Germany (Open to Relocation) \enspace\textbar\enspace +49 176 59677415 \enspace\textbar\enspace gandupradeep2026@gmail.com}
+  {LinkedIn: linkedin.com/in/pradeep-gandu \enspace\textbar\enspace GitHub: github.com/gandupradeep2026}
+  {Portfolio: gandupradeep2026.github.io \enspace\textbar\enspace German -- C1 \enspace\textbar\enspace English -- Fluent}
+  {photo.jpeg}
+
+\section{CORE COMPETENCIES}
+\competency{Cloud Data Engineering (GCP / AWS)}\competency{Apache Beam / PySpark / Spark SQL}\competency{Automotive Telemetry \& CAN-Bus (ISO 14229)}
+\competency{CARLA AD Simulator \& Scenario Runner}\competency{Python / FastAPI / REST APIs}\competency{Generative AI / RAG / MCP / Ollama}
+\competency{BigQuery / Cloud Storage / Airflow}\competency{Docker / Linux / Git / CI/CD Actions}
+
+\section{PROFESSIONAL EXPERIENCE}
+
+\experienceitem{Working Student — AI-Assisted Software Solutions}{DiPP GmbH}{Chemnitz, Germany}{01/2025 -- 07/2025}{}
+\compactliststart
+  \item Integrated generative AI capabilities into enterprise CRM software using Python, FastAPI, and REST APIs.
+  \item Implemented RAG pipelines leveraging vector embeddings, semantic retrieval, and IONOS AI / Ollama.
+  \item Integrated Model Context Protocol (MCP) to standardize contextual data interfaces and tools for LLMs.
+\compactlistend
+
+\vspace{0.02em}
+\experienceitem{Associate Language Specialist — Content Engineering}{GlobalLogic Technologies}{Hyderabad, India}{10/2020 -- 12/2021}{}
+\compactliststart
+  \item Cleaned, annotated, and validated German e-commerce datasets for machine learning and NLP pipelines.
+  \item Trained and evaluated classification and regression models using Python, scikit-learn, and PyTorch.
+\compactlistend
+
+\vspace{0.02em}
+\experienceitem{Senior Process Executive (Client: Meta / Facebook)}{Cognizant Technology Solutions}{Hyderabad, India}{09/2017 -- 05/2019}{}
+\compactliststart
+  \item Supported human-in-the-loop ML evaluation for Facebook Marketplace; improved accuracy from 64\,\% to 76\,\%.
+  \item Executed data validation, root-cause investigations, and quality auditing using Python and SQL.
+\compactlistend
+
+\vspace{0.02em}
+\experienceitem{Practitioner — CRM Operations (Client: Google)}{Concentrix Daksh Services}{Hyderabad, India}{03/2016 -- 05/2017}{}
+\compactliststart
+  \item Supported Google Ads process automation through error analysis, QA, and validation; improved results from 72\,\% to 79\,\%.
+\compactlistend
+
+\section{PROJECTS}
+
+\textbf{Automotive Telemetry Streaming Platform (GCP)}\hfill{\small\textit{2026}}\\[-0.03em]
+{\small\textit{GCP Pub/Sub, Apache Beam / Dataflow, BigQuery, Cloud Storage, Apache Airflow, Pytest CI}}\\[-0.42em]
+\compactliststart
+  \item Built event-driven streaming pipeline ingesting CARLA telemetry; implemented stateful deduplication, DLQ, and BigQuery.
+\compactlistend
+
+\vspace{0.02em}
+\textbf{AutoSense AI: Predictive Vehicle Diagnostics \& Agent}\hfill{\small\textit{2026}}\\[-0.03em]
+{\small\textit{FastAPI, IsolationForest, RAG, Ollama LLM (Qwen3), MCP Tools, REST APIs, React / Vite}}\\[-0.42em]
+\compactliststart
+  \item Built pre-fault diagnostic system audited on 39k+ real OBD records; 5-of-7 alert filter reduced false alarms by 93.4\,\%.
+\compactlistend
+
+\vspace{0.02em}
+\textbf{Master's Thesis: Scenario-Centric Dataset Generation for Autonomous Driving}\hfill{\small\textit{07/2026 -- 12/2026}}\\[-0.03em]
+{\small\textit{Python, CARLA Simulator 0.9.15, YAML, Autonomous Driving Simulation, Dataset Validation, TU Chemnitz}}\\[-0.42em]
+\compactliststart
+  \item Developed modular Python pipeline generating synthetic datasets for autonomous driving environment prediction in CARLA.
+\compactlistend
+
+\section{EDUCATION}
+
+\educationitem{M.Sc. Automotive Software Engineering}{Technische Universität Chemnitz}{Chemnitz, Germany}{10/2022 -- Expected 12/2026}\\
+{\small 90 / 120 ECTS completed \enspace\textbar\enspace Master's thesis in finalization \enspace\textbar\enspace Available full-time from 01/2027 (immediately as Werkstudent)}\\[0.02em]
+\educationitem{M.Tech. Embedded Systems}{MLR Institute of Technology}{Hyderabad, India}{09/2017 -- 09/2019}\\
+{\small Degree: First Class with Distinction (CGPA: 7.33 / 90 Credits) \enspace\textbar\enspace Real-Time Systems, Microcontrollers, System Architecture}
+
+\section{CERTIFICATIONS \& CONTINUING EDUCATION}
+{\small
+\textbullet\enspace Google Cloud Data Engineering \enspace\textbullet\enspace Python Essentials 1 \& 2 (Cisco/OpenEDG) \enspace\textbullet\enspace HackerRank SQL Certified \enspace\textbullet\enspace IBM Generative AI \& RAG
+}
+
+\section{TECHNICAL SKILLS}
+{\small
+\skillrow{Cloud \& Big Data}{GCP (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS, Apache Beam, PySpark, Spark SQL, Airflow, Parquet}
+\skillrow{Software \& Tools}{Python, SQL, FastAPI, Docker, Docker Compose, Pydantic, Streamlit, Linux/Bash, Git/GitHub Actions CI/CD, Pytest}
+\skillrow{Automotive \& AI}{CARLA Simulator, 3D Trajectories, CAN-Bus, UDS (ISO 14229), DBC, SocketCAN, IsolationForest, RAG, Ollama, MCP}
+\skillrow{Languages}{\textbf{German:} C1 (TU Chemnitz UNIcert III / Goethe certified) \enspace\textbar\enspace \textbf{English:} C1 / Fluent \enspace\textbar\enspace \textbf{Hindi:} Fluent \enspace\textbar\enspace \textbf{Telugu:} Native}
+}
+
+\end{document}

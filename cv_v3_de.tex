@@ -1,0 +1,152 @@
+\documentclass[9.6pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.16in,bottom=0.14in,left=0.44in,right=0.44in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\definecolor{sectionrule}{RGB}{132,132,132}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+
+\titleformat{\section}
+  {\normalsize\bfseries}{}{0pt}{\MakeUppercase}
+  [\vspace{-0.56em}\textcolor{sectionrule}{\rule{\textwidth}{0.45pt}}\vspace{-0.10em}]
+\titlespacing*{\section}{0pt}{0.16em}{0.04em}
+
+\newcommand{\cvheaderwithphoto}[6]{%
+  \noindent
+  \begin{minipage}[c]{0.78\textwidth}
+    {\fontsize{20}{23}\selectfont\bfseries #1}\\[0.10em]
+    {\normalsize\textbf{#2}}\\[0.16em]
+    {\small #3}\\[0.03em]
+    {\small #4}\\[0.03em]
+    {\small #5}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{0.20\textwidth}
+    \raggedleft
+    \begin{tikzpicture}
+      \clip (0,0) circle (1.08cm);
+      \node[inner sep=0pt] at (0.42cm, -0.52cm) {\includegraphics[height=3.2cm,keepaspectratio]{#6}};
+      \draw[draw=sectionrule!40, line width=0.8pt] (0,0) circle (1.08cm);
+    \end{tikzpicture}
+  \end{minipage}
+  \vspace{0.01em}
+}
+
+\newcommand{\experienceitem}[5]{%
+  \textbf{#1}\hfill\textbf{#2}\\[-0.03em]
+  {\small\textit{#3}}\hfill{\small #4}\\[-0.03em]
+  \if\relax\detokenize{#5}\relax\else{\small\textit{#5}}\\[-0.44em]\fi
+}
+
+\newcommand{\educationitem}[4]{%
+  \textbf{#1}\hfill\textbf{#2}\\[-0.03em]
+  {\small\textit{#3}}\hfill{\small #4}\\[0.10em]
+}
+
+\newcommand{\compactliststart}{%
+  \begin{itemize}[leftmargin=1.15em,labelsep=0.38em,topsep=0pt,itemsep=0.01em,parsep=0pt,partopsep=0pt]
+}
+\newcommand{\compactlistend}{\end{itemize}}
+\newcommand{\competency}[1]{{\textbullet\enspace#1\enspace}}
+\newcommand{\skillrow}[2]{\textbf{#1:}\enspace #2\\[-0.03em]}
+
+\begin{document}
+
+\cvheaderwithphoto
+  {Pradeep Gandu}
+  {Cloud Data Engineer \enspace\textbar\enspace Automotive Software \enspace\textbar\enspace KI / Machine Learning}
+  {Chemnitz, Deutschland (umzugsbereit) \enspace\textbar\enspace +49 176 59677415 \enspace\textbar\enspace gandupradeep2026@gmail.com}
+  {LinkedIn: linkedin.com/in/pradeep-gandu \enspace\textbar\enspace GitHub: github.com/gandupradeep2026}
+  {Portfolio: gandupradeep2026.github.io \enspace\textbar\enspace Deutsch -- C1 \enspace\textbar\enspace Englisch -- Fließend}
+  {photo.jpeg}
+
+\section{KERNKOMPETENZEN}
+\competency{Cloud Data Engineering (GCP / AWS)}\competency{Apache Beam / PySpark / Spark SQL}\competency{Fahrzeugtelemetrie \& CAN-Bus (ISO 14229)}
+\competency{CARLA AD Simulator \& Scenario Runner}\competency{Python / FastAPI / REST-APIs}\competency{Generative KI / RAG / MCP / Ollama}
+\competency{BigQuery / Cloud Storage / Airflow}\competency{Docker / Linux / Git / CI/CD Actions}
+
+\section{BERUFSERFAHRUNG}
+
+\experienceitem{Werkstudent — KI-Softwarelösungen}{DiPP GmbH}{Chemnitz, Deutschland}{01/2025 -- 07/2025}{Generative KI, FastAPI, RAG, Model Context Protocol (MCP), Ollama, IONOS Cloud, Docker}
+\compactliststart
+  \item Integrierte generative KI- und LLM-Funktionen in CRM-Systeme via Python, FastAPI und REST-APIs.
+  \item Entwickelte RAG-Pipelines mit Ingestion, Text-Chunking, Vektor-Embeddings und semantischem Retrieval.
+  \item Setzte Model Context Protocol (MCP) zur standardisierten Bereitstellung von Systemkontexten für KI um.
+\compactlistend
+
+\vspace{0.01em}
+\experienceitem{Associate Language Specialist — Content Engineering}{GlobalLogic Technologies}{Hyderabad, Indien}{10/2020 -- 12/2021}{Deutsche Handelsdaten, NLP / Textverarbeitung, Machine Learning, scikit-learn, PyTorch}
+\compactliststart
+  \item Bereinigte, strukturierte und annotierte deutsche Handelsdaten für Machine-Learning- und NLP-Pipelines.
+  \item Trainierte und evaluierte Modelle mit Python, scikit-learn und PyTorch (Accuracy, Precision, Recall, F1).
+\compactlistend
+
+\vspace{0.01em}
+\experienceitem{Senior Process Executive (Kunde: Meta / Facebook)}{Cognizant Technology Solutions}{Hyderabad, Indien}{09/2017 -- 05/2019}{Facebook Marketplace Automatisierung, Human-in-the-Loop ML, Python, SQL, QA}
+\compactliststart
+  \item Unterstützte Marketplace-Automatisierung durch Human-in-the-Loop ML-Evaluation und Metadatenvalidierung.
+  \item Trug durch datengestützte Fehleranalysen zur Genauigkeitssteigerung von ca. 64\,\% auf 76\,\% bei.
+\compactlistend
+
+\vspace{0.01em}
+\experienceitem{Practitioner — CRM Operations (Kunde: Google)}{Concentrix Daksh Services}{Hyderabad, Indien}{03/2016 -- 05/2017}{Google AdWords / Ads Automatisierung, Qualitätssicherung, Fehleranalyse, Python, SQL}
+\compactliststart
+  \item Unterstützte Google Ads-Automatisierung via Modellprüfungen und QA; Steigerung von ca. 72\,\% auf 79\,\%.
+\compactlistend
+
+\section{AUSGEWÄHLTE PROJEKTE}
+
+\textbf{Automotive Telemetrie-Streaming-Plattform (GCP)}\hfill{\small\textit{2026}}\\[-0.03em]
+{\small\textit{GCP Pub/Sub, Apache Beam / Dataflow, BigQuery, Cloud Storage, Apache Airflow, Pytest CI}}\\[-0.44em]
+\compactliststart
+  \item Streaming-Pipeline für CARLA-Telemetrie; zustandsbehaftete Deduplizierung, DLQ und partitioniertes BigQuery.
+\compactlistend
+
+\vspace{0.01em}
+\textbf{AutoSense AI: Vorausschauende Fahrzeugdiagnose \& Agent}\hfill{\small\textit{2026}}\\[-0.03em]
+{\small\textit{FastAPI, IsolationForest, RAG, Ollama LLM (Qwen3), MCP-Tools, REST-APIs, React / Vite Dashboard}}\\[-0.44em]
+\compactliststart
+  \item Pre-Fault-Diagnose an 39k+ realen OBD-Daten; 5-aus-7-Stabilisierungsfilter senkte Fehlalarme um 93,4\,\%.
+\compactlistend
+
+\vspace{0.01em}
+\textbf{Masterarbeit: Szenariozentrierte Datensätze für autonomes Fahren}\hfill{\small\textit{07/2026 -- 12/2026}}\\[-0.03em]
+{\small\textit{Python, CARLA Simulator 0.9.x, YAML, OpenDRIVE, 3D-Trajektorien, Datenvalidierung, Parquet, TU Chemnitz}}\\[-0.44em]
+\compactliststart
+  \item Pipeline zur synthetischen Datengenerierung und Trajektorien-Extraktion für Prädiktionsmodelle in CARLA.
+\compactlistend
+
+\section{AUSBILDUNG}
+
+\educationitem{M.Sc. Automotive Software Engineering}{Technische Universität Chemnitz}{Chemnitz, Deutschland}{10/2022 -- voraussichtlich 12/2026}\\
+{\small 90 / 120 ECTS absolviert \enspace\textbar\enspace Masterarbeit in Finalisierung \enspace\textbar\enspace Vollzeit ab 01/2027 (ab sofort als Werkstudent)}\\[0.02em]
+\educationitem{M.Tech. Embedded Systems}{MLR Institute of Technology}{Hyderabad, Indien}{09/2017 -- 09/2019}\\
+{\small First Class with Distinction (CGPA: 7,33 / 90 Credits) \enspace\textbar\enspace Bachelor: B.Tech. EEE, JNTU Hyderabad (62,67\,\%)}
+
+\section{WEITERBILDUNG \& ZERTIFIKATE}
+{\small
+\textbullet\enspace Google Cloud Data Engineering \enspace\textbullet\enspace Python Essentials 1 \& 2 (Cisco/OpenEDG) \enspace\textbullet\enspace HackerRank SQL-Zertifikat \enspace\textbullet\enspace IBM Generative KI \& RAG
+}
+
+\section{TECHNISCHE KENNTNISSE}
+{\small
+\skillrow{Cloud \& Big Data}{GCP (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS, Apache Beam, PySpark, Spark SQL, Airflow, Parquet}
+\skillrow{Software \& Tools}{Python, SQL, FastAPI, Docker, Docker Compose, Pydantic, Streamlit, Linux/Bash, Git/GitHub Actions CI/CD, Pytest}
+\skillrow{Automotive \& KI}{CARLA Simulator, 3D-Trajektorien, CAN-Bus, UDS (ISO 14229), DBC, SocketCAN, IsolationForest, RAG, Ollama, MCP}
+\skillrow{Sprachen}{\textbf{Deutsch:} C1 (UNIcert III / Goethe) \enspace\textbar\enspace \textbf{Englisch:} C1 / Fließend \enspace\textbar\enspace \textbf{Hindi:} Fließend \enspace\textbar\enspace \textbf{Telugu:} Erstsprache}
+}
+
+\end{document}
