@@ -228,10 +228,10 @@
 
         <!-- CATEGORY FILTERS -->
         <div class="project-filters" role="tablist">
-            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects (6)</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects (9)</button>
             <button class="filter-btn" data-filter="cloud" data-i18n="projects.filterCloud">Cloud & Data Engineering</button>
             <button class="filter-btn" data-filter="automotive" data-i18n="projects.filterAuto">Automotive & ADAS</button>
-            <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">AI & Diagnostics</button>
+            <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">AI & Generative AI</button>
         </div>
     </div>
 
@@ -323,7 +323,103 @@
             </div>
         </article>
 
-        <!-- PROJECT 3: CAN-Bus Simulator -->
+        <!-- PROJECT 3: Aural AI (Live Deployed) -->
+        <article class="project-card" data-category="ai">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-live" data-i18n="projects.liveBadge">🟢 Live App</span>
+                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
+                    <span class="project-category-tag">Voice & Multimodal AI</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.aural.title">Aural AI: Voice & Video Interview Platform</h3>
+            
+            <p class="project-description" data-i18n="projects.aural.desc">
+                Open-source multimodal AI interview platform conducting structured voice, chat, and video interviews at scale with real-time adaptive questioning and automated scoring.
+            </p>
+
+            <div class="project-tags">
+                <span>WebRTC</span>
+                <span>Python</span>
+                <span>Real-Time Audio</span>
+                <span>Whisper STT</span>
+                <span>Adaptive LLMs</span>
+                <span>Docker</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.aural.b1">Architected real-time multimodal interview workflows with low-latency WebRTC audio/video capture and streaming.</li>
+                <li data-i18n="projects.aural.b2">Integrated adaptive LLM reasoning to generate context-aware follow-up questions tailored to candidate responses.</li>
+                <li data-i18n="projects.aural.b3">Built automated scoring rubrics, competency evaluation engines, and structured candidate performance analytics.</li>
+                <li data-i18n="projects.aural.b4">Deployed live in production with self-hostable Docker architecture at aural-ai.com.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://aural-ai.com" target="_blank" rel="noopener noreferrer" class="project-btn live-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span data-i18n="projects.btnLive">Live Demo 🚀</span>
+                </a>
+                <a href="https://github.com/gandupradeep2026/pradeep-ai-interview-agent" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="aural">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: Natively AI Copilot (Live Deployed) -->
+        <article class="project-card" data-category="ai">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-live" data-i18n="projects.liveBadge">🟢 Live App</span>
+                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
+                    <span class="project-category-tag">Local RAG & Copilot</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.natively.title">Natively: AI Meeting Copilot & Local RAG</h3>
+            
+            <p class="project-description" data-i18n="projects.natively.desc">
+                Privacy-first, open-source AI meeting assistant and interview copilot featuring real-time local transcription, zero cloud data leakage, and local vector RAG.
+            </p>
+
+            <div class="project-tags">
+                <span>Python</span>
+                <span>Local RAG</span>
+                <span>Whisper VAD</span>
+                <span>Ollama / BYOK</span>
+                <span>Desktop Overlay</span>
+                <span>Chromadb</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.natively.b1">Built real-time speech-to-text pipeline with Voice Activity Detection (VAD) and local Whisper transcription.</li>
+                <li data-i18n="projects.natively.b2">Implemented local RAG vector retrieval for documents and meeting context with 100% private on-device execution.</li>
+                <li data-i18n="projects.natively.b3">Engineered lightweight desktop overlay UI supporting stealth mode, keyboard shortcuts, and low-latency assistance.</li>
+                <li data-i18n="projects.natively.b4">Published open-source with live web product homepage and documentation at natively.software.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://natively.software" target="_blank" rel="noopener noreferrer" class="project-btn live-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span data-i18n="projects.btnLive">Live Demo 🚀</span>
+                </a>
+                <a href="https://github.com/gandupradeep2026/natively-cluely-ai-assistant" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="natively">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 5: CAN-Bus Simulator -->
         <article class="project-card" data-category="automotive">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -366,7 +462,46 @@
             </div>
         </article>
 
-        <!-- PROJECT 4: CARLA Master Thesis Pipeline -->
+        <!-- PROJECT 6: ShuttleVision-AI -->
+        <article class="project-card" data-category="ai">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="project-category-tag">Computer Vision</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.shuttle.title">ShuttleVision-AI: CV Player Tracking & Analytics</h3>
+            
+            <p class="project-description" data-i18n="projects.shuttle.desc">
+                AI-powered computer vision and deep-learning system tracking player movement, court positioning, and performance analytics from video streams.
+            </p>
+
+            <div class="project-tags">
+                <span>OpenCV</span>
+                <span>Python</span>
+                <span>Deep Learning</span>
+                <span>Player Tracking</span>
+                <span>2D Court Geometry</span>
+                <span>Video Analytics</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.shuttle.b1">Developed robust multi-object tracking pipelines using OpenCV and deep-learning detection architectures.</li>
+                <li data-i18n="projects.shuttle.b2">Mapped pixel coordinates to calibrated 2D court geometry for accurate velocity, distance, and heat-map analytics.</li>
+                <li data-i18n="projects.shuttle.b3">Engineered frame-by-frame player trajectory extraction with occlusion handling and temporal smoothing.</li>
+                <li data-i18n="projects.shuttle.b4">Open-sourced on GitHub with structured modular Python codebase and reproducibility guidelines.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026/ShuttleVision-AI" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- PROJECT 7: CARLA Master Thesis Pipeline -->
         <article class="project-card" data-category="automotive cloud">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -399,13 +534,17 @@
             </ul>
 
             <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub</span>
+                </a>
                 <button class="project-btn modal-trigger-btn primary-action" data-project="carla">
                     <span data-i18n="projects.btnThesisDetails">Explore Thesis Architecture 📐</span>
                 </button>
             </div>
         </article>
 
-        <!-- PROJECT 5: Dataproc / PySpark Retail Pipeline -->
+        <!-- PROJECT 8: Dataproc / PySpark Retail Pipeline -->
         <article class="project-card" data-category="cloud">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -437,13 +576,17 @@
             </ul>
 
             <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub</span>
+                </a>
                 <button class="project-btn modal-trigger-btn primary-action" data-project="pyspark">
                     <span data-i18n="projects.btnPipelineDetails">View Pipeline Workflow 📐</span>
                 </button>
             </div>
         </article>
 
-        <!-- PROJECT 6: CARLA Autonomous Driving Scenario Development -->
+        <!-- PROJECT 9: CARLA Autonomous Driving Scenario Development -->
         <article class="project-card" data-category="automotive ai">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -475,6 +618,10 @@
             </ul>
 
             <div class="project-actions">
+                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub</span>
+                </a>
                 <button class="project-btn modal-trigger-btn primary-action" data-project="carlaScenarios">
                     <span data-i18n="projects.btnScenarioDetails">View Scenario Specs 📐</span>
                 </button>

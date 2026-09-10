@@ -53,12 +53,14 @@ const translations = {
         "projects.label": "PORTFOLIO",
         "projects.title": "Featured Engineering Projects",
         "projects.subtitle": "Verified, production-grade projects across event-driven cloud data pipelines, predictive AI, and autonomous systems.",
-        "projects.filterAll": "All Projects (6)",
+        "projects.filterAll": "All Projects (9)",
         "projects.filterCloud": "Cloud & Data Engineering",
         "projects.filterAuto": "Automotive & ADAS",
-        "projects.filterAI": "AI & Diagnostics",
+        "projects.filterAI": "AI & Generative AI",
         "projects.flagship": "⭐ Flagship",
+        "projects.liveBadge": "🟢 Live App",
         "projects.thesis.badge": "🎓 Master Thesis",
+        "projects.btnLive": "Live Demo 🚀",
         "projects.btnCode": "GitHub Repository",
         "projects.btnArchitecture": "View Architecture 📐",
         "projects.btnThesisDetails": "Explore Thesis Architecture 📐",
@@ -112,6 +114,30 @@ const translations = {
         "projects.carlaScenarios.b2": "Implemented dynamic vehicle-control behaviour responding to road users, speed regulations, and emergency braking.",
         "projects.carlaScenarios.b3": "Engineered overtaking, safe lane changing, and multi-bus-stop navigation and stopping sequences.",
         "projects.carlaScenarios.b4": "Calibrated sensor inputs, weather models, and simulation maps for reproducible test scenarios.",
+
+        // Project 7: Aural AI (Live Deployed)
+        "projects.aural.title": "Aural AI: Voice & Video Interview Platform",
+        "projects.aural.desc": "Open-source multimodal AI interview platform conducting structured voice, chat, and video interviews at scale with real-time adaptive questioning and automated scoring.",
+        "projects.aural.b1": "Architected real-time multimodal interview workflows with low-latency WebRTC audio/video capture and streaming.",
+        "projects.aural.b2": "Integrated adaptive LLM reasoning to generate context-aware follow-up questions tailored to candidate responses.",
+        "projects.aural.b3": "Built automated scoring rubrics, competency evaluation engines, and structured candidate performance analytics.",
+        "projects.aural.b4": "Deployed live in production with self-hostable Docker architecture at aural-ai.com.",
+
+        // Project 8: Natively AI Copilot (Live Deployed)
+        "projects.natively.title": "Natively: AI Meeting Copilot & Local RAG",
+        "projects.natively.desc": "Privacy-first, open-source AI meeting assistant and interview copilot featuring real-time local transcription, zero cloud data leakage, and local vector RAG.",
+        "projects.natively.b1": "Built real-time speech-to-text pipeline with Voice Activity Detection (VAD) and local Whisper transcription.",
+        "projects.natively.b2": "Implemented local RAG vector retrieval for documents and meeting context with 100% private on-device execution.",
+        "projects.natively.b3": "Engineered lightweight desktop overlay UI supporting stealth mode, keyboard shortcuts, and low-latency assistance.",
+        "projects.natively.b4": "Published open-source with live web product homepage and documentation at natively.software.",
+
+        // Project 9: ShuttleVision-AI
+        "projects.shuttle.title": "ShuttleVision-AI: CV Player Tracking & Analytics",
+        "projects.shuttle.desc": "AI-powered computer vision and deep-learning system tracking player movement, court positioning, and performance analytics from video streams.",
+        "projects.shuttle.b1": "Developed robust multi-object tracking pipelines using OpenCV and deep-learning detection architectures.",
+        "projects.shuttle.b2": "Mapped pixel coordinates to calibrated 2D court geometry for accurate velocity, distance, and heat-map analytics.",
+        "projects.shuttle.b3": "Engineered frame-by-frame player trajectory extraction with occlusion handling and temporal smoothing.",
+        "projects.shuttle.b4": "Open-sourced on GitHub with structured modular Python codebase and reproducibility guidelines.",
 
         // About Section
         "about.label": "PROFILE",
@@ -259,12 +285,14 @@ const translations = {
         "projects.label": "PORTFOLIO",
         "projects.title": "Ausgewählte Engineering-Projekte",
         "projects.subtitle": "Verifizierte Projekte aus den Bereichen ereignisgesteuerte Cloud-Datenpipelines, prädiktive KI und autonome Systeme.",
-        "projects.filterAll": "Alle Projekte (6)",
+        "projects.filterAll": "Alle Projekte (9)",
         "projects.filterCloud": "Cloud & Data Engineering",
         "projects.filterAuto": "Automotive & ADAS",
-        "projects.filterAI": "KI & Diagnostik",
+        "projects.filterAI": "KI & Generative KI",
         "projects.flagship": "⭐ Flagship",
+        "projects.liveBadge": "🟢 Live-App",
         "projects.thesis.badge": "🎓 Masterarbeit",
+        "projects.btnLive": "Live-Demo 🚀",
         "projects.btnCode": "GitHub Repository",
         "projects.btnArchitecture": "Architektur ansehen 📐",
         "projects.btnThesisDetails": "Masterarbeits-Architektur 📐",
@@ -318,6 +346,30 @@ const translations = {
         "projects.carlaScenarios.b2": "Implementierte dynamisches Steuerungsverhalten in Reaktion auf Verkehrsteilnehmer und Notbremsungen.",
         "projects.carlaScenarios.b3": "Konzipierte Überholmanöver, sichere Spurwechsel und Haltestellen-Navigationsabläufe.",
         "projects.carlaScenarios.b4": "Kalibrierte Sensordaten, Wettermodelle und Simulationskarten für reproduzierbare Testläufe.",
+
+        // Project 7: Aural AI (Live Deployed)
+        "projects.aural.title": "Aural AI: Sprach- & Video-Interviewplattform",
+        "projects.aural.desc": "Open-Source multimodale KI-Interviewplattform für strukturierte Sprach-, Chat- und Video-Interviews im großen Maßstab mit adaptiver Fragestellung und automatisierter Auswertung.",
+        "projects.aural.b1": "Entwickelte multimodale Echtzeit-Interview-Workflows mit latenzarmer WebRTC-Audio-/Videoübertragung.",
+        "projects.aural.b2": "Integrierte adaptive LLM-Logik zur Generierung kontextbezogener Folgefragen basierend auf Kandidatenantworten.",
+        "projects.aural.b3": "Implementierte automatisierte Bewertungsrubriken, Kompetenzanalysen und strukturierte Kandidatenberichte.",
+        "projects.aural.b4": "Produktiv bereitgestellt mit selbst-hostbarer Docker-Architektur und Live-Web-App auf aural-ai.com.",
+
+        // Project 8: Natively AI Copilot (Live Deployed)
+        "projects.natively.title": "Natively: KI-Meeting-Copilot & Lokales RAG",
+        "projects.natively.desc": "Datenschutzorientierter Open-Source KI-Meeting-Assistent mit lokaler Echtzeit-Transkription, lokaler RAG-Wissensabfrage und ohne Cloud-Datenabfluss.",
+        "projects.natively.b1": "Entwickelte Echtzeit-Spracherkennung mit Voice Activity Detection (VAD) und lokaler Whisper-Transkription.",
+        "projects.natively.b2": "Implementierte lokale RAG-Vektorsuche für Dokumente und Meeting-Kontexte mit 100 % privater On-Device-Ausführung.",
+        "projects.natively.b3": "Entwarf leichtgewichtige Desktop-Overlay-Oberfläche mit Stealth-Modus, Tastaturkürzeln und Echtzeit-Unterstützung.",
+        "projects.natively.b4": "Open-Source veröffentlicht mit produktiver Webpräsenz und Dokumentation auf natively.software.",
+
+        // Project 9: ShuttleVision-AI
+        "projects.shuttle.title": "ShuttleVision-AI: Computer Vision Spieler-Tracking",
+        "projects.shuttle.desc": "KI-gestütztes Computer-Vision- und Deep-Learning-System zur Verfolgung von Spielerbewegungen, Spielfeldpositionierung und Leistungsanalysen aus Videostreams.",
+        "projects.shuttle.b1": "Entwickelte robuste Multi-Objekt-Tracking-Pipelines mit OpenCV und Deep-Learning-Erkennungsmodellen.",
+        "projects.shuttle.b2": "Projizierte Pixelkoordinaten auf kalibrierte 2D-Spielfeldgeometrien für Geschwindigkeits-, Distanz- und Heatmap-Analysen.",
+        "projects.shuttle.b3": "Extrahierte Bild-für-Bild-Trajektorien mit Verdeckungsbehandlung und zeitlicher Glättung.",
+        "projects.shuttle.b4": "Als Open-Source auf GitHub bereitgestellt mit modularer Python-Codebasis und Reproduzierbarkeitsrichtlinien.",
 
         // About Section
         "about.label": "PROFIL",
@@ -828,6 +880,140 @@ const projectArchitectures = {
                 { val: "Python", label: "Steuerungslogik" }
             ],
             githubUrl: "https://github.com/gandupradeep2026"
+        }
+    },
+
+    aural: {
+        en: {
+            title: "Aural AI: Voice, Chat & Video Interview Platform",
+            subtitle: "Open Source · WebRTC · Python · LLMs · Real-Time Audio & Video · Docker",
+            flow: `[Candidate Voice / Video / Chat WebRTC Stream]
+                          │
+                          ▼
+            [MediaStream & Audio Preprocessing Pipeline]
+                          │
+                          ▼
+            [Real-Time Whisper Speech-to-Text Transcription]
+                          │
+                          ▼
+            [Adaptive LLM Conversational Agent Engine]
+               ├─ Dynamic Follow-Up Question Generation
+               ├─ Multi-Competency Objective Scoring Rubrics
+               └─ Response Depth & Speech Pace Monitoring
+                          │
+                          ▼
+            [Automated Assessment Report & Analytics Mart]`,
+            challenges: [
+                "Achieving low-latency bidirectional voice interaction with WebRTC streaming to eliminate unnatural conversational pauses.",
+                "Designing objective, hallucination-resistant evaluation rubrics grounded in verbatim candidate speech transcripts.",
+                "Orchestrating multi-modal state tracking (voice, video, text) in scalable Dockerized microservices."
+            ],
+            metrics: [
+                { val: "Live", label: "Production Web Deployment" },
+                { val: "3 Modes", label: "Voice, Video & Text Chat" },
+                { val: "100%", label: "Open-Source & Self-Hostable" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/pradeep-ai-interview-agent"
+        },
+        de: {
+            title: "Aural AI: Sprach-, Chat- & Video-Interviewplattform",
+            subtitle: "Open Source · WebRTC · Python · LLMs · Echtzeit-Audio & Video · Docker",
+            flow: `[Kandidaten-Audio-/Video-Stream via WebRTC]
+                          │
+                          ▼
+            [MediaStream & Vorverarbeitungspipeline]
+                          │
+                          ▼
+            [Echtzeit-Transkription via Whisper STT]
+                          │
+                          ▼
+            [Adaptive LLM-Interview-Engine]
+               ├─ Dynamische Generierung von Folgefragen
+               ├─ Objektive Bewertung nach Kompetenzrubriken
+               └─ Überwachung von Antworttiefe und Sprechtempo
+                          │
+                          ▼
+            [Automatisierter Feedback-Report & Analytics-Dashboard]`,
+            challenges: [
+                "Minimierung von Latenzzeiten bei bidirektionaler Sprachübertragung via WebRTC für flüssige Gesprächsführung.",
+                "Entwicklung deterministischer und halluzinationsfreier Bewertungsrubriken anhand wörtlicher Transkripte.",
+                "Robuste Multimodalitäts-Orchestrierung (Audio, Video, Text) in modularer Docker-Architektur."
+            ],
+            metrics: [
+                { val: "Live", label: "Produktives Deployment" },
+                { val: "3 Modi", label: "Sprache, Video & Chat" },
+                { val: "100 %", label: "Open-Source & Self-Hostable" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/pradeep-ai-interview-agent"
+        }
+    },
+
+    natively: {
+        en: {
+            title: "Natively: AI Meeting Assistant & Copilot",
+            subtitle: "Python · Local RAG · Real-Time Audio Transcription · Ollama / LLMs · Stealth UI",
+            flow: `[System Audio & Microphone Stream]
+                          │
+                          ▼
+            [Voice Activity Detection (VAD) & Audio Buffering]
+                          │
+                          ▼
+            [Local Speech-to-Text Transcription Engine]
+                          │
+                          ▼
+            [Local Vector Store (Chromadb Embeddings)]
+               ├─ On-Device Document Ingestion & Chunking
+               └─ Semantic Knowledge Retrieval
+                          │
+                          ▼
+            [Zero-Cloud-Leakage Local LLM Reasoning (Ollama / BYOK)]
+                          │
+                          ▼
+            [Transparent Desktop Overlay & Meeting Notes Copilot]`,
+            challenges: [
+                "Guaranteeing complete data confidentiality with 100% on-device transcription and local embeddings without cloud leaks.",
+                "Maintaining sub-second response times using optimized local LLM quantization and caching.",
+                "Building an unobtrusive, lightweight desktop overlay with minimal CPU and memory footprints during active calls."
+            ],
+            metrics: [
+                { val: "0 Leakage", label: "Privacy-Preserving On-Device RAG" },
+                { val: "Sub-Second", label: "Real-Time Meeting Assistance" },
+                { val: "Live", label: "Public Web Documentation" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/natively-cluely-ai-assistant"
+        },
+        de: {
+            title: "Natively: KI-Meeting-Assistent & Copilot",
+            subtitle: "Python · Lokales RAG · Echtzeit-Spracherkennung · Ollama / LLMs · Desktop-Overlay",
+            flow: `[System-Audio & Mikrofon-Stream]
+                          │
+                          ▼
+            [Voice Activity Detection (VAD) & Audio-Pufferung]
+                          │
+                          ▼
+            [Lokale Speech-to-Text Spracherkennung]
+                          │
+                          ▼
+            [Lokaler Vektorspeicher (Chromadb-Embeddings)]
+               ├─ Lokale Dokumentenverarbeitung & Chunking
+               └─ Semantische Ähnlichkeitssuche
+                          │
+                          ▼
+            [Lokale LLM-Inferenz ohne Cloud-Abfluss (Ollama / BYOK)]
+                          │
+                          ▼
+            [Transparentes Desktop-Overlay & Echtzeit-Meeting-Notizen]`,
+            challenges: [
+                "Gewährleistung absoluten Datenschutzes durch vollständige On-Device-Verarbeitung ohne externe Serveranfragen.",
+                "Echtzeitfähige Antwortzeiten durch optimierte lokale LLM-Quantisierung und intelligentes Caching.",
+                "Entwicklung eines ressourcenschonenden, transparenten Desktop-Overlays für Videokonferenzen."
+            ],
+            metrics: [
+                { val: "0 Abfluss", label: "Lokale Datensicherheit" },
+                { val: "< 1 Sek.", label: "Reaktionszeit im Meeting" },
+                { val: "Live", label: "Webpräsenz & Dokumentation" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/natively-cluely-ai-assistant"
         }
     }
 };
