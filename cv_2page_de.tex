@@ -1,0 +1,208 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.38in,bottom=0.38in,left=0.55in,right=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\definecolor{primary}{RGB}{15,23,42}
+\definecolor{accent}{RGB}{0,86,179}
+\definecolor{sectionrule}{RGB}{132,132,132}
+\definecolor{subtext}{RGB}{75,85,100}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+
+% Section formatting
+\titleformat{\section}
+  {\normalsize\bfseries\color{primary}}{}{0pt}{\MakeUppercase}
+  [\vspace{-0.55em}\textcolor{sectionrule}{\rule{\textwidth}{0.5pt}}\vspace{0.06em}]
+\titlespacing*{\section}{0pt}{0.32em}{0.12em}
+
+% Header with circular photo
+\newcommand{\cvheaderwithphoto}[6]{%
+  \noindent
+  \begin{minipage}[c]{0.80\textwidth}
+    {\fontsize{20}{23}\selectfont\bfseries\color{primary} #1}\\[0.15em]
+    {\small\bfseries\color{accent} #2}\\[0.20em]
+    {\footnotesize #3}\\[0.10em]
+    {\footnotesize #4}\\[0.10em]
+    {\footnotesize #5}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{0.18\textwidth}
+    \raggedleft
+    \begin{tikzpicture}
+      \clip (0,0) circle (1.18cm);
+      \node[inner sep=0pt] at (0.45cm, -0.55cm) {\includegraphics[height=3.4cm,keepaspectratio]{#6}};
+      \draw[draw=sectionrule!50, line width=0.8pt] (0,0) circle (1.18cm);
+    \end{tikzpicture}
+  \end{minipage}
+  \vspace{0.15em}
+}
+
+% Experience item macro
+\newcommand{\experienceitem}[5]{%
+  \noindent\textbf{#1}\hfill\textbf{#2}\\[0.02em]
+  {\footnotesize\textit{\color{accent} #3}}\hfill{\footnotesize\textbf{#4}}\\[0.04em]
+  \if\relax\detokenize{#5}\relax\else{\scriptsize\color{subtext}\textbf{Technologien / Stack:} #5}\\[0.08em]\fi
+}
+
+% Education item macro
+\newcommand{\educationitem}[4]{%
+  \noindent\textbf{#1}\hfill\textbf{#2}\\[0.02em]
+  {\footnotesize\textit{\color{accent} #3}}\hfill{\footnotesize\textbf{#4}}\\[0.04em]
+}
+
+% Project item macro
+\newcommand{\projectitem}[4]{%
+  \noindent\textbf{#1}\hfill{\footnotesize\textbf{#2}}\\[0.02em]
+  {\scriptsize\color{subtext}\textbf{Stack:} #3}\hfill{\scriptsize\textbf{#4}}\\[0.06em]
+}
+
+% List formatting without full stops
+\newcommand{\cvliststart}{%
+  \begin{itemize}[leftmargin=1.15em,labelsep=0.38em,topsep=0.04em,itemsep=0.04em,parsep=0pt,partopsep=0pt]
+}
+\newcommand{\cvlistend}{\end{itemize}\vspace{0.14em}}
+
+\newcommand{\competency}[1]{{\textbullet\enspace #1\enspace}}
+\newcommand{\skillrow}[2]{\textbf{#1:}\enspace #2\\[0.10em]}
+
+\begin{document}
+
+% ================= PAGE 1 =================
+\cvheaderwithphoto
+  {Pradeep Gandu}
+  {Cloud Data Engineer \enspace\textbar\enspace Automotive Software \enspace\textbar\enspace KI / Machine Learning}
+  {Bernsdorfer Str. 115, 09126 Chemnitz \enspace\textbar\enspace +49 176 59677415 \enspace\textbar\enspace gandupradeep2026@gmail.com}
+  {LinkedIn: linkedin.com/in/pradeep-gandu \enspace\textbar\enspace GitHub: github.com/gandupradeep2026 \enspace\textbar\enspace Portfolio: gandupradeep2026.github.io}
+  {Deutsch: C1 (UNIcert III / DSH) \enspace\textbar\enspace Englisch: Fließend (C1) \enspace\textbar\enspace Status: § 16b AufenthG (Vollzeit ab 01/2027)}
+  {photo.jpeg}
+
+\section{Kurzprofil}
+{\small
+Ingenieur für Cloud-Datenplattformen, Künstliche Intelligenz und Automotive Software Engineering mit fundierter Praxiserfahrung in skalierbaren Streaming- und Batch-Pipelines (GCP BigQuery, Pub/Sub, Apache Beam, Dataflow) sowie generativer KI und modularen RAG-Architekturen (FastAPI, MCP, Ollama bei der DiPP GmbH). Masterand an der Technischen Universität Chemnitz mit verhandlungssicheren C1-Deutschkenntnissen, bundesweiter Mobilität und sofortiger Verfügbarkeit (ab sofort als Werkstudent / Teilzeit, ab 01/2027 in Vollzeit).
+}
+
+\section{Kernkompetenzen}
+\vspace{0.06em}
+{\small
+\competency{Cloud Data Engineering (GCP / AWS)}\competency{Apache Beam / PySpark / Spark SQL}\competency{Fahrzeugtelemetrie \& CAN-Bus (ISO 14229)}\\
+\competency{CARLA AD Simulator \& Scenario Runner}\competency{Python / FastAPI / REST-APIs}\competency{Generative KI / RAG / MCP / Ollama}\\
+\competency{BigQuery / Cloud Storage / Cloud Composer}\competency{CI/CD GitHub Actions / Docker / Linux}
+}
+\vspace{0.10em}
+
+\section{Berufserfahrung}
+
+\experienceitem{Werkstudent — KI-Softwarelösungen}{DiPP GmbH}{Chemnitz}{01/2025 – 07/2025}{Generative KI, FastAPI, RAG, Model Context Protocol (MCP), Ollama, IONOS Cloud, Docker, Git}
+\cvliststart
+  \item Konzeption und Implementierung generativer KI- und LLM-Services für Enterprise-CRM-Systeme via Python und FastAPI
+  \item Aufbau modularer RAG-Pipelines mit Ingestion, Text-Chunking, Vektor-Embeddings und semantischem Retrieval
+  \item Standardisierung von Systemkontexten und Toolschnittstellen über das Model Context Protocol (MCP) für sichere lokale Inferenz
+  \item Durchführung von Integrationsprüfungen, Fehleranalysen und systematischer Evaluation der Modellantworten
+\cvlistend
+
+\experienceitem{Associate Language Specialist (Content Engineering \& NLP)}{GlobalLogic Technologies}{Hyderabad, Indien}{10/2020 – 12/2021}{Deutsche Handelsdaten, NLP / Textverarbeitung, Machine Learning, scikit-learn, PyTorch, Python}
+\cvliststart
+  \item Bereinigung, Kuration und semantische Validierung deutscher Einzelhandelsdaten für automatisierte ML-Pipelines
+  \item Training, Hyperparameter-Optimierung und Evaluation überwachter Klassifikationsmodelle mit Python und scikit-learn
+  \item Durchführung systematischer Qualitätsprüfungen zur Sicherstellung hoher Annotationskonsistenz nach Kundenrichtlinien
+\cvlistend
+
+\experienceitem{Senior Process Executive (ML-Qualitätsprüfung Meta / Facebook)}{Cognizant}{Hyderabad, Indien}{09/2017 – 05/2019}{Facebook Marketplace, Human-in-the-Loop ML, Datenqualität, SQL, Python, Ursachenanalyse}
+\cvliststart
+  \item Durchführung von Human-in-the-Loop ML-Evaluationen und Metadatenvalidierungen für Facebook Marketplace
+  \item Steigerung der Erkennungs- und Klassifikationsgenauigkeit von ca. 64\,\% auf 76\,\% durch datengestützte Feedbackschleifen
+  \item Automatisierte Datenqualitätsaudits und strukturierte Ursachenanalysen bei Modellabweichungen mittels SQL und Python
+\cvlistend
+
+\experienceitem{Spezialist für CRM-Operations (Qualitätssicherung für Google)}{Concentrix Daksh Services}{Hyderabad, Indien}{03/2016 – 05/2017}{Google Ads, Workflow-Automatisierung, Prozessvalidierung, Fehleranalyse, SQL}
+\cvliststart
+  \item Prozessvalidierung, Fehlerauswertung und Datenprüfungen für automatisierte Google-Ads-Workflows
+  \item Steigerung der operativen Prozess-Erfolgsquote von ca. 72\,\% auf 79\,\% durch Optimierung der Prüfschritte
+\cvlistend
+
+\newpage
+% ================= PAGE 2 =================
+
+\section{Ausbildung}
+
+\educationitem{M.Sc. in Automotive Software Engineering}{Technische Universität Chemnitz}{}{10/2022 – voraussichtlich 12/2026}
+\cvliststart
+  \item 90 / 120 ECTS absolviert; Masterarbeit in Finalisierung: Generierung und Annotation szenariozentrierter Datensätze für Umgebungsvorhersagen beim autonomen Fahren (Python, CARLA Simulator 0.9.15, OpenDRIVE, Parquet)
+  \item \textbf{Studienschwerpunkte:} Verteilte Systeme, Software-Architekturen, Fahrerassistenzsysteme, Simulationstechnik
+\cvlistend
+
+\educationitem{M.Tech. in Eingebettete Systeme (Embedded Systems)}{MLR Institute of Technology}{Hyderabad, Indien}{09/2017 – 09/2019}\\[-0.05em]
+{\footnotesize First Class with Distinction (CGPA: 7,33 / 90 Credits) \enspace\textbar\enspace \textbf{Schwerpunkte:} RTOS, Mikrocontroller, Systementwurf}\\[0.20em]
+
+\educationitem{B.Tech. in Elektro- und Informationstechnik}{Jawaharlal Nehru Technological University}{Hyderabad, Indien}{08/2009 – 11/2013}\\[-0.05em]
+{\footnotesize First Class (Gesamtnote: 62,67\,\%) \enspace\textbar\enspace \textbf{Schwerpunkte:} Regelungstechnik, Elektronik, Signalverarbeitung}\\[0.25em]
+
+\section{Ausgewählte Praxisprojekte}
+
+\projectitem{Automotive-Telemetrie-Streaming-Plattform (GCP)}{2026}{GCP Pub/Sub, Apache Beam, Dataflow, BigQuery, Airflow, Python}{GitHub}
+\cvliststart
+  \item Skalierbare Event-Streaming-Pipeline für Fahrzeugtelemetriedaten mit zustandsbehafteter Deduplizierung via Apache Beam
+  \item Partitionierte, kostenoptimierte Speicherung in Google BigQuery sowie automatisierte Orchestrierung mit Cloud Composer
+\cvlistend
+
+\projectitem{AutoSense AI: Vorausschauende Fahrzeugdiagnose \& Agent}{2026}{FastAPI, IsolationForest, RAG, Ollama LLM, MCP, React / Vite}{GitHub}
+\cvliststart
+  \item Anomalieerkennung an 39.000+ realen OBD-II-Datensätzen mit 5-aus-7-Filter zur Fehlalarmreduktion um 93,4\,\%
+  \item Interaktiver KI-Diagnose-Agent mit RAG-Abfrage technischer Reparaturleitfäden und Model Context Protocol (MCP)
+\cvlistend
+
+\projectitem{TU Chemnitz Badminton Community Portal}{2026}{React / Vite, Node.js / Express, SQLite, Tailwind, Cloudflare, Oracle VM}{Live-App}
+\cvliststart
+  \item Entkoppelte Full-Stack-Webanwendung auf GitHub Pages mit Node.js/Express REST-Backend via Cloudflare-Tunnel
+  \item Sicheres Turnieranmeldesystem, Trainervermittlung und gehärtete Authentifizierung mit kryptografischen 6-Digit-OTPs
+\cvlistend
+
+\section{Fähigkeiten \& Qualifikationen}
+{\small
+\skillrow{Cloud \& Big Data}{Google Cloud Platform (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS (EC2, S3), Apache Beam, PySpark, Spark SQL, Apache Airflow, Parquet}
+\skillrow{Software \& KI}{Python (FastAPI, Scikit-learn, PyTorch), SQL (Experte), RAG-Architekturen, Ollama, MCP, REST-APIs, Docker, Docker Compose, Git / GitHub Actions CI/CD}
+\skillrow{Automotive \& IT}{CARLA AD Simulator, OpenDRIVE, 3D-Trajektorien, CAN-Bus, ISO 14229 (UDS), Linux (Ubuntu/Debian), Windows Server, Active Directory}
+\skillrow{Zertifizierungen}{Google Cloud Certified Data Engineer \enspace\textbullet\enspace UNIcert III C1 Deutsch (TU Chemnitz) \enspace\textbullet\enspace Cisco Python \enspace\textbullet\enspace HackerRank SQL}
+}
+
+\section{Sprachkenntnisse}
+{\small
+\textbf{Deutsch:} C1 (UNIcert III / DSH, verhandlungssicher) \enspace\textbar\enspace \textbf{Englisch:} C1 (Fließend in Wort und Schrift) \enspace\textbar\enspace \textbf{Telugu:} Muttersprache \enspace\textbar\enspace \textbf{Hindi:} Fließend
+}
+
+\section{Engagement \& Interessen}
+{\small
+\textbf{Badminton:} Aktiver Spieler im Hochschulsport der TU Chemnitz sowie Initiator und Entwickler des universitären Badminton-Community-Portals\\
+\textbf{Interkultureller Austausch:} Aktive Unterstützung und Vernetzung internationaler Masterstudierender an der TU Chemnitz
+}
+
+\vspace{0.6em}
+\noindent
+\begin{minipage}[b]{0.48\textwidth}
+  Chemnitz, den 14. September 2026\\[1.0em]
+  \rule{5.5cm}{0.4pt}\\
+  {\footnotesize Ort, Datum}
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.48\textwidth}
+  \raggedleft
+  \includegraphics[height=0.90cm,keepaspectratio]{Sign.png}\\[0.05em]
+  \rule{5.5cm}{0.4pt}\\
+  {\footnotesize Pradeep Gandu (Unterschrift)}
+\end{minipage}
+
+\end{document}
