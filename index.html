@@ -228,7 +228,7 @@
 
         <!-- CATEGORY FILTERS -->
         <div class="project-filters" role="tablist">
-            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects (9)</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects (10)</button>
             <button class="filter-btn" data-filter="cloud" data-i18n="projects.filterCloud">Cloud & Data Engineering</button>
             <button class="filter-btn" data-filter="automotive" data-i18n="projects.filterAuto">Automotive & ADAS</button>
             <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">AI & Generative AI</button>
@@ -419,7 +419,56 @@
             </div>
         </article>
 
-        <!-- PROJECT 5: CAN-Bus Simulator -->
+        <!-- PROJECT 5: TU Chemnitz Badminton Portal (Live Deployed) -->
+        <article class="project-card" data-category="cloud">
+            <div class="project-top">
+                <div class="project-badge-group">
+                    <span class="badge-live" data-i18n="projects.liveBadge">🟢 Live App</span>
+                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
+                    <span class="project-category-tag">Full-Stack & Cloud</span>
+                </div>
+                <span class="project-year">2026</span>
+            </div>
+
+            <h3 data-i18n="projects.tucBadminton.title">TU Chemnitz Badminton Community Portal</h3>
+            
+            <p class="project-description" data-i18n="projects.tucBadminton.desc">
+                Decoupled full-stack athletic community portal for TU Chemnitz Badminton, integrating a React/Vite frontend, Node.js/SQLite backend, tournament registrations, and Cloudflare tunnel connectivity.
+            </p>
+
+            <div class="project-tags">
+                <span>React / Vite</span>
+                <span>Node.js / Express</span>
+                <span>SQLite</span>
+                <span>Tailwind CSS</span>
+                <span>Cloudflare Tunnel</span>
+                <span>Oracle Cloud / Nginx</span>
+                <span>GitHub Actions</span>
+            </div>
+
+            <ul class="project-bullets">
+                <li data-i18n="projects.tucBadminton.b1">Architected decoupled full-stack platform with React/Vite SPA on GitHub Pages and an Express/SQLite REST API backend.</li>
+                <li data-i18n="projects.tucBadminton.b2">Integrated Cloudflare Tunnel and Oracle Cloud VM reverse proxy (Nginx) for hybrid server connectivity.</li>
+                <li data-i18n="projects.tucBadminton.b3">Implemented tournament registrations, email-mediated partner requests, and privacy-shielded trainer services.</li>
+                <li data-i18n="projects.tucBadminton.b4">Hardened admin security with salted scrypt hashing, session revocation, and 6-digit cryptographic OTP approval.</li>
+            </ul>
+
+            <div class="project-actions">
+                <a href="https://gandupradeep2026.github.io/tuc-badminton-website/" target="_blank" rel="noopener noreferrer" class="project-btn live-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span data-i18n="projects.btnLive">Live Demo 🚀</span>
+                </a>
+                <a href="https://github.com/gandupradeep2026/tuc-badminton-website" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub Repository</span>
+                </a>
+                <button class="project-btn modal-trigger-btn" data-project="tucBadminton">
+                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- PROJECT 6: CAN-Bus Simulator -->
         <article class="project-card" data-category="automotive">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -462,7 +511,7 @@
             </div>
         </article>
 
-        <!-- PROJECT 6: ShuttleVision-AI -->
+        <!-- PROJECT 7: ShuttleVision-AI -->
         <article class="project-card" data-category="ai">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -501,7 +550,7 @@
             </div>
         </article>
 
-        <!-- PROJECT 7: CARLA Master Thesis Pipeline -->
+        <!-- PROJECT 8: CARLA Master Thesis Pipeline -->
         <article class="project-card" data-category="automotive cloud">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -544,7 +593,7 @@
             </div>
         </article>
 
-        <!-- PROJECT 8: Dataproc / PySpark Retail Pipeline -->
+        <!-- PROJECT 9: Dataproc / PySpark Retail Pipeline -->
         <article class="project-card" data-category="cloud">
             <div class="project-top">
                 <div class="project-badge-group">
@@ -586,7 +635,7 @@
             </div>
         </article>
 
-        <!-- PROJECT 9: CARLA Autonomous Driving Scenario Development -->
+        <!-- PROJECT 10: CARLA Autonomous Driving Scenario Development -->
         <article class="project-card" data-category="automotive ai">
             <div class="project-top">
                 <div class="project-badge-group">

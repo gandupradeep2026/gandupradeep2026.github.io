@@ -53,7 +53,7 @@ const translations = {
         "projects.label": "PORTFOLIO",
         "projects.title": "Featured Engineering Projects",
         "projects.subtitle": "Verified, production-grade projects across event-driven cloud data pipelines, predictive AI, and autonomous systems.",
-        "projects.filterAll": "All Projects (9)",
+        "projects.filterAll": "All Projects (10)",
         "projects.filterCloud": "Cloud & Data Engineering",
         "projects.filterAuto": "Automotive & ADAS",
         "projects.filterAI": "AI & Generative AI",
@@ -138,6 +138,14 @@ const translations = {
         "projects.shuttle.b2": "Mapped pixel coordinates to calibrated 2D court geometry for accurate velocity, distance, and heat-map analytics.",
         "projects.shuttle.b3": "Engineered frame-by-frame player trajectory extraction with occlusion handling and temporal smoothing.",
         "projects.shuttle.b4": "Open-sourced on GitHub with structured modular Python codebase and reproducibility guidelines.",
+
+        // Project 10: TU Chemnitz Badminton Portal (Live Deployed)
+        "projects.tucBadminton.title": "TU Chemnitz Badminton Community Portal",
+        "projects.tucBadminton.desc": "Decoupled full-stack athletic community portal for TU Chemnitz Badminton, integrating a React/Vite frontend, Node.js/SQLite backend, tournament registrations, and Cloudflare tunnel connectivity.",
+        "projects.tucBadminton.b1": "Architected decoupled full-stack platform with React/Vite SPA on GitHub Pages and an Express/SQLite REST API backend.",
+        "projects.tucBadminton.b2": "Integrated Cloudflare Tunnel and Oracle Cloud VM reverse proxy (Nginx) for hybrid server connectivity.",
+        "projects.tucBadminton.b3": "Implemented tournament registrations, email-mediated partner requests, and privacy-shielded trainer services.",
+        "projects.tucBadminton.b4": "Hardened admin security with salted scrypt hashing, session revocation, and 6-digit cryptographic OTP approval.",
 
         // About Section
         "about.label": "PROFILE",
@@ -285,7 +293,7 @@ const translations = {
         "projects.label": "PORTFOLIO",
         "projects.title": "Ausgewählte Engineering-Projekte",
         "projects.subtitle": "Verifizierte Projekte aus den Bereichen ereignisgesteuerte Cloud-Datenpipelines, prädiktive KI und autonome Systeme.",
-        "projects.filterAll": "Alle Projekte (9)",
+        "projects.filterAll": "Alle Projekte (10)",
         "projects.filterCloud": "Cloud & Data Engineering",
         "projects.filterAuto": "Automotive & ADAS",
         "projects.filterAI": "KI & Generative KI",
@@ -370,6 +378,14 @@ const translations = {
         "projects.shuttle.b2": "Projizierte Pixelkoordinaten auf kalibrierte 2D-Spielfeldgeometrien für Geschwindigkeits-, Distanz- und Heatmap-Analysen.",
         "projects.shuttle.b3": "Extrahierte Bild-für-Bild-Trajektorien mit Verdeckungsbehandlung und zeitlicher Glättung.",
         "projects.shuttle.b4": "Als Open-Source auf GitHub bereitgestellt mit modularer Python-Codebasis und Reproduzierbarkeitsrichtlinien.",
+
+        // Project 10: TU Chemnitz Badminton Portal (Live Deployed)
+        "projects.tucBadminton.title": "TU Chemnitz Badminton Community Portal",
+        "projects.tucBadminton.desc": "Entkoppeltes Full-Stack-Community-Portal für den Badminton-Sport an der TU Chemnitz mit React/Vite-Frontend, Node.js/SQLite-Backend, Turnierverwaltung und Cloudflare-Tunnel-Anbindung.",
+        "projects.tucBadminton.b1": "Entwarf entkoppelte Full-Stack-Architektur mit React/Vite auf GitHub Pages und Express/SQLite REST-API-Backend.",
+        "projects.tucBadminton.b2": "Integrierte Cloudflare Tunnel und Oracle Cloud VM Reverse-Proxy (Nginx) für hybride Serveranbindung.",
+        "projects.tucBadminton.b3": "Implementierte Turnieranmeldungen, E-Mail-basierte Partnersuche und geschützte Trainer-/Besaitungsdienste.",
+        "projects.tucBadminton.b4": "Härtete Admin-Sicherheit durch gesalzenes Scrypt-Hashing, Sitzungswiderruf und 6-stellige kryptografische OTPs.",
 
         // About Section
         "about.label": "PROFIL",
@@ -1014,6 +1030,66 @@ const projectArchitectures = {
                 { val: "Live", label: "Webpräsenz & Dokumentation" }
             ],
             githubUrl: "https://github.com/gandupradeep2026/natively-cluely-ai-assistant"
+        }
+    },
+    tucBadminton: {
+        en: {
+            title: "TU Chemnitz Badminton Community Portal",
+            subtitle: "React / Vite · Node.js / Express · SQLite · Cloudflare Tunnel · Oracle Cloud VM / Nginx",
+            flow: `[GitHub Pages Production SPA (React / Vite + Tailwind)]
+                                  │
+                                  ▼ (HTTPS REST API Requests)
+          [Cloudflare Tunnel / Oracle Cloud VM Nginx Reverse Proxy]
+                                  │
+                                  ▼ (Port 5000)
+                 [Express.js REST API Backend Core]
+              ├─ Salted Scrypt Passwords & 6-Digit Cryptographic OTP
+              ├─ Tournament Registration & Partner Email Matcher
+              ├─ Privacy-Shielded Trainer & Stringer Directory
+              └─ Document Storage & Media Upload Service
+                                  │
+                                  ▼
+             [SQLite Relational Database (badminton_community.db)]`,
+            challenges: [
+                "Architecting a decoupled hybrid deployment bridging static GitHub Pages hosting with a private home server/cloud VM backend without CORS bottlenecks.",
+                "Designing a zero-client-leakage admin password recovery flow requiring a cryptographically generated 6-digit numeric OTP and server-console audit verification.",
+                "Implementing private trainer & stringer mediation allowing user contact inquiries without public email or phone number harvesting."
+            ],
+            metrics: [
+                { val: "Live", label: "Production on GitHub Pages" },
+                { val: "Decoupled", label: "Vite SPA + Express Core" },
+                { val: "2-Step OTP", label: "Hardened Admin Security" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/tuc-badminton-website"
+        },
+        de: {
+            title: "TU Chemnitz Badminton Community Portal",
+            subtitle: "React / Vite · Node.js / Express · SQLite · Cloudflare Tunnel · Oracle Cloud VM / Nginx",
+            flow: `[GitHub Pages Produktions-SPA (React / Vite + Tailwind)]
+                                  │
+                                  ▼ (HTTPS REST-API Anfragen)
+          [Cloudflare Tunnel / Oracle Cloud VM Nginx Reverse-Proxy]
+                                  │
+                                  ▼ (Port 5000)
+                 [Express.js REST-API Backend-Kern]
+              ├─ Gesalzenes Scrypt-Passworthashing & 6-stellige OTPs
+              ├─ Turnieranmeldungen & E-Mail-basierte Partnersuche
+              ├─ Datenschutzkonformes Trainer- & Besaitungsverzeichnis
+              └─ Dokumentenspeicher & Upload-Dienst
+                                  │
+                                  ▼
+             [SQLite Relationale Datenbank (badminton_community.db)]`,
+            challenges: [
+                "Entwurf einer entkoppelten Hybrid-Architektur zwischen statischem GitHub Pages Hosting und privatem Home-Server/Cloud-VM Backend ohne CORS-Probleme.",
+                "Konzeption eines token-sicheren Passwort-Reset-Workflows mit kryptografischem 6-stelligem Einmalcode (OTP) und Konsolenverifikation.",
+                "Realisierung einer geschützten Vermittlung für Trainer und Schlägerbesaiter zum Schutz privater Kontaktdaten vor Scraping."
+            ],
+            metrics: [
+                { val: "Live", label: "Produktives GitHub Pages Deployment" },
+                { val: "Entkoppelt", label: "Vite SPA + Express Backend" },
+                { val: "2-Schritt OTP", label: "Gehärtete Administrator-Sicherheit" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/tuc-badminton-website"
         }
     }
 };
