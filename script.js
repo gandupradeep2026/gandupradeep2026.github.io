@@ -53,7 +53,7 @@ const translations = {
         "projects.label": "PORTFOLIO",
         "projects.title": "Featured Engineering Projects",
         "projects.subtitle": "Verified, production-grade projects across event-driven cloud data pipelines, predictive AI, and autonomous systems.",
-        "projects.filterAll": "All Projects (10)",
+        "projects.filterAll": "All Projects (11)",
         "projects.filterCloud": "Cloud & Data Engineering",
         "projects.filterAuto": "Automotive & ADAS",
         "projects.filterAI": "AI & Generative AI",
@@ -146,6 +146,14 @@ const translations = {
         "projects.tucBadminton.b2": "Integrated Cloudflare Tunnel and Oracle Cloud VM reverse proxy (Nginx) for hybrid server connectivity.",
         "projects.tucBadminton.b3": "Implemented tournament registrations, email-mediated partner requests, and privacy-shielded trainer services.",
         "projects.tucBadminton.b4": "Hardened admin security with salted scrypt hashing, session revocation, and 6-digit cryptographic OTP approval.",
+
+        // Project 11: Comparative Regression Analysis (Machine Learning)
+        "projects.regression.title": "Comparative Regression Analysis: Linear, Polynomial & Multi-Variable",
+        "projects.regression.desc": "Comparative machine learning framework modeling multi-variable non-linear sales dynamics across Simple Linear, Multiple Linear, and Polynomial regression pipelines with scikit-learn.",
+        "projects.regression.b1": "Engineered comparative ML pipelines evaluating Simple Linear, Polynomial (Deg 2), Multiple Linear, and Multi-Variable Polynomial algorithms on 150 business observations.",
+        "projects.regression.b2": "Built robust preprocessing workflows utilizing scikit-learn's PolynomialFeatures, StandardScaler, and Pipeline to prevent data leakage across 80/20 train-test splits.",
+        "projects.regression.b3": "Benchmarked performance across R² Score, MAE, and RMSE: Simple Linear (R² = 0.85), Multi-Linear (R² = 0.88), Polynomial (R² = 0.93), and Multi-Polynomial (R² = 0.98, MAE 7.54, RMSE 10.04).",
+        "projects.regression.b4": "Generated publication-grade 3-panel comparative visualizations analyzing non-linear seasonal heat curves, multi-variable response surfaces, and 45° actual-vs-predicted parity plots.",
 
         // About Section
         "about.label": "PROFILE",
@@ -293,7 +301,7 @@ const translations = {
         "projects.label": "PORTFOLIO",
         "projects.title": "Ausgewählte Engineering-Projekte",
         "projects.subtitle": "Verifizierte Projekte aus den Bereichen ereignisgesteuerte Cloud-Datenpipelines, prädiktive KI und autonome Systeme.",
-        "projects.filterAll": "Alle Projekte (10)",
+        "projects.filterAll": "Alle Projekte (11)",
         "projects.filterCloud": "Cloud & Data Engineering",
         "projects.filterAuto": "Automotive & ADAS",
         "projects.filterAI": "KI & Generative KI",
@@ -386,6 +394,14 @@ const translations = {
         "projects.tucBadminton.b2": "Integrierte Cloudflare Tunnel und Oracle Cloud VM Reverse-Proxy (Nginx) für hybride Serveranbindung.",
         "projects.tucBadminton.b3": "Implementierte Turnieranmeldungen, E-Mail-basierte Partnersuche und geschützte Trainer-/Besaitungsdienste.",
         "projects.tucBadminton.b4": "Härtete Admin-Sicherheit durch gesalzenes Scrypt-Hashing, Sitzungswiderruf und 6-stellige kryptografische OTPs.",
+
+        // Project 11: Comparative Regression Analysis (Machine Learning)
+        "projects.regression.title": "Vergleichende Regressionsanalyse: Linear, Polynomiell & Multivariat",
+        "projects.regression.desc": "Vergleichendes Machine-Learning-Framework zur Modellierung multivariater, nichtlinearer Absatzdynamiken mittels einfacher, multipler und polynomieller Regression mit scikit-learn.",
+        "projects.regression.b1": "Entwickelte vergleichende ML-Pipelines zur Evaluation einfacher linearer, polynomieller (Grad 2), multipler und multivariat-polynomieller Regressionsmodelle auf 150 Geschäftsdatensätzen.",
+        "projects.regression.b2": "Erstellte robuste Vorverarbeitungs-Pipelines mit scikit-learn (PolynomialFeatures, StandardScaler, Pipeline) zur Vermeidung von Data Leakage bei 80/20-Train-Test-Splits.",
+        "projects.regression.b3": "Benchmarking der Gütemaße (R²-Score, MAE, RMSE): Einfache Regression (R² = 0,85), Multiple Regression (R² = 0,88), Polynomiell (R² = 0,93) und Multi-Polynomiell (R² = 0,98, MAE 7,54, RMSE 10,04).",
+        "projects.regression.b4": "Erstellte 3-Panel-Visualisierungen zur Analyse nichtlinearer saisonaler Temperaturkurven, multivariater Wirkungszusammenhänge und 45°-Paritätsdiagramme (Ist- vs. Vorhersagewerte).",
 
         // About Section
         "about.label": "PROFIL",
@@ -1090,6 +1106,80 @@ const projectArchitectures = {
                 { val: "2-Schritt OTP", label: "Gehärtete Administrator-Sicherheit" }
             ],
             githubUrl: "https://github.com/gandupradeep2026/tuc-badminton-website"
+        }
+    },
+    regressionAnalysis: {
+        en: {
+            title: "Comparative Regression & Non-Linear Modeling Framework",
+            subtitle: "Python · scikit-learn · PolynomialFeatures · StandardScaler · Matplotlib · Seaborn",
+            flow: `[Simulated Business Sales Dataset (150 Samples: Temp + Ad Budget)]
+                                  │
+                                  ▼ (80/20 Train-Test Stratified Split)
+          [Feature Engineering & Preprocessing Pipeline]
+       ├─ PolynomialFeatures (degree=2, include_bias=False)
+       ├─ StandardScaler (Feature Normalization & Zero Data Leakage)
+       └─ Multi-Feature Design Matrix Construction
+                                  │
+                                  ▼ (Parallel Model Fitting & Optimization)
+          ┌───────────────┬───────────────┬───────────────┐
+          ▼               ▼               ▼               ▼
+    [Simple Linear]  [Multi-Linear]  [Polynomial 2]  [Poly-Multi 2]
+      (R² = 0.85)     (R² = 0.88)     (R² = 0.93)     (R² = 0.98)
+      (RMSE = 30.1)   (RMSE = 26.2)   (RMSE = 20.4)   (RMSE = 10.0)
+          └───────────────┼───────────────┴───────────────┘
+                                  │
+                                  ▼
+         [Residual Analysis, Benchmarking & Parity Plots]
+     ├─ Held-Out Evaluation: R², MAE (7.54), RMSE (10.04)
+     ├─ Non-Linear Seasonal Curve vs. Linear Underfitting Analysis
+     └─ Actual vs. Predicted 45° Parity Verification (y = y_pred)`,
+            challenges: [
+                "Preventing polynomial over-parameterization and feature explosion while accurately capturing non-linear seasonal temperature spikes.",
+                "Decoupling interaction effects between linear marketing spend and quadratic ambient temperature without introducing multicollinearity instabilities.",
+                "Structuring reproducible scikit-learn pipeline transformations ensuring test-set isolation and zero preprocessing data leakage."
+            ],
+            metrics: [
+                { val: "0.98 R²", label: "Multi-Polynomial Fit" },
+                { val: "7.54 MAE", label: "Held-Out Test Accuracy" },
+                { val: "4 Models", label: "Rigorous ML Benchmark" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/regression-analysis"
+        },
+        de: {
+            title: "Vergleichende Regressionsanalyse & Nichtlineare Modellierung",
+            subtitle: "Python · scikit-learn · PolynomialFeatures · StandardScaler · Matplotlib · Seaborn",
+            flow: `[Simulierter Vertriebsdatensatz (150 Stichproben: Temp + Budget)]
+                                  │
+                                  ▼ (80/20 Train-Test-Split)
+          [Feature-Engineering & Vorverarbeitungs-Pipeline]
+       ├─ PolynomialFeatures (degree=2, include_bias=False)
+       ├─ StandardScaler (Normalisierung & kein Data Leakage)
+       └─ Aufbau der multivariaten Design-Matrix
+                                  │
+                                  ▼ (Paralleles Modelltraining & Fitting)
+          ┌───────────────┬───────────────┬───────────────┐
+          ▼               ▼               ▼               ▼
+    [Einfach Linear] [Multi-Linear]  [Polynomiell 2] [Multi-Poly 2]
+      (R² = 0,85)     (R² = 0,88)     (R² = 0,93)     (R² = 0,98)
+      (RMSE = 30,1)   (RMSE = 26,2)   (RMSE = 20,4)   (RMSE = 10,0)
+          └───────────────┼───────────────┴───────────────┘
+                                  │
+                                  ▼
+         [Residuenanalyse, Benchmarking & Paritätsdiagramme]
+     ├─ Testset-Evaluation: R², MAE (7,54), RMSE (10,04)
+     ├─ Analyse nichtlinearer Saisonkurven vs. linearem Underfitting
+     └─ 45°-Paritätsdiagramme von Ist- und Modell-Vorhersagewerten`,
+            challenges: [
+                "Verhinderung von Overfitting und Feature-Explosion bei gleichzeitiger präziser Erfassung quadratischer Temperatur-Nachfragespitzen.",
+                "Entkopplung von Interaktionseffekten zwischen linearem Marketingbudget und nichtlinearen saisonalen Temperatureinflüssen.",
+                "Aufbau strikter scikit-learn Pipeline-Transformationen zur vollständigen Vermeidung von Data Leakage zwischen Trainings- und Testdaten."
+            ],
+            metrics: [
+                { val: "0,98 R²", label: "Multi-Polynomieller Fit" },
+                { val: "7,54 MAE", label: "Testset-Fehlerminimierung" },
+                { val: "4 Modelle", label: "Systematischer Benchmark" }
+            ],
+            githubUrl: "https://github.com/gandupradeep2026/regression-analysis"
         }
     }
 };
