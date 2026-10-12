@@ -4,48 +4,48 @@
 
 :root,
 [data-theme="dark"] {
-    --bg-base: #0a0e17;
-    --bg-surface: #111827;
-    --bg-surface-elevated: #162032;
-    --bg-alt: #0d1322;
-    --border: rgba(255, 255, 255, 0.09);
-    --border-hover: rgba(14, 165, 233, 0.5);
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --accent-primary: #0ea5e9;
-    --accent-primary-hover: #38bdf8;
-    --accent-glow: rgba(14, 165, 233, 0.15);
-    --accent-glow-strong: rgba(14, 165, 233, 0.3);
-    --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-    --card-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
-    --card-shadow-hover: 0 20px 45px rgba(14, 165, 233, 0.15);
-    --nav-bg: rgba(10, 14, 23, 0.88);
-    --tag-bg: rgba(14, 165, 233, 0.1);
-    --tag-text: #38bdf8;
+    --bg-base: #090e0d;
+    --bg-surface: #0e1715;
+    --bg-surface-elevated: #13201d;
+    --bg-alt: #0c1412;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(27, 179, 156, 0.5);
+    --text-primary: #f2f7f5;
+    --text-secondary: #92a5a0;
+    --text-muted: #607470;
+    --accent-primary: #1bb39c;
+    --accent-primary-hover: #34d399;
+    --accent-glow: rgba(27, 179, 156, 0.16);
+    --accent-glow-strong: rgba(27, 179, 156, 0.32);
+    --accent-gradient: linear-gradient(135deg, #00594f 0%, #1bb39c 100%);
+    --card-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    --card-shadow-hover: 0 20px 45px rgba(27, 179, 156, 0.16);
+    --nav-bg: rgba(9, 14, 13, 0.90);
+    --tag-bg: rgba(27, 179, 156, 0.12);
+    --tag-text: #34d399;
     --container: 1180px;
 }
 
 [data-theme="light"] {
-    --bg-base: #f8fafc;
+    --bg-base: #f7faf9;
     --bg-surface: #ffffff;
-    --bg-surface-elevated: #f1f5f9;
-    --bg-alt: #edf2f7;
-    --border: #e2e8f0;
-    --border-hover: #0284c7;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --accent-primary: #0284c7;
-    --accent-primary-hover: #0369a1;
-    --accent-glow: rgba(2, 132, 199, 0.1);
-    --accent-glow-strong: rgba(2, 132, 199, 0.25);
-    --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
-    --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-    --card-shadow-hover: 0 20px 40px rgba(2, 132, 199, 0.15);
-    --nav-bg: rgba(255, 255, 255, 0.92);
-    --tag-bg: rgba(2, 132, 199, 0.08);
-    --tag-text: #0284c7;
+    --bg-surface-elevated: #f0f5f3;
+    --bg-alt: #edf3f0;
+    --border: #dbe5e2;
+    --border-hover: #00594f;
+    --text-primary: #0a1916;
+    --text-secondary: #3e544f;
+    --text-muted: #708882;
+    --accent-primary: #00594f;
+    --accent-primary-hover: #177665;
+    --accent-glow: rgba(0, 89, 79, 0.12);
+    --accent-glow-strong: rgba(0, 89, 79, 0.25);
+    --accent-gradient: linear-gradient(135deg, #00594f 0%, #177665 100%);
+    --card-shadow: 0 8px 26px rgba(0, 40, 35, 0.06);
+    --card-shadow-hover: 0 18px 36px rgba(0, 89, 79, 0.14);
+    --nav-bg: rgba(255, 255, 255, 0.94);
+    --tag-bg: rgba(0, 89, 79, 0.08);
+    --tag-text: #00594f;
     --container: 1180px;
 }
 
@@ -267,7 +267,7 @@ a {
     position: relative;
     background: 
         radial-gradient(circle at 15% 20%, var(--accent-glow) 0%, transparent 40%),
-        radial-gradient(circle at 85% 60%, rgba(99, 102, 241, 0.08) 0%, transparent 45%);
+        radial-gradient(circle at 85% 60%, var(--accent-glow) 0%, transparent 45%);
 }
 
 .hero-container {
@@ -982,7 +982,7 @@ a {
 .project-tags span {
     background: var(--tag-bg);
     color: var(--tag-text);
-    border: 1px solid rgba(14, 165, 233, 0.2);
+    border: 1px solid var(--border);
     font-size: 0.78rem;
     font-weight: 600;
     padding: 4px 10px;
@@ -1039,8 +1039,8 @@ a {
 }
 
 .modal-trigger-btn {
-    background: rgba(14, 165, 233, 0.08);
-    border-color: rgba(14, 165, 233, 0.3);
+    background: var(--tag-bg);
+    border-color: var(--border-hover);
     color: var(--accent-primary);
 }
 
@@ -1181,7 +1181,7 @@ a {
     padding: 5px 10px;
     background: var(--tag-bg);
     color: var(--tag-text);
-    border: 1px solid rgba(14, 165, 233, 0.15);
+    border: 1px solid var(--border);
     border-radius: 6px;
     font-size: 0.82rem;
     font-weight: 600;
@@ -1311,8 +1311,8 @@ a {
 }
 
 .education-card.highlight-card {
-    border-color: rgba(14, 165, 233, 0.4);
-    background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(14, 165, 233, 0.04) 100%);
+    border-color: var(--border-hover);
+    background: linear-gradient(180deg, var(--bg-surface) 0%, var(--accent-glow) 100%);
 }
 
 .education-status {
@@ -1326,9 +1326,9 @@ a {
 }
 
 .education-status.in-progress {
-    background: rgba(14, 165, 233, 0.15);
+    background: var(--tag-bg);
     color: var(--accent-primary);
-    border: 1px solid rgba(14, 165, 233, 0.3);
+    border: 1px solid var(--border-hover);
 }
 
 .education-status.completed {
@@ -1462,9 +1462,9 @@ a {
 
 .contact-section {
     padding: 95px 25px;
-    background: #070a12;
+    background: var(--bg-surface-elevated);
     border-top: 1px solid var(--border);
-    color: #f1f5f9;
+    color: var(--text-primary);
 }
 
 .contact-container {
@@ -1481,13 +1481,13 @@ a {
     font-size: clamp(2rem, 3.8vw, 2.7rem);
     letter-spacing: -0.03em;
     margin-bottom: 16px;
-    color: #f8fafc;
+    color: var(--text-primary);
 }
 
 .contact-header p {
     max-width: 680px;
     margin: 0 auto 32px;
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 1.05rem;
     line-height: 1.7;
 }
@@ -1512,15 +1512,15 @@ a {
 }
 
 .contact-secondary {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.15);
-    color: #f1f5f9;
+    background: var(--bg-surface);
+    border-color: var(--border);
+    color: var(--text-primary);
 }
 
 .contact-secondary:hover {
     border-color: var(--accent-primary);
     color: var(--accent-primary);
-    background: rgba(14, 165, 233, 0.1);
+    background: var(--tag-bg);
 }
 
 .contact-details {
@@ -1528,7 +1528,7 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 28px;
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 0.92rem;
 }
 
@@ -1551,10 +1551,10 @@ a {
 footer {
     padding: 26px 20px;
     text-align: center;
-    background: #04070d;
-    color: #64748b;
+    background: var(--bg-surface);
+    color: var(--text-muted);
     font-size: 0.88rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border);
 }
 
 /* =========================================================
@@ -1659,7 +1659,7 @@ footer {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.84rem;
     line-height: 1.7;
-    color: #38bdf8;
+    color: var(--accent-primary);
     overflow-x: auto;
 }
 
