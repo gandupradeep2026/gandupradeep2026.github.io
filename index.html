@@ -17,7 +17,9 @@
 
 <header class="navbar" id="navbar">
     <a href="#home" class="logo">
-        <span class="logo-accent">&lt;</span>Pradeep Gandu<span class="logo-accent">/&gt;</span>
+        <span class="logo-name">Pradeep Gandu</span>
+        <span class="logo-sep">/</span>
+        <span class="logo-sub">TU Chemnitz</span>
     </a>
 
     <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
@@ -25,9 +27,9 @@
     </button>
 
     <nav class="nav-links" id="navLinks">
-        <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#snapshot" data-i18n="nav.snapshot">Recruiter Fast-Track</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#home" data-i18n="nav.home">About</a>
+        <a href="#research" data-i18n="nav.research">Research</a>
+        <a href="#projects" data-i18n="nav.projects">Systems</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#education" data-i18n="nav.education">Education</a>
@@ -49,71 +51,72 @@
 
 <main>
 
-<!-- HERO SECTION -->
+<!-- HERO / PROFILE SECTION -->
 <section id="home" class="hero">
     <div class="hero-container">
 
         <div class="hero-content">
-            <div class="status-badge">
-                <span class="status-pulse"></span>
-                <span data-i18n="hero.status">Available for Master Thesis / Full-Time in Germany</span>
+            <div class="affiliation-badge">
+                <span class="affiliation-dot"></span>
+                <span data-i18n="hero.affiliation">M.Sc. Candidate in Automotive Software Engineering · TU Chemnitz</span>
             </div>
-
-            <p class="eyebrow" data-i18n="hero.eyebrow">Hello, I'm</p>
 
             <h1 class="hero-title">Pradeep Gandu</h1>
 
             <h2 class="hero-subtitle">
-                <span class="highlight-role" data-i18n="hero.role1">Cloud Data Engineer</span>
+                <span class="highlight-role" data-i18n="hero.role1">Distributed Cloud Data Systems</span>
                 <span class="role-dot">·</span>
-                <span class="highlight-role" data-i18n="hero.role2">AI / Machine Learning</span>
+                <span class="highlight-role" data-i18n="hero.role2">Autonomous Driving Simulation (CARLA)</span>
                 <span class="role-dot">·</span>
-                <span class="highlight-role" data-i18n="hero.role3">Automotive Software</span>
+                <span class="highlight-role" data-i18n="hero.role3">Applied Machine Learning</span>
             </h2>
 
             <p class="hero-description" data-i18n="hero.description">
-                M.Sc. student at TU Chemnitz architecting event-driven data streaming pipelines, cloud big-data platforms on GCP & AWS, and AI-driven autonomous vehicle diagnostic systems.
+                Master's candidate at Technische Universität Chemnitz specializing in event-driven cloud streaming architectures (GCP / Beam / PySpark), autonomous vehicle scenario extraction, and predictive AI systems. Finalizing Master's thesis on multi-agent trajectory dataset generation; available for full-time roles in Germany from January 2027.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn" data-i18n="hero.projects">
-                    <span>View Projects</span>
-                    <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
+            <div class="meta-specs">
+                <div class="spec-pill">
+                    <span class="spec-label">Location:</span>
+                    <span class="spec-value" data-i18n="hero.location">Chemnitz, Germany (Open to Relocation)</span>
+                </div>
+                <div class="spec-pill">
+                    <span class="spec-label">German:</span>
+                    <span class="spec-value" data-i18n="hero.germanSpec">C1 (UNIcert III / DSH)</span>
+                </div>
+                <div class="spec-pill">
+                    <span class="spec-label">English:</span>
+                    <span class="spec-value" data-i18n="hero.englishSpec">C1 (Fluent)</span>
+                </div>
+                <div class="spec-pill">
+                    <span class="spec-label">Status:</span>
+                    <span class="spec-value" data-i18n="hero.statusSpec">Vollzeit ab 01/2027 · Sofort Teilzeit / Werkstudent</span>
+                </div>
+            </div>
 
+            <div class="hero-buttons">
                 <a
                     href="assets/Pradeep_Gandu_CV_EN.pdf"
-                    class="btn secondary-btn"
+                    class="btn primary-btn"
                     id="cvButton"
                     target="_blank"
                     rel="noopener"
-                    data-i18n="hero.cv"
                 >
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    <span>Download CV</span>
+                    <span data-i18n="hero.cv">Download CV (2-Page PDF)</span>
                 </a>
 
-                <a href="#snapshot" class="btn outline-btn" data-i18n="hero.snapshotBtn">⚡ 30s Summary</a>
+                <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub (15+ Repos)</span>
+                </a>
+
+                <a href="#research" class="btn outline-btn">
+                    <span data-i18n="hero.researchBtn">Master's Research 🔬</span>
+                </a>
             </div>
 
-            <div class="quick-links">
-                <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span>GitHub</span>
-                </a>
-                <span class="dot-separator">•</span>
-                <a href="https://www.linkedin.com/in/pradeep-gandu/" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    <span>LinkedIn</span>
-                </a>
-                <span class="dot-separator">•</span>
-                <span class="location-badge">
-                    <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <span data-i18n="hero.location">Chemnitz, Germany</span>
-                </span>
-            </div>
-
-            <!-- HERO STAT RIBBON -->
+            <!-- ACADEMIC METRICS RIBBON -->
             <div class="hero-stats">
                 <div class="stat-card">
                     <span class="stat-value">90 / 120</span>
@@ -124,8 +127,8 @@
                     <span class="stat-label" data-i18n="stats.cloud">Cloud & Dataflow</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-value">10+</span>
-                    <span class="stat-label" data-i18n="stats.repos">Projects with CI/CD</span>
+                    <span class="stat-value">11</span>
+                    <span class="stat-label" data-i18n="stats.systems">Engineered Systems</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-value" data-i18n="stats.languagesValue">C1 · Fluent</span>
@@ -136,7 +139,6 @@
 
         <div class="hero-photo-wrapper">
             <div class="hero-photo-frame">
-                <div class="photo-glow"></div>
                 <img
                     src="assets/images/photo.jpeg"
                     alt="Pradeep Gandu"
@@ -144,8 +146,9 @@
                     id="profilePhoto"
                 >
                 <div class="photo-fallback" id="photoFallback">PG</div>
-                <div class="photo-badge">
-                    <span>TU Chemnitz</span>
+                <div class="photo-caption">
+                    <span class="caption-title">Pradeep Gandu</span>
+                    <span class="caption-sub">TU Chemnitz · ASE</span>
                 </div>
             </div>
         </div>
@@ -153,66 +156,73 @@
     </div>
 </section>
 
-<!-- RECRUITER FAST-TRACK SECTION -->
-<section id="snapshot" class="section snapshot-section">
-    <div class="snapshot-card">
-        <div class="snapshot-header">
-            <div class="snapshot-badge">
-                <span class="pulse-icon">⚡</span>
-                <span data-i18n="snapshot.badge">Recruiter Fast-Track</span>
+<!-- MASTER'S RESEARCH SPOTLIGHT SECTION -->
+<section id="research" class="section research-section">
+    <div class="section-heading">
+        <p class="section-label" data-i18n="research.label">ACADEMIC RESEARCH</p>
+        <h2 data-i18n="research.title">Master's Thesis Research Spotlight</h2>
+        <p data-i18n="research.subtitle">
+            Autonomous driving trajectory dataset generation & environment prediction pipeline at Technische Universität Chemnitz.
+        </p>
+    </div>
+
+    <div class="research-spotlight-card">
+        <div class="research-header">
+            <div class="research-badge-group">
+                <span class="research-tag">🎓 M.Sc. Thesis</span>
+                <span class="research-institution">Technische Universität Chemnitz</span>
+                <span class="research-phase" data-i18n="research.phase">Finalization Phase · Submission Dec 2026</span>
             </div>
-            <h2 data-i18n="snapshot.title">30-Second Candidate Summary</h2>
-            <p data-i18n="snapshot.subtitle">Essential facts for tech recruiters, hiring managers, and engineering leads.</p>
+            <h3 class="research-title" data-i18n="research.thesisTitle">
+                Generation and Annotation of Scenario-Centric Datasets for Environment Prediction in Autonomous Driving
+            </h3>
+            <p class="research-abstract" data-i18n="research.thesisAbstract">
+                Developing machine learning models for predictive autonomous driving demands massive, high-fidelity datasets capturing multi-agent interactions and rare safety-critical edge cases. This research constructs an automated, high-precision simulation and trajectory-annotation pipeline in CARLA 0.9.15, synchronously mapping 3D actor movements to OpenDRIVE road network topologies and outputting optimized, ML-ready Parquet datasets.
+            </p>
         </div>
 
-        <div class="snapshot-grid">
-            <div class="snapshot-item">
-                <div class="snapshot-icon">🎯</div>
-                <div class="snapshot-content">
-                    <h3 data-i18n="snapshot.targetRolesTitle">Target Roles</h3>
-                    <p data-i18n="snapshot.targetRolesDesc">Cloud Data Engineer · Data Platform Engineer · AI/ML Engineer · Automotive Software Engineer</p>
-                </div>
+        <div class="research-pillars-grid">
+            <div class="pillar-item">
+                <div class="pillar-num">01</div>
+                <h4 data-i18n="research.p1Title">Multi-Agent Scenario Runner</h4>
+                <p data-i18n="research.p1Desc">Automated scenario generation in CARLA for highway cut-ins, high-speed merges, and pedestrian interactions with parametrized behavior variation.</p>
             </div>
-
-            <div class="snapshot-item">
-                <div class="snapshot-icon">📍</div>
-                <div class="snapshot-content">
-                    <h3 data-i18n="snapshot.locationTitle">Location & Mobility</h3>
-                    <p data-i18n="snapshot.locationDesc">Chemnitz, Germany · Willing to relocate nationwide (Munich, Stuttgart, Berlin, Frankfurt, etc.) · Hybrid or Remote</p>
-                </div>
+            <div class="pillar-item">
+                <div class="pillar-num">02</div>
+                <h4 data-i18n="research.p2Title">OpenDRIVE Topological Mapping</h4>
+                <p data-i18n="research.p2Desc">Synchronized extraction aligning raw 3D actor bounding boxes with road boundaries, lane networks, and heading vectors.</p>
             </div>
-
-            <div class="snapshot-item">
-                <div class="snapshot-icon">📑</div>
-                <div class="snapshot-content">
-                    <h3 data-i18n="snapshot.visaTitle">Work Authorization & Availability</h3>
-                    <p data-i18n="snapshot.visaDesc">Legal resident in Germany (§16b AufenthG). Immediately available for Working Student (up to 20h/wk) or Master Thesis. Permanent full-time available from Jan 01, 2027 (immediately upon thesis submission Dec 28, 2026), with immediate dual-track onboarding as working student or project associate. 18-month German Jobseeker Visa (§20 Abs. 3 Nr. 1) & EU Blue Card with NO labor market priority check.</p>
-                </div>
+            <div class="pillar-item">
+                <div class="pillar-num">03</div>
+                <h4 data-i18n="research.p3Title">Columnar Parquet Pipeline</h4>
+                <p data-i18n="research.p3Desc">Transformation of multi-sensor simulation frames into compressed, partitioned Parquet schemas optimized for deep learning.</p>
             </div>
-
-            <div class="snapshot-item">
-                <div class="snapshot-icon">🗣️</div>
-                <div class="snapshot-content">
-                    <h3 data-i18n="snapshot.langTitle">Verified Language Proficiencies</h3>
-                    <p data-i18n="snapshot.langDesc">German: C1 (TU Chemnitz UNIcert III / Niveau C1 passed 31.08.2026; Goethe certified) · English: C1 / Fluent (Professional working proficiency; international master's degree in English) · Hindi: Fluent · Telugu: Native</p>
-                </div>
-            </div>
-
-            <div class="snapshot-item" style="grid-column: 1 / -1;">
-                <div class="snapshot-icon">⚙️</div>
-                <div class="snapshot-content">
-                    <h3 data-i18n="snapshot.stackTitle">Core Technology Stack</h3>
-                    <p data-i18n="snapshot.stackDesc">GCP (BigQuery, Pub/Sub, Dataflow, Dataproc, GCS, IAM), AWS (EC2, S3, RDS), Apache Beam, PySpark, Spark SQL, Python, SQL, CARLA Simulator, Docker, Apache Airflow, Linux/Bash, UDS (ISO 14229), CAN-Bus, CI/CD Actions</p>
-                </div>
+            <div class="pillar-item">
+                <div class="pillar-num">04</div>
+                <h4 data-i18n="research.p4Title">Kinematic Validation Suite</h4>
+                <p data-i18n="research.p4Desc">Automated continuity filters, collision-free trajectory verification, and temporal smoothing ensuring zero label corruption.</p>
             </div>
         </div>
 
-        <div class="snapshot-footer">
-            <a href="#projects" class="btn primary-btn" data-i18n="snapshot.btnProjects">Explore Flagship Projects</a>
-            <button class="btn secondary-btn copy-email-btn" data-email="gandupradeep2026@gmail.com">
-                <span class="copy-icon">📋</span>
-                <span data-i18n="snapshot.copyEmail">Copy Email Address</span>
-            </button>
+        <div class="research-footer">
+            <div class="research-tags">
+                <span>CARLA 0.9.15</span>
+                <span>OpenDRIVE</span>
+                <span>Python</span>
+                <span>3D Trajectories</span>
+                <span>Apache Parquet</span>
+                <span>Autonomous Driving</span>
+                <span>Scenario Runner</span>
+            </div>
+            <div class="research-actions">
+                <button class="project-btn modal-trigger-btn primary-action" data-project="carla">
+                    <span data-i18n="projects.btnThesisDetails">Explore Thesis Architecture 📐</span>
+                </button>
+                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span data-i18n="projects.btnCode">GitHub</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -220,18 +230,18 @@
 <!-- PROJECTS SECTION -->
 <section id="projects" class="section section-alt">
     <div class="section-heading">
-        <p class="section-label" data-i18n="projects.label">PORTFOLIO</p>
-        <h2 data-i18n="projects.title">Featured Engineering Projects</h2>
+        <p class="section-label" data-i18n="projects.label">ENGINEERED SYSTEMS</p>
+        <h2 data-i18n="projects.title">Engineered Systems & Research Projects</h2>
         <p data-i18n="projects.subtitle">
-            Verified, production-grade projects across event-driven cloud data pipelines, predictive AI, and autonomous systems.
+            Production-grade distributed pipelines, autonomous vehicle simulators, and predictive machine learning architectures.
         </p>
 
         <!-- CATEGORY FILTERS -->
         <div class="project-filters" role="tablist">
-            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects (11)</button>
-            <button class="filter-btn" data-filter="cloud" data-i18n="projects.filterCloud">Cloud & Data Engineering</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Systems (11)</button>
+            <button class="filter-btn" data-filter="cloud" data-i18n="projects.filterCloud">Cloud & Distributed Systems</button>
             <button class="filter-btn" data-filter="automotive" data-i18n="projects.filterAuto">Automotive & ADAS</button>
-            <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">AI & Generative AI</button>
+            <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">Machine Learning & AI</button>
         </div>
     </div>
 
