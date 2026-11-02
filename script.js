@@ -15,57 +15,57 @@ const translations = {
 
         // Hero
         "hero.affiliation": "M.Sc. Candidate in Automotive Software Engineering · TU Chemnitz",
-        "hero.role1": "Distributed Cloud Data Systems",
-        "hero.role2": "Autonomous Driving Simulation (CARLA)",
+        "hero.meta": "Chemnitz, open to relocation · German C1 · English C1 · Full-time from 01/2027",
+        "stats.heading": "Master's thesis results",
+        "stats.v1": "720",
+        "stats.l1": "annotated frames in 6 scenarios",
+        "stats.v2": "1,865",
+        "stats.l2": "automated consistency checks passed",
+        "stats.v3": "0.21 m",
+        "stats.l3": "mean FDE at 1 s, constant-velocity baseline",
+        "hero.role1": "Data Engineering",
+        "hero.role2": "Autonomous Driving Simulation",
         "hero.role3": "Applied Machine Learning",
-        "hero.description": "Master's candidate at Technische Universität Chemnitz specializing in event-driven cloud streaming architectures (GCP / Beam / PySpark), autonomous vehicle scenario extraction, and predictive AI systems. Finalizing Master's thesis on multi-agent trajectory dataset generation; available for full-time roles in Germany from January 2027.",
-        "hero.cv": "Download CV (2-Page PDF)",
-        "hero.researchBtn": "Master's Research 🔬",
+        "hero.description": "Master's student at Technische Universität Chemnitz. My thesis generates, annotates and validates scenario-centric datasets for environment prediction in CARLA. Before that, I built GCP data pipelines at Cognizant and RAG systems at DiPP GmbH.",
+        "hero.cv": "Download CV",
+        "hero.researchBtn": "Master's Thesis",
         "hero.location": "Chemnitz, Germany (Open to Relocation)",
         "hero.germanSpec": "C1 (UNIcert III)",
         "hero.englishSpec": "C1 (Fluent)",
         "hero.statusSpec": "Vollzeit ab 01/2027",
 
         // Hero Stats
-        "stats.ects": "ECTS · TU Chemnitz",
-        "stats.cloud": "Cloud & Dataflow",
-        "stats.systems": "Engineered Systems",
-        "stats.languages": "German C1 · English Fluent",
-        "stats.languagesValue": "C1 · Fluent",
 
         // Academic Research Spotlight (Master's Thesis)
-        "research.label": "ACADEMIC RESEARCH",
-        "research.title": "Master's Thesis Research Spotlight",
-        "research.subtitle": "Autonomous driving trajectory dataset generation & environment prediction pipeline at Technische Universität Chemnitz.",
+        "research.label": "RESEARCH",
+        "research.title": "Master's Thesis",
+        "research.subtitle": "Technische Universität Chemnitz. Supervised by Univ.-Prof. Dr. Wolfram Hardt and Dr. Ariane Heller.",
         "research.phase": "Finalization Phase · Submission Dec 2026",
         "research.thesisTitle": "Generation and Annotation of Scenario-Centric Datasets for Environment Prediction in Autonomous Driving",
-        "research.thesisAbstract": "Developing machine learning models for predictive autonomous driving demands massive, high-fidelity datasets capturing multi-agent interactions and rare safety-critical edge cases. This research constructs an automated, high-precision simulation and trajectory-annotation pipeline in CARLA 0.9.15, synchronously mapping 3D actor movements to OpenDRIVE road network topologies and outputting optimized, ML-ready Parquet datasets.",
-        "research.p1Title": "Multi-Agent Scenario Runner",
-        "research.p1Desc": "Automated scenario generation in CARLA for highway cut-ins, high-speed merges, and pedestrian interactions with parametrized behavior variation.",
-        "research.p2Title": "OpenDRIVE Topological Mapping",
-        "research.p2Desc": "Synchronized extraction aligning raw 3D actor bounding boxes with road boundaries, lane networks, and heading vectors.",
-        "research.p3Title": "Columnar Parquet Pipeline",
-        "research.p3Desc": "Transformation of multi-sensor simulation frames into compressed, partitioned Parquet schemas optimized for deep learning.",
-        "research.p4Title": "Kinematic Validation Suite",
-        "research.p4Desc": "Automated continuity filters, collision-free trajectory verification, and temporal smoothing ensuring zero label corruption.",
+        "research.thesisAbstract": "Environment prediction models need datasets whose labels can be trusted. This thesis generates lane-change scenarios in CARLA, records synchronous ground truth, annotates every frame and validates the data at three levels. A constant-velocity baseline then gives a first reference result.",
+        "research.p1Title": "Scenario Pipeline",
+        "research.p1Desc": "YAML-driven CARLA pipeline recording synchronous 10 FPS ground truth for lane-change scenarios.",
+        "research.p2Title": "Annotation",
+        "research.p2Desc": "720 frames in 6 Town06 scenarios, labelled with lane-change phase, bumper gaps, lateral offset and TTC.",
+        "research.p3Title": "Three-Level Validation",
+        "research.p3Desc": "Recorder self-checks plus field, gap and continuity validators. 1,865 automated consistency checks passed in an offline, SHA-256-audited evaluation.",
+        "research.p4Title": "Baseline Evaluation",
+        "research.p4Desc": "Constant-velocity baseline on 1,278 windows: mean FDE of 0.21 m at 1 s and 1.73 m at 3 s.",
 
         // Projects Section
         "projects.label": "ENGINEERED SYSTEMS",
-        "projects.title": "Engineered Systems & Research Projects",
-        "projects.subtitle": "Production-grade distributed pipelines, autonomous vehicle simulators, and predictive machine learning architectures.",
+        "projects.title": "Selected Projects",
+        "projects.subtitle": "Systems I built myself, with the code linked.",
         "projects.filterAll": "All Systems (11)",
         "projects.filterCloud": "Cloud & Distributed Systems",
         "projects.filterAuto": "Automotive & ADAS",
         "projects.filterAI": "Machine Learning & AI",
         "projects.flagship": "⭐ Flagship",
         "projects.liveBadge": "🟢 Live App",
-        "projects.thesis.badge": "🎓 Master Thesis",
-        "projects.btnLive": "Live Demo 🚀",
+        "projects.btnLive": "Live Demo",
         "projects.btnCode": "GitHub Repository",
-        "projects.btnArchitecture": "View Architecture 📐",
-        "projects.btnThesisDetails": "Explore Thesis Architecture 📐",
-        "projects.btnPipelineDetails": "View Pipeline Workflow 📐",
-        "projects.btnScenarioDetails": "View Scenario Specs 📐",
+        "projects.btnArchitecture": "View Architecture",
+        "projects.btnPipelineDetails": "View Pipeline Workflow",
 
         // Project 1: Automotive Telemetry GCP
         "projects.telemetry.title": "Automotive Telemetry Streaming Platform",
@@ -85,19 +85,13 @@ const translations = {
 
         // Project 3: CAN-Bus Simulator
         "projects.canbus.title": "CAN-Bus Diagnostic & Health Simulator",
-        "projects.canbus.desc": "Production-quality in-vehicle network simulator implementing CAN DBC messaging, UDS diagnostic protocols (ISO 14229), fault injection, and a real-time Streamlit diagnostic tester.",
+        "projects.canbus.desc": "In-vehicle network simulator implementing CAN DBC messaging, UDS diagnostic protocols (ISO 14229), fault injection and a real-time Streamlit diagnostic tester.",
         "projects.canbus.b1": "Simulated multi-ECU CAN communication (Engine, Dynamics, Battery) with modulo-16 alive counters and checksum verification.",
         "projects.canbus.b2": "Implemented UDS diagnostic services including Session Control (0x10), Read Data By ID (0x22), and DTC Info (0x19).",
         "projects.canbus.b3": "Engineered automated YAML fault injection for sensor freeze, checksum corruption, and ECU silence scenarios.",
         "projects.canbus.b4": "Tested with Linux SocketCAN & virtual transports; maintained >70% branch coverage with Ruff, Black, and MyPy CI.",
 
         // Project 4: CARLA Master Thesis Pipeline
-        "projects.thesis.title": "Scenario-Centric AD Dataset & Trajectory Pipeline",
-        "projects.thesis.desc": "High-fidelity simulation and data pipeline in CARLA generating structured, annotated multi-agent trajectory datasets for environment prediction in automated driving.",
-        "projects.thesis.b1": "Generated complex highway lane-change and high-speed merge scenarios using CARLA Scenario Runner.",
-        "projects.thesis.b2": "Extracted synchronized ground-truth actor trajectories, velocities, headings, and road topology coordinates.",
-        "projects.thesis.b3": "Constructed automated pipeline transforming raw simulation sensor frames into structured JSON and Parquet schemas.",
-        "projects.thesis.b4": "Implemented strict temporal continuity and collision-free validation routines for ML training data readiness.",
 
         // Project 5: Dataproc / PySpark Retail
         "projects.spark.title": "Dataproc & PySpark Retail Data Warehouse",
@@ -108,36 +102,15 @@ const translations = {
         "projects.spark.b4": "Aggregated executive retail KPIs and customer summary tables with lazy evaluation and memory management.",
 
         // Project 6: CARLA Autonomous Driving Scenario Development
-        "projects.carlaScenarios.title": "CARLA Autonomous Driving Scenario Development",
-        "projects.carlaScenarios.desc": "Engineered complex autonomous vehicle control logic and multi-agent simulation scenarios in CARLA including pedestrian detection, traffic-light interaction, and collision avoidance.",
-        "projects.carlaScenarios.b1": "Developed multiple autonomous driving scenarios in CARLA: pedestrian crossing, traffic-light detection, and vehicle following.",
-        "projects.carlaScenarios.b2": "Implemented dynamic vehicle-control behaviour responding to road users, speed regulations, and emergency braking.",
-        "projects.carlaScenarios.b3": "Engineered overtaking, safe lane changing, and multi-bus-stop navigation and stopping sequences.",
-        "projects.carlaScenarios.b4": "Calibrated sensor inputs, weather models, and simulation maps for reproducible test scenarios.",
+        "projects.carlaScenarios.title": "Research Internship: Autonomous Bus Parking System",
+        "projects.carlaScenarios.desc": "Multi-bus-stop parking system in CARLA with YOLOv8 at Technische Universität Chemnitz. Grade 1.7.",
+        "projects.carlaScenarios.b1": "Built a system in which each bus parks at its own stop, in any arrival order.",
+        "projects.carlaScenarios.b2": "Detected bus stops and waiting passengers with YOLOv8, and held the bus until boarding finished.",
+        "projects.carlaScenarios.b3": "Matched bus and stop IDs, and overtook obstacles still blocking after a 3 to 4 s wait.",
+        "projects.carlaScenarios.b4": "Collected the datasets, trained and evaluated the models, and embedded the result in CARLA.",
 
-        // Project 7: Aural AI (Live Deployed)
-        "projects.aural.title": "Aural AI: Voice & Video Interview Platform",
-        "projects.aural.desc": "Open-source multimodal AI interview platform conducting structured voice, chat, and video interviews at scale with real-time adaptive questioning and automated scoring.",
-        "projects.aural.b1": "Architected real-time multimodal interview workflows with low-latency WebRTC audio/video capture and streaming.",
-        "projects.aural.b2": "Integrated adaptive LLM reasoning to generate context-aware follow-up questions tailored to candidate responses.",
-        "projects.aural.b3": "Built automated scoring rubrics, competency evaluation engines, and structured candidate performance analytics.",
-        "projects.aural.b4": "Deployed live in production with self-hostable Docker architecture at aural-ai.com.",
 
-        // Project 8: Natively AI Copilot (Live Deployed)
-        "projects.natively.title": "Natively: AI Meeting Copilot & Local RAG",
-        "projects.natively.desc": "Privacy-first, open-source AI meeting assistant and interview copilot featuring real-time local transcription, zero cloud data leakage, and local vector RAG.",
-        "projects.natively.b1": "Built real-time speech-to-text pipeline with Voice Activity Detection (VAD) and local Whisper transcription.",
-        "projects.natively.b2": "Implemented local RAG vector retrieval for documents and meeting context with 100% private on-device execution.",
-        "projects.natively.b3": "Engineered lightweight desktop overlay UI supporting stealth mode, keyboard shortcuts, and low-latency assistance.",
-        "projects.natively.b4": "Published open-source with live web product homepage and documentation at natively.software.",
 
-        // Project 9: ShuttleVision-AI
-        "projects.shuttle.title": "ShuttleVision-AI: CV Player Tracking & Analytics",
-        "projects.shuttle.desc": "AI-powered computer vision and deep-learning system tracking player movement, court positioning, and performance analytics from video streams.",
-        "projects.shuttle.b1": "Developed robust multi-object tracking pipelines using OpenCV and deep-learning detection architectures.",
-        "projects.shuttle.b2": "Mapped pixel coordinates to calibrated 2D court geometry for accurate velocity, distance, and heat-map analytics.",
-        "projects.shuttle.b3": "Engineered frame-by-frame player trajectory extraction with occlusion handling and temporal smoothing.",
-        "projects.shuttle.b4": "Open-sourced on GitHub with structured modular Python codebase and reproducibility guidelines.",
 
         // Project 10: TU Chemnitz Badminton Portal (Live Deployed)
         "projects.tucBadminton.title": "TU Chemnitz Badminton Community Portal",
@@ -151,7 +124,7 @@ const translations = {
         "projects.regression.title": "Comparative Regression Analysis: Linear, Polynomial & Multi-Variable",
         "projects.regression.desc": "Comparative machine learning framework modeling multi-variable non-linear sales dynamics across Simple Linear, Multiple Linear, and Polynomial regression pipelines with scikit-learn.",
         "projects.regression.b1": "Engineered comparative ML pipelines evaluating Simple Linear, Polynomial (Deg 2), Multiple Linear, and Multi-Variable Polynomial algorithms on 150 business observations.",
-        "projects.regression.b2": "Built robust preprocessing workflows utilizing scikit-learn's PolynomialFeatures, StandardScaler, and Pipeline to prevent data leakage across 80/20 train-test splits.",
+        "projects.regression.b2": "Built preprocessing workflows utilizing scikit-learn's PolynomialFeatures, StandardScaler, and Pipeline to prevent data leakage across 80/20 train-test splits.",
         "projects.regression.b3": "Benchmarked performance across R² Score, MAE, and RMSE: Simple Linear (R² = 0.85), Multi-Linear (R² = 0.88), Polynomial (R² = 0.93), and Multi-Polynomial (R² = 0.98, MAE 7.54, RMSE 10.04).",
         "projects.regression.b4": "Generated publication-grade 3-panel comparative visualizations analyzing non-linear seasonal heat curves, multi-variable response surfaces, and 45° actual-vs-predicted parity plots.",
 
@@ -160,7 +133,7 @@ const translations = {
         "about.title": "About Me",
         "about.p1": "I am pursuing an M.Sc. in Automotive Software Engineering at Technische Universität Chemnitz (90 / 120 ECTS completed).",
         "about.p2": "My technical engineering focus bridges Cloud Data Platforms, Distributed Big Data (PySpark/Beam), and Automotive Software Systems. I specialize in designing scalable ingestion architectures that convert raw sensor feeds and telemetry into reliable, analytics-ready datasets.",
-        "about.p3": "My recent implementations include production-style GCP streaming pipelines (Pub/Sub, Beam, BigQuery, Airflow), CARLA autonomous driving scenario generation, CAN-Bus UDS diagnostic simulators, and explainable AI diagnostic systems audited on real OBD vehicle data.",
+        "about.p3": "My recent implementations include GCP streaming pipelines (Pub/Sub, Beam, BigQuery, Airflow), CARLA autonomous driving scenario generation, CAN-Bus UDS diagnostic simulators, and explainable AI diagnostic systems audited on real OBD vehicle data.",
         "about.based": "Location",
         "about.location": "Chemnitz, Germany (Open to Relocation)",
         "about.focus": "Engineering Focus",
@@ -177,7 +150,6 @@ const translations = {
         "skills.data.quality": "Data Quality",
         "skills.cloud.title": "Cloud Platforms",
         "skills.auto.title": "Automotive Software",
-        "skills.auto.scenario": "Scenario Runner",
         "skills.auto.trajectory": "3D Trajectories",
         "skills.auto.annotation": "Dataset Annotation",
         "skills.ai.title": "AI & Machine Learning",
@@ -240,7 +212,7 @@ const translations = {
 
         // Contact
         "contact.label": "LET'S CONNECT",
-        "contact.title": "Ready to Add Value to Your Team",
+        "contact.title": "Get in Touch",
         "contact.p1": "I am actively seeking full-time opportunities from January 2027 in Cloud Data Engineering, AI/ML, and Automotive Software Engineering across Germany.",
         "contact.email": "Send Email",
         "contact.copy": "Copy Email Address",
@@ -263,57 +235,57 @@ const translations = {
 
         // Hero
         "hero.affiliation": "M.Sc. Kandidat in Automotive Software Engineering · TU Chemnitz",
-        "hero.role1": "Verteilte Cloud-Datensysteme",
-        "hero.role2": "Autonomes Fahren Simulation (CARLA)",
+        "hero.meta": "Chemnitz, bundesweit mobil · Deutsch C1 · Englisch C1 · Vollzeit ab 01/2027",
+        "stats.heading": "Ergebnisse der Masterarbeit",
+        "stats.v1": "720",
+        "stats.l1": "annotierte Frames in 6 Szenarien",
+        "stats.v2": "1.865",
+        "stats.l2": "automatisierte Konsistenzprüfungen bestanden",
+        "stats.v3": "0,21 m",
+        "stats.l3": "mittlerer FDE bei 1 s, Constant-Velocity-Baseline",
+        "hero.role1": "Data Engineering",
+        "hero.role2": "Simulation für autonomes Fahren",
         "hero.role3": "Angewandtes Machine Learning",
-        "hero.description": "Masterstudent an der Technischen Universität Chemnitz mit Spezialisierung auf ereignisgesteuerte Cloud-Streaming-Architekturen (GCP / Beam / PySpark), Szenariogenerierung für autonome Fahrzeuge und prädiktive KI-Systeme. Finalisierung der Masterarbeit zur Generierung von Multi-Agenten-Trajektoriendatensätzen; verfügbar für Vollzeitpositionen in Deutschland ab Januar 2027.",
-        "hero.cv": "Lebenslauf (2-Seiten PDF)",
-        "hero.researchBtn": "Master-Forschung 🔬",
+        "hero.description": "Masterstudent an der Technischen Universität Chemnitz. Meine Masterarbeit erzeugt, annotiert und validiert szenario-zentrierte Datensätze für die Umfeldprädiktion in CARLA. Davor entwickelte ich GCP-Datenpipelines bei Cognizant und RAG-Systeme bei der DiPP GmbH.",
+        "hero.cv": "Lebenslauf herunterladen",
+        "hero.researchBtn": "Masterarbeit",
         "hero.location": "Chemnitz, Deutschland (Bundesweit mobil)",
         "hero.germanSpec": "C1 (UNIcert III)",
         "hero.englishSpec": "C1 (Fließend)",
         "hero.statusSpec": "Vollzeit ab 01/2027",
 
         // Hero Stats
-        "stats.ects": "ECTS · TU Chemnitz",
-        "stats.cloud": "Cloud & Dataflow",
-        "stats.systems": "Entwickelte Systeme",
-        "stats.languages": "Deutsch C1 · Englisch Fließend",
-        "stats.languagesValue": "C1 · Fließend",
 
         // Wissenschaftliche Forschung (Masterarbeit)
-        "research.label": "WISSENSCHAFTLICHE FORSCHUNG",
-        "research.title": "Masterarbeit: Forschung & Systemarchitektur",
-        "research.subtitle": "Pipeline zur Trajektoriendatensatz-Generierung & Umgebungsvorhersage für autonomes Fahren an der TU Chemnitz.",
+        "research.label": "FORSCHUNG",
+        "research.title": "Masterarbeit",
+        "research.subtitle": "Technische Universität Chemnitz. Betreut von Univ.-Prof. Dr. Wolfram Hardt und Dr. Ariane Heller.",
         "research.phase": "Abschlussphase · Abgabe Dez 2026",
         "research.thesisTitle": "Generierung und Annotation szenariozentrierter Datensätze zur Umgebungsvorhersage im autonomen Fahren",
-        "research.thesisAbstract": "Das Training von ML-Modellen für vorausschauendes autonomes Fahren erfordert hochpräzise Datensätze mit Multi-Agenten-Interaktionen und sicherheitskritischen Grenzfällen. Diese Forschungsarbeit konstruiert eine automatisierte Simulations- und Annotationspipeline in CARLA 0.9.15, die 3D-Akteursbewegungen synchron mit OpenDRIVE-Straßentopologien verknüpft und hochoptimierte Parquet-Datensätze bereitstellt.",
-        "research.p1Title": "Multi-Agenten Szenariogenerator",
-        "research.p1Desc": "Automatisierte Erzeugung von Autobahn-Einfädelungs-, Spurwechsel- und Fußgängerszenarien in CARLA mit parametrisierter Verhaltensvariation.",
-        "research.p2Title": "OpenDRIVE Topologie-Mapping",
-        "research.p2Desc": "Synchronisierte Extraktion zur Ausrichtung von 3D-Bounding-Boxes an Fahrbahnrändern, Spurverläufen und Richtungswinkeln.",
-        "research.p3Title": "Spaltenorientierte Parquet-Pipeline",
-        "research.p3Desc": "Transformation roher Sensorsimulationsframes in komprimierte, partitionierte Parquet-Schemata für Deep-Learning-Frameworks.",
-        "research.p4Title": "Kinematische Validierungssuite",
-        "research.p4Desc": "Automatisierte Kontinuitätsfilter, kollisionsfreie Trajektorienprüfung und Glättungsverfahren zur Vermeidung von Labeling-Fehlern.",
+        "research.thesisAbstract": "Modelle zur Umfeldprädiktion brauchen Datensätze mit verlässlichen Labels. Diese Arbeit erzeugt Spurwechselszenarien in CARLA, zeichnet synchrone Ground Truth auf, annotiert jeden Frame und validiert die Daten auf drei Ebenen. Eine Constant-Velocity-Baseline liefert anschließend ein erstes Referenzergebnis.",
+        "research.p1Title": "Szenario-Pipeline",
+        "research.p1Desc": "YAML-gesteuerte CARLA-Pipeline mit synchroner 10-FPS-Aufzeichnung der Ground Truth für Spurwechselszenarien.",
+        "research.p2Title": "Annotation",
+        "research.p2Desc": "720 Frames in 6 Town06-Szenarien, annotiert mit Spurwechselphase, Stoßstangenabständen, lateralem Versatz und TTC.",
+        "research.p3Title": "Dreistufige Validierung",
+        "research.p3Desc": "Selbstprüfungen des Recorders sowie Feld-, Abstands- und Kontinuitätsvalidatoren. 1.865 automatisierte Konsistenzprüfungen bestanden, offline und mit SHA-256 auditiert.",
+        "research.p4Title": "Baseline-Evaluation",
+        "research.p4Desc": "Constant-Velocity-Baseline auf 1.278 Fenstern: mittlerer FDE von 0,21 m bei 1 s und 1,73 m bei 3 s.",
 
         // Projects Section
         "projects.label": "SYSTEM-ENTWICKLUNG",
-        "projects.title": "Systemarchitekturen & Forschungsprojekte",
-        "projects.subtitle": "Produktionsreife verteilte Pipelines, Simulatoren für autonomes Fahren und prädiktive Machine-Learning-Architekturen.",
+        "projects.title": "Ausgewählte Projekte",
+        "projects.subtitle": "Selbst entwickelte Systeme mit verlinktem Code.",
         "projects.filterAll": "Alle Systeme (11)",
         "projects.filterCloud": "Cloud & Verteilte Systeme",
         "projects.filterAuto": "Automotive & ADAS",
         "projects.filterAI": "Machine Learning & KI",
         "projects.flagship": "⭐ Flagship",
         "projects.liveBadge": "🟢 Live-App",
-        "projects.thesis.badge": "🎓 Masterarbeit",
-        "projects.btnLive": "Live-Demo 🚀",
+        "projects.btnLive": "Live-Demo",
         "projects.btnCode": "GitHub Repository",
-        "projects.btnArchitecture": "Architektur ansehen 📐",
-        "projects.btnThesisDetails": "Masterarbeits-Architektur 📐",
-        "projects.btnPipelineDetails": "Pipeline-Workflow ansehen 📐",
-        "projects.btnScenarioDetails": "Szenario-Spezifikation 📐",
+        "projects.btnArchitecture": "Architektur ansehen",
+        "projects.btnPipelineDetails": "Pipeline-Workflow ansehen",
 
         // Project 1: Automotive Telemetry GCP
         "projects.telemetry.title": "Automotive Telemetrie-Streaming-Plattform",
@@ -333,19 +305,13 @@ const translations = {
 
         // Project 3: CAN-Bus Simulator
         "projects.canbus.title": "CAN-Bus Diagnose- & Zustands-Simulator",
-        "projects.canbus.desc": "Hochwertiger Bordnetz-Simulator mit CAN DBC-Nachrichten, UDS-Diagnoseprotokoll (ISO 14229), Fehlerinjektion und Streamlit-Echtzeit-Tester.",
+        "projects.canbus.desc": "Simulator für Fahrzeugnetzwerke mit CAN-DBC-Kommunikation, UDS-Diagnose (ISO 14229), Fehlerinjektion und einem Echtzeit-Diagnosetester in Streamlit.",
         "projects.canbus.b1": "Simulierte Multi-ECU-CAN-Kommunikation (Motor, Fahrdynamik, Batterie) mit Modulo-16 Alive-Countern und Prüfsummen.",
         "projects.canbus.b2": "Implementierte UDS-Dienste wie Session Control (0x10), Read Data By ID (0x22) und DTC Info (0x19).",
         "projects.canbus.b3": "Entwickelte automatisierte YAML-Fehlerinjektion für Sensor-Freeze, Checksum-Korruption und ECU-Silence.",
         "projects.canbus.b4": "Getestet mit Linux SocketCAN und virtuellen Kanälen; >70% Testabdeckung mit Ruff, Black und MyPy CI.",
 
         // Project 4: CARLA Master Thesis Pipeline
-        "projects.thesis.title": "Szenariozentrierte AD-Datenpipeline & Trajektorien",
-        "projects.thesis.desc": "Hochpräzise Simulation und Datenpipeline in CARLA zur Generierung strukturierter, annotierter Multi-Agenten-Trajektoriendatensätze für Environment Prediction im autonomen Fahren.",
-        "projects.thesis.b1": "Generierte komplexe Autobahn-Spurwechsel- und Einfädelungsszenarien mit CARLA Scenario Runner.",
-        "projects.thesis.b2": "Extrahierte synchronisierte Ground-Truth Trajektorien, Geschwindigkeiten, Gierraten und Straßenkoordinaten.",
-        "projects.thesis.b3": "Entwickelte Pipeline zur Transformation roher Simulations-Sensordaten in strukturierte JSON- und Parquet-Dateien.",
-        "projects.thesis.b4": "Implementierte zeitliche Kontinuitäts- und Kollisionsprüfungen für ML-Trainingsbereitschaft.",
 
         // Project 5: Dataproc / PySpark Retail
         "projects.spark.title": "Dataproc & PySpark Retail Data Warehouse",
@@ -356,36 +322,15 @@ const translations = {
         "projects.spark.b4": "Erzeugte aggregierte Retail-Kennzahlen und Kundenübersichten mit optimiertem Speichermanagement.",
 
         // Project 6: CARLA Autonomous Driving Scenario Development
-        "projects.carlaScenarios.title": "CARLA Szenariodesign für autonomes Fahren",
-        "projects.carlaScenarios.desc": "Entwicklung komplexer Fahrzeugsteuerungslogik und Multi-Agenten-Simulationsszenarien in CARLA inklusive Fußgängererkennung, Ampelsteuerung und Kollisionsvermeidung.",
-        "projects.carlaScenarios.b1": "Entwickelte diverse Szenarien in CARLA: Fußgängerüberwege, Ampelerkennung und Fahrzeugfolgeverhalten.",
-        "projects.carlaScenarios.b2": "Implementierte dynamisches Steuerungsverhalten in Reaktion auf Verkehrsteilnehmer und Notbremsungen.",
-        "projects.carlaScenarios.b3": "Konzipierte Überholmanöver, sichere Spurwechsel und Haltestellen-Navigationsabläufe.",
-        "projects.carlaScenarios.b4": "Kalibrierte Sensordaten, Wettermodelle und Simulationskarten für reproduzierbare Testläufe.",
+        "projects.carlaScenarios.title": "Forschungspraktikum: Autonomes Bus-Parksystem",
+        "projects.carlaScenarios.desc": "Parksystem für mehrere Bushaltestellen in CARLA mit YOLOv8 an der Technischen Universität Chemnitz. Note 1,7.",
+        "projects.carlaScenarios.b1": "Aufbau eines Systems, in dem jeder Bus in beliebiger Ankunftsreihenfolge an seiner Haltestelle parkt.",
+        "projects.carlaScenarios.b2": "Erkennung von Haltestellen und wartenden Fahrgästen mit YOLOv8, Weiterfahrt erst nach dem Einstieg.",
+        "projects.carlaScenarios.b3": "ID-Abgleich von Bus und Haltestelle, Überholen von Hindernissen nach 3 bis 4 s Wartezeit.",
+        "projects.carlaScenarios.b4": "Datensammlung, Training und Evaluation der Modelle sowie Einbindung in CARLA.",
 
-        // Project 7: Aural AI (Live Deployed)
-        "projects.aural.title": "Aural AI: Sprach- & Video-Interviewplattform",
-        "projects.aural.desc": "Open-Source multimodale KI-Interviewplattform für strukturierte Sprach-, Chat- und Video-Interviews im großen Maßstab mit adaptiver Fragestellung und automatisierter Auswertung.",
-        "projects.aural.b1": "Entwickelte multimodale Echtzeit-Interview-Workflows mit latenzarmer WebRTC-Audio-/Videoübertragung.",
-        "projects.aural.b2": "Integrierte adaptive LLM-Logik zur Generierung kontextbezogener Folgefragen basierend auf Kandidatenantworten.",
-        "projects.aural.b3": "Implementierte automatisierte Bewertungsrubriken, Kompetenzanalysen und strukturierte Kandidatenberichte.",
-        "projects.aural.b4": "Produktiv bereitgestellt mit selbst-hostbarer Docker-Architektur und Live-Web-App auf aural-ai.com.",
 
-        // Project 8: Natively AI Copilot (Live Deployed)
-        "projects.natively.title": "Natively: KI-Meeting-Copilot & Lokales RAG",
-        "projects.natively.desc": "Datenschutzorientierter Open-Source KI-Meeting-Assistent mit lokaler Echtzeit-Transkription, lokaler RAG-Wissensabfrage und ohne Cloud-Datenabfluss.",
-        "projects.natively.b1": "Entwickelte Echtzeit-Spracherkennung mit Voice Activity Detection (VAD) und lokaler Whisper-Transkription.",
-        "projects.natively.b2": "Implementierte lokale RAG-Vektorsuche für Dokumente und Meeting-Kontexte mit 100 % privater On-Device-Ausführung.",
-        "projects.natively.b3": "Entwarf leichtgewichtige Desktop-Overlay-Oberfläche mit Stealth-Modus, Tastaturkürzeln und Echtzeit-Unterstützung.",
-        "projects.natively.b4": "Open-Source veröffentlicht mit produktiver Webpräsenz und Dokumentation auf natively.software.",
 
-        // Project 9: ShuttleVision-AI
-        "projects.shuttle.title": "ShuttleVision-AI: Computer Vision Spieler-Tracking",
-        "projects.shuttle.desc": "KI-gestütztes Computer-Vision- und Deep-Learning-System zur Verfolgung von Spielerbewegungen, Spielfeldpositionierung und Leistungsanalysen aus Videostreams.",
-        "projects.shuttle.b1": "Entwickelte robuste Multi-Objekt-Tracking-Pipelines mit OpenCV und Deep-Learning-Erkennungsmodellen.",
-        "projects.shuttle.b2": "Projizierte Pixelkoordinaten auf kalibrierte 2D-Spielfeldgeometrien für Geschwindigkeits-, Distanz- und Heatmap-Analysen.",
-        "projects.shuttle.b3": "Extrahierte Bild-für-Bild-Trajektorien mit Verdeckungsbehandlung und zeitlicher Glättung.",
-        "projects.shuttle.b4": "Als Open-Source auf GitHub bereitgestellt mit modularer Python-Codebasis und Reproduzierbarkeitsrichtlinien.",
 
         // Project 10: TU Chemnitz Badminton Portal (Live Deployed)
         "projects.tucBadminton.title": "TU Chemnitz Badminton Community Portal",
@@ -399,7 +344,7 @@ const translations = {
         "projects.regression.title": "Vergleichende Regressionsanalyse: Linear, Polynomiell & Multivariat",
         "projects.regression.desc": "Vergleichendes Machine-Learning-Framework zur Modellierung multivariater, nichtlinearer Absatzdynamiken mittels einfacher, multipler und polynomieller Regression mit scikit-learn.",
         "projects.regression.b1": "Entwickelte vergleichende ML-Pipelines zur Evaluation einfacher linearer, polynomieller (Grad 2), multipler und multivariat-polynomieller Regressionsmodelle auf 150 Geschäftsdatensätzen.",
-        "projects.regression.b2": "Erstellte robuste Vorverarbeitungs-Pipelines mit scikit-learn (PolynomialFeatures, StandardScaler, Pipeline) zur Vermeidung von Data Leakage bei 80/20-Train-Test-Splits.",
+        "projects.regression.b2": "Erstellte Vorverarbeitungs-Pipelines mit scikit-learn (PolynomialFeatures, StandardScaler, Pipeline) zur Vermeidung von Data Leakage bei 80/20-Train-Test-Splits.",
         "projects.regression.b3": "Benchmarking der Gütemaße (R²-Score, MAE, RMSE): Einfache Regression (R² = 0,85), Multiple Regression (R² = 0,88), Polynomiell (R² = 0,93) und Multi-Polynomiell (R² = 0,98, MAE 7,54, RMSE 10,04).",
         "projects.regression.b4": "Erstellte 3-Panel-Visualisierungen zur Analyse nichtlinearer saisonaler Temperaturkurven, multivariater Wirkungszusammenhänge und 45°-Paritätsdiagramme (Ist- vs. Vorhersagewerte).",
 
@@ -425,7 +370,6 @@ const translations = {
         "skills.data.quality": "Datenqualität",
         "skills.cloud.title": "Cloud-Plattformen",
         "skills.auto.title": "Automotive Software",
-        "skills.auto.scenario": "Szenariogenerierung",
         "skills.auto.trajectory": "3D-Trajektorien",
         "skills.auto.annotation": "Datensatzannotation",
         "skills.ai.title": "KI & Machine Learning",
@@ -488,7 +432,7 @@ const translations = {
 
         // Contact
         "contact.label": "KONTAKT",
-        "contact.title": "Bereit für Ihr Team",
+        "contact.title": "Kontakt",
         "contact.p1": "Ich suche aktiv nach Vollzeitstellen ab Januar 2027 in den Bereichen Cloud Data Engineering, KI/ML und Automotive Software in ganz Deutschland.",
         "contact.email": "E-Mail senden",
         "contact.copy": "E-Mail-Adresse kopieren",
@@ -724,75 +668,6 @@ const projectArchitectures = {
         }
     },
 
-    carla: {
-        en: {
-            title: "Scenario-Centric AD Dataset & Trajectory Pipeline",
-            subtitle: "Master Thesis at TU Chemnitz · CARLA 0.9.x · ADAS · OpenDRIVE",
-            flow: `[CARLA High-Fidelity Autonomous Driving Simulator]
-                                │
-                                ▼
-         [CARLA Scenario Runner: Highway Merges & Lane Changes]
-                                │
-                                ▼
-         [Sensor Synchronization & Actor Trajectory Extraction Engine]
-            ├─ 3D Actor Coordinates (X, Y, Z, Roll, Pitch, Yaw)
-            ├─ Dynamic Kinematics (Velocity Vectors, Accelerations)
-            └─ Road Network Topology (Lane IDs, OpenDRIVE Geometry)
-                                │
-                                ▼
-         [Temporal Continuity & Quality Verification Layer]
-            ├─ Collision-Free Ground Truth Checks
-            └─ Frame-by-Frame Continuity Validation
-                                │
-                                ▼
-         [Structured Dataset Output: Partitioned Parquet & JSON]`,
-            challenges: [
-                "Synchronizing multi-modal simulation sensor data at deterministic fixed timesteps in CARLA.",
-                "Extracting 3D trajectory ground-truth from complex highway merge scenarios for environment prediction models.",
-                "Enforcing strict data schema validation to eliminate simulation artifacts prior to model training."
-            ],
-            metrics: [
-                { val: "90 / 120", label: "ECTS Completed at TU Chemnitz" },
-                { val: "CARLA 0.9.x", label: "Simulation Platform" },
-                { val: "Parquet", label: "Columnar Storage Schema" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026"
-        },
-        de: {
-            title: "Szenariozentrierte AD-Datenpipeline & Trajektorien",
-            subtitle: "Masterarbeit an der TU Chemnitz · CARLA 0.9.x · ADAS · OpenDRIVE",
-            flow: `[CARLA Simulator für autonomes Fahren]
-                                │
-                                ▼
-         [CARLA Scenario Runner: Autobahn-Merges & Spurwechsel]
-                                │
-                                ▼
-         [Sensorsynchronisation & Akteur-Trajektorienextraktion]
-            ├─ 3D-Koordinaten (X, Y, Z, Roll, Pitch, Yaw)
-            ├─ Dynamische Kinematik (Geschwindigkeitsvektoren, Beschleunigung)
-            └─ Straßennetzwerktopologie (Spur-IDs, OpenDRIVE-Geometrie)
-                                │
-                                ▼
-         [Validierungsschicht für zeitliche Kontinuität & Qualität]
-            ├─ Kollisionsfreie Ground-Truth Prüfungen
-            └─ Kontinuitätsprüfung von Frame zu Frame
-                                │
-                                ▼
-         [Strukturierte Datensätze: Partitioniertes Parquet & JSON]`,
-            challenges: [
-                "Präzise Synchronisation multimodaler Sensordaten bei deterministischer Taktung in CARLA.",
-                "Extraktion verlässlicher 3D-Trajektorien aus Autobahn-Einfädelungsszenarien für Vorhersagemodelle.",
-                "Automatisierte Validierungsroutinen zur Eliminierung von Simulationsartefakten."
-            ],
-            metrics: [
-                { val: "90 / 120", label: "ECTS an der TU Chemnitz" },
-                { val: "CARLA 0.9.x", label: "Simulationsplattform" },
-                { val: "Parquet", label: "Spaltenbasiertes Speicherformat" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026"
-        }
-    },
-
     pyspark: {
         en: {
             title: "Dataproc & PySpark Retail Big Data Warehouse",
@@ -850,204 +725,6 @@ const projectArchitectures = {
         }
     },
 
-    carlaScenarios: {
-        en: {
-            title: "CARLA Autonomous Driving Scenario Development",
-            subtitle: "Python · CARLA Simulator · ADAS Vehicle-Control Logic · Scenario Development",
-            flow: `[CARLA Open-Source Autonomous Driving Simulation Environment]
-                                │
-                                ▼
-         [Scenario Configuration & Road Environment Setup]
-            ├─ Town Maps, Weather Models & Actor Spawning
-            ├─ Pedestrians, Bicycles, Surrounding Vehicles & Buses
-            └─ Traffic Signal Systems & Zebra-Crossing Infrastructure
-                                │
-                                ▼
-         [Vehicle Control Logic & Decision-Making Layer]
-            ├─ Dynamic Distance Monitoring & Collision Avoidance
-            ├─ Controlled Overtaking & Lane-Change Execution
-            └─ Bus-Stop Navigation & Precision Parking Manoeuvres
-                                │
-                                ▼
-         [Continuous Evaluation: Telemetry Logs & Performance Metrics]`,
-            challenges: [
-                "Developing deterministic autonomous vehicle-control behavior in response to unexpected pedestrian crossings and traffic signals.",
-                "Implementing multi-agent decision logic for safe overtaking and lane-change maneuvers without simulator collisions.",
-                "Calibrating sensor detection parameters across diverse simulated weather and lighting conditions."
-            ],
-            metrics: [
-                { val: "9+ Scenarios", label: "Implemented Driving Scenarios" },
-                { val: "CARLA", label: "Simulation Platform" },
-                { val: "Python", label: "Vehicle Control Logic" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026"
-        },
-        de: {
-            title: "CARLA Szenariodesign für autonomes Fahren",
-            subtitle: "Python · CARLA Simulator · ADAS Fahrzeugsteuerungslogik · Szenariodesign",
-            flow: `[CARLA Simulationsumgebung für autonomes Fahren]
-                                │
-                                ▼
-         [Szenariokonfiguration & Umgebungsparameter]
-            ├─ Karten, Wettermodelle & Akteur-Spawning
-            ├─ Fußgänger, Fahrräder, Umgebungsfahrzeuge & Busse
-            └─ Ampelsysteme & Zebrastreifen-Infrastruktur
-                                │
-                                ▼
-         [Fahrzeugsteuerungslogik & Entscheidungsschicht]
-            ├─ Dynamische Abstandsüberwachung & Kollisionsvermeidung
-            ├─ Kontrollierte Überhol- & Spurwechselmanöver
-            └─ Haltestellen-Navigation & Einparksequenzen
-                                │
-                                ▼
-         [Evaluation & Logging von Telemetriedaten]`,
-            challenges: [
-                "Deterministische Fahrzeugreaktionen auf plötzliche Fußgängerquerungen und Ampelschaltungen.",
-                "Multi-Agenten-Entscheidungslogik für sichere Überhol- und Spurwechselmanöver ohne Kollisionen.",
-                "Feinabstimmung von Sensorerfassungen unter wechselnden Wetter- und Lichtbedingungen."
-            ],
-            metrics: [
-                { val: "9+ Szenarien", label: "Implementierte Szenarien" },
-                { val: "CARLA", label: "Simulationsplattform" },
-                { val: "Python", label: "Steuerungslogik" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026"
-        }
-    },
-
-    aural: {
-        en: {
-            title: "Aural AI: Voice, Chat & Video Interview Platform",
-            subtitle: "Open Source · WebRTC · Python · LLMs · Real-Time Audio & Video · Docker",
-            flow: `[Candidate Voice / Video / Chat WebRTC Stream]
-                          │
-                          ▼
-            [MediaStream & Audio Preprocessing Pipeline]
-                          │
-                          ▼
-            [Real-Time Whisper Speech-to-Text Transcription]
-                          │
-                          ▼
-            [Adaptive LLM Conversational Agent Engine]
-               ├─ Dynamic Follow-Up Question Generation
-               ├─ Multi-Competency Objective Scoring Rubrics
-               └─ Response Depth & Speech Pace Monitoring
-                          │
-                          ▼
-            [Automated Assessment Report & Analytics Mart]`,
-            challenges: [
-                "Achieving low-latency bidirectional voice interaction with WebRTC streaming to eliminate unnatural conversational pauses.",
-                "Designing objective, hallucination-resistant evaluation rubrics grounded in verbatim candidate speech transcripts.",
-                "Orchestrating multi-modal state tracking (voice, video, text) in scalable Dockerized microservices."
-            ],
-            metrics: [
-                { val: "Live", label: "Production Web Deployment" },
-                { val: "3 Modes", label: "Voice, Video & Text Chat" },
-                { val: "100%", label: "Open-Source & Self-Hostable" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026/pradeep-ai-interview-agent"
-        },
-        de: {
-            title: "Aural AI: Sprach-, Chat- & Video-Interviewplattform",
-            subtitle: "Open Source · WebRTC · Python · LLMs · Echtzeit-Audio & Video · Docker",
-            flow: `[Kandidaten-Audio-/Video-Stream via WebRTC]
-                          │
-                          ▼
-            [MediaStream & Vorverarbeitungspipeline]
-                          │
-                          ▼
-            [Echtzeit-Transkription via Whisper STT]
-                          │
-                          ▼
-            [Adaptive LLM-Interview-Engine]
-               ├─ Dynamische Generierung von Folgefragen
-               ├─ Objektive Bewertung nach Kompetenzrubriken
-               └─ Überwachung von Antworttiefe und Sprechtempo
-                          │
-                          ▼
-            [Automatisierter Feedback-Report & Analytics-Dashboard]`,
-            challenges: [
-                "Minimierung von Latenzzeiten bei bidirektionaler Sprachübertragung via WebRTC für flüssige Gesprächsführung.",
-                "Entwicklung deterministischer und halluzinationsfreier Bewertungsrubriken anhand wörtlicher Transkripte.",
-                "Robuste Multimodalitäts-Orchestrierung (Audio, Video, Text) in modularer Docker-Architektur."
-            ],
-            metrics: [
-                { val: "Live", label: "Produktives Deployment" },
-                { val: "3 Modi", label: "Sprache, Video & Chat" },
-                { val: "100 %", label: "Open-Source & Self-Hostable" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026/pradeep-ai-interview-agent"
-        }
-    },
-
-    natively: {
-        en: {
-            title: "Natively: AI Meeting Assistant & Copilot",
-            subtitle: "Python · Local RAG · Real-Time Audio Transcription · Ollama / LLMs · Stealth UI",
-            flow: `[System Audio & Microphone Stream]
-                          │
-                          ▼
-            [Voice Activity Detection (VAD) & Audio Buffering]
-                          │
-                          ▼
-            [Local Speech-to-Text Transcription Engine]
-                          │
-                          ▼
-            [Local Vector Store (Chromadb Embeddings)]
-               ├─ On-Device Document Ingestion & Chunking
-               └─ Semantic Knowledge Retrieval
-                          │
-                          ▼
-            [Zero-Cloud-Leakage Local LLM Reasoning (Ollama / BYOK)]
-                          │
-                          ▼
-            [Transparent Desktop Overlay & Meeting Notes Copilot]`,
-            challenges: [
-                "Guaranteeing complete data confidentiality with 100% on-device transcription and local embeddings without cloud leaks.",
-                "Maintaining sub-second response times using optimized local LLM quantization and caching.",
-                "Building an unobtrusive, lightweight desktop overlay with minimal CPU and memory footprints during active calls."
-            ],
-            metrics: [
-                { val: "0 Leakage", label: "Privacy-Preserving On-Device RAG" },
-                { val: "Sub-Second", label: "Real-Time Meeting Assistance" },
-                { val: "Live", label: "Public Web Documentation" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026/natively-cluely-ai-assistant"
-        },
-        de: {
-            title: "Natively: KI-Meeting-Assistent & Copilot",
-            subtitle: "Python · Lokales RAG · Echtzeit-Spracherkennung · Ollama / LLMs · Desktop-Overlay",
-            flow: `[System-Audio & Mikrofon-Stream]
-                          │
-                          ▼
-            [Voice Activity Detection (VAD) & Audio-Pufferung]
-                          │
-                          ▼
-            [Lokale Speech-to-Text Spracherkennung]
-                          │
-                          ▼
-            [Lokaler Vektorspeicher (Chromadb-Embeddings)]
-               ├─ Lokale Dokumentenverarbeitung & Chunking
-               └─ Semantische Ähnlichkeitssuche
-                          │
-                          ▼
-            [Lokale LLM-Inferenz ohne Cloud-Abfluss (Ollama / BYOK)]
-                          │
-                          ▼
-            [Transparentes Desktop-Overlay & Echtzeit-Meeting-Notizen]`,
-            challenges: [
-                "Gewährleistung absoluten Datenschutzes durch vollständige On-Device-Verarbeitung ohne externe Serveranfragen.",
-                "Echtzeitfähige Antwortzeiten durch optimierte lokale LLM-Quantisierung und intelligentes Caching.",
-                "Entwicklung eines ressourcenschonenden, transparenten Desktop-Overlays für Videokonferenzen."
-            ],
-            metrics: [
-                { val: "0 Abfluss", label: "Lokale Datensicherheit" },
-                { val: "< 1 Sek.", label: "Reaktionszeit im Meeting" },
-                { val: "Live", label: "Webpräsenz & Dokumentation" }
-            ],
-            githubUrl: "https://github.com/gandupradeep2026/natively-cluely-ai-assistant"
-        }
-    },
     tucBadminton: {
         en: {
             title: "TU Chemnitz Badminton Community Portal",

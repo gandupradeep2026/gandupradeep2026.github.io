@@ -9,8 +9,8 @@
     <title>Pradeep Gandu | Cloud Data & Automotive Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.3">
 </head>
 
 <body>
@@ -64,35 +64,16 @@
             <h1 class="hero-title">Pradeep Gandu</h1>
 
             <h2 class="hero-subtitle">
-                <span class="highlight-role" data-i18n="hero.role1">Distributed Cloud Data Systems</span>
+                <span class="highlight-role" data-i18n="hero.role1">Data Engineering</span>
                 <span class="role-dot">·</span>
-                <span class="highlight-role" data-i18n="hero.role2">Autonomous Driving Simulation (CARLA)</span>
+                <span class="highlight-role" data-i18n="hero.role2">Autonomous Driving Simulation</span>
                 <span class="role-dot">·</span>
                 <span class="highlight-role" data-i18n="hero.role3">Applied Machine Learning</span>
             </h2>
 
-            <p class="hero-description" data-i18n="hero.description">
-                Master's candidate at Technische Universität Chemnitz specializing in event-driven cloud streaming architectures (GCP / Beam / PySpark), autonomous vehicle scenario extraction, and predictive AI systems. Finalizing Master's thesis on multi-agent trajectory dataset generation; available for full-time roles in Germany from January 2027.
-            </p>
+            <p class="hero-description" data-i18n="hero.description">Master's student at Technische Universität Chemnitz. My thesis generates, annotates and validates scenario-centric datasets for environment prediction in CARLA. Before that, I built GCP data pipelines at Cognizant and RAG systems at DiPP GmbH.</p>
 
-            <div class="meta-specs">
-                <div class="spec-pill">
-                    <span class="spec-label">Location:</span>
-                    <span class="spec-value" data-i18n="hero.location">Chemnitz, Germany (Open to Relocation)</span>
-                </div>
-                <div class="spec-pill">
-                    <span class="spec-label">German:</span>
-                    <span class="spec-value" data-i18n="hero.germanSpec">C1 (UNIcert III)</span>
-                </div>
-                <div class="spec-pill">
-                    <span class="spec-label">English:</span>
-                    <span class="spec-value" data-i18n="hero.englishSpec">C1 (Fluent)</span>
-                </div>
-                <div class="spec-pill">
-                    <span class="spec-label">Status:</span>
-                    <span class="spec-value" data-i18n="hero.statusSpec">Vollzeit ab 01/2027</span>
-                </div>
-            </div>
+            <p class="hero-meta" data-i18n="hero.meta">Chemnitz, open to relocation · German C1 · English C1 · Full-time from 01/2027</p>
 
             <div class="hero-buttons">
                 <a
@@ -103,7 +84,7 @@
                     rel="noopener"
                 >
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    <span data-i18n="hero.cv">Download CV (2-Page PDF)</span>
+                    <span data-i18n="hero.cv">Download CV</span>
                 </a>
 
                 <a href="https://github.com/gandupradeep2026/" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
@@ -112,28 +93,16 @@
                 </a>
 
                 <a href="#research" class="btn outline-btn">
-                    <span data-i18n="hero.researchBtn">Master's Research 🔬</span>
+                    <span data-i18n="hero.researchBtn">Master's Thesis</span>
                 </a>
             </div>
 
-            <!-- ACADEMIC METRICS RIBBON -->
+            <!-- THESIS RESULTS -->
+            <p class="stats-heading" data-i18n="stats.heading">Master's thesis results</p>
             <div class="hero-stats">
-                <div class="stat-card">
-                    <span class="stat-value">90 / 120</span>
-                    <span class="stat-label" data-i18n="stats.ects">ECTS · TU Chemnitz</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value">GCP & AWS</span>
-                    <span class="stat-label" data-i18n="stats.cloud">Cloud & Dataflow</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value">11</span>
-                    <span class="stat-label" data-i18n="stats.systems">Engineered Systems</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value" data-i18n="stats.languagesValue">C1 · Fluent</span>
-                    <span class="stat-label" data-i18n="stats.languages">German C1 · English Fluent</span>
-                </div>
+                <div class="stat-card"><span class="stat-value" data-i18n="stats.v1">720</span><span class="stat-label" data-i18n="stats.l1">annotated frames in 6 scenarios</span></div>
+                <div class="stat-card"><span class="stat-value" data-i18n="stats.v2">1,865</span><span class="stat-label" data-i18n="stats.l2">automated consistency checks passed</span></div>
+                <div class="stat-card"><span class="stat-value" data-i18n="stats.v3">0.21 m</span><span class="stat-label" data-i18n="stats.l3">mean FDE at 1 s, constant-velocity baseline</span></div>
             </div>
         </div>
 
@@ -146,10 +115,6 @@
                     id="profilePhoto"
                 >
                 <div class="photo-fallback" id="photoFallback">PG</div>
-                <div class="photo-caption">
-                    <span class="caption-title">Pradeep Gandu</span>
-                    <span class="caption-sub">TU Chemnitz · ASE</span>
-                </div>
             </div>
         </div>
 
@@ -159,48 +124,44 @@
 <!-- MASTER'S RESEARCH SPOTLIGHT SECTION -->
 <section id="research" class="section research-section">
     <div class="section-heading">
-        <p class="section-label" data-i18n="research.label">ACADEMIC RESEARCH</p>
-        <h2 data-i18n="research.title">Master's Thesis Research Spotlight</h2>
-        <p data-i18n="research.subtitle">
-            Autonomous driving trajectory dataset generation & environment prediction pipeline at Technische Universität Chemnitz.
-        </p>
+        <p class="section-label" data-i18n="research.label">RESEARCH</p>
+        <h2 data-i18n="research.title">Master's Thesis</h2>
+        <p data-i18n="research.subtitle">Technische Universität Chemnitz. Supervised by Univ.-Prof. Dr. Wolfram Hardt and Dr. Ariane Heller.</p>
     </div>
 
     <div class="research-spotlight-card">
         <div class="research-header">
             <div class="research-badge-group">
-                <span class="research-tag">🎓 M.Sc. Thesis</span>
+                <span class="research-tag">M.Sc. Thesis</span>
                 <span class="research-institution">Technische Universität Chemnitz</span>
                 <span class="research-phase" data-i18n="research.phase">Finalization Phase · Submission Dec 2026</span>
             </div>
             <h3 class="research-title" data-i18n="research.thesisTitle">
                 Generation and Annotation of Scenario-Centric Datasets for Environment Prediction in Autonomous Driving
             </h3>
-            <p class="research-abstract" data-i18n="research.thesisAbstract">
-                Developing machine learning models for predictive autonomous driving demands massive, high-fidelity datasets capturing multi-agent interactions and rare safety-critical edge cases. This research constructs an automated, high-precision simulation and trajectory-annotation pipeline in CARLA 0.9.15, synchronously mapping 3D actor movements to OpenDRIVE road network topologies and outputting optimized, ML-ready Parquet datasets.
-            </p>
+            <p class="research-abstract" data-i18n="research.thesisAbstract">Environment prediction models need datasets whose labels can be trusted. This thesis generates lane-change scenarios in CARLA, records synchronous ground truth, annotates every frame and validates the data at three levels. A constant-velocity baseline then gives a first reference result.</p>
         </div>
 
         <div class="research-pillars-grid">
             <div class="pillar-item">
                 <div class="pillar-num">01</div>
-                <h4 data-i18n="research.p1Title">Multi-Agent Scenario Runner</h4>
-                <p data-i18n="research.p1Desc">Automated scenario generation in CARLA for highway cut-ins, high-speed merges, and pedestrian interactions with parametrized behavior variation.</p>
+                <h4 data-i18n="research.p1Title">Scenario Pipeline</h4>
+                <p data-i18n="research.p1Desc">YAML-driven CARLA pipeline recording synchronous 10 FPS ground truth for lane-change scenarios.</p>
             </div>
             <div class="pillar-item">
                 <div class="pillar-num">02</div>
-                <h4 data-i18n="research.p2Title">OpenDRIVE Topological Mapping</h4>
-                <p data-i18n="research.p2Desc">Synchronized extraction aligning raw 3D actor bounding boxes with road boundaries, lane networks, and heading vectors.</p>
+                <h4 data-i18n="research.p2Title">Annotation</h4>
+                <p data-i18n="research.p2Desc">720 frames in 6 Town06 scenarios, labelled with lane-change phase, bumper gaps, lateral offset and TTC.</p>
             </div>
             <div class="pillar-item">
                 <div class="pillar-num">03</div>
-                <h4 data-i18n="research.p3Title">Columnar Parquet Pipeline</h4>
-                <p data-i18n="research.p3Desc">Transformation of multi-sensor simulation frames into compressed, partitioned Parquet schemas optimized for deep learning.</p>
+                <h4 data-i18n="research.p3Title">Three-Level Validation</h4>
+                <p data-i18n="research.p3Desc">Recorder self-checks plus field, gap and continuity validators. 1,865 automated consistency checks passed in an offline, SHA-256-audited evaluation.</p>
             </div>
             <div class="pillar-item">
                 <div class="pillar-num">04</div>
-                <h4 data-i18n="research.p4Title">Kinematic Validation Suite</h4>
-                <p data-i18n="research.p4Desc">Automated continuity filters, collision-free trajectory verification, and temporal smoothing ensuring zero label corruption.</p>
+                <h4 data-i18n="research.p4Title">Baseline Evaluation</h4>
+                <p data-i18n="research.p4Desc">Constant-velocity baseline on 1,278 windows: mean FDE of 0.21 m at 1 s and 1.73 m at 3 s.</p>
             </div>
         </div>
 
@@ -209,19 +170,8 @@
                 <span>CARLA 0.9.15</span>
                 <span>OpenDRIVE</span>
                 <span>Python</span>
-                <span>3D Trajectories</span>
-                <span>Apache Parquet</span>
-                <span>Autonomous Driving</span>
-                <span>Scenario Runner</span>
-            </div>
-            <div class="research-actions">
-                <button class="project-btn modal-trigger-btn primary-action" data-project="carla">
-                    <span data-i18n="projects.btnThesisDetails">Explore Thesis Architecture 📐</span>
-                </button>
-                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub</span>
-                </a>
+                <span>YAML</span>
+                <span>Streamlit</span>
             </div>
         </div>
     </div>
@@ -231,10 +181,8 @@
 <section id="projects" class="section section-alt">
     <div class="section-heading">
         <p class="section-label" data-i18n="projects.label">ENGINEERED SYSTEMS</p>
-        <h2 data-i18n="projects.title">Engineered Systems & Research Projects</h2>
-        <p data-i18n="projects.subtitle">
-            Production-grade distributed pipelines, autonomous vehicle simulators, and predictive machine learning architectures.
-        </p>
+        <h2 data-i18n="projects.title">Selected Projects</h2>
+        <p data-i18n="projects.subtitle">Systems I built myself, with the code linked.</p>
 
         <!-- CATEGORY FILTERS -->
         <div class="project-filters" role="tablist">
@@ -285,7 +233,7 @@
                     <span data-i18n="projects.btnCode">GitHub Repository</span>
                 </a>
                 <button class="project-btn modal-trigger-btn" data-project="telemetry">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                    <span data-i18n="projects.btnArchitecture">View Architecture</span>
                 </button>
             </div>
         </article>
@@ -328,103 +276,7 @@
                     <span data-i18n="projects.btnCode">GitHub Repository</span>
                 </a>
                 <button class="project-btn modal-trigger-btn" data-project="autosense">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- PROJECT 3: Aural AI (Live Deployed) -->
-        <article class="project-card" data-category="ai">
-            <div class="project-top">
-                <div class="project-badge-group">
-                    <span class="badge-live" data-i18n="projects.liveBadge">🟢 Live App</span>
-                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
-                    <span class="project-category-tag">Voice & Multimodal AI</span>
-                </div>
-                <span class="project-year">2026</span>
-            </div>
-
-            <h3 data-i18n="projects.aural.title">Aural AI: Voice & Video Interview Platform</h3>
-            
-            <p class="project-description" data-i18n="projects.aural.desc">
-                Open-source multimodal AI interview platform conducting structured voice, chat, and video interviews at scale with real-time adaptive questioning and automated scoring.
-            </p>
-
-            <div class="project-tags">
-                <span>WebRTC</span>
-                <span>Python</span>
-                <span>Real-Time Audio</span>
-                <span>Whisper STT</span>
-                <span>Adaptive LLMs</span>
-                <span>Docker</span>
-            </div>
-
-            <ul class="project-bullets">
-                <li data-i18n="projects.aural.b1">Architected real-time multimodal interview workflows with low-latency WebRTC audio/video capture and streaming.</li>
-                <li data-i18n="projects.aural.b2">Integrated adaptive LLM reasoning to generate context-aware follow-up questions tailored to candidate responses.</li>
-                <li data-i18n="projects.aural.b3">Built automated scoring rubrics, competency evaluation engines, and structured candidate performance analytics.</li>
-                <li data-i18n="projects.aural.b4">Deployed live in production with self-hostable Docker architecture at aural-ai.com.</li>
-            </ul>
-
-            <div class="project-actions">
-                <a href="https://aural-ai.com" target="_blank" rel="noopener noreferrer" class="project-btn live-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    <span data-i18n="projects.btnLive">Live Demo 🚀</span>
-                </a>
-                <a href="https://github.com/gandupradeep2026/pradeep-ai-interview-agent" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub Repository</span>
-                </a>
-                <button class="project-btn modal-trigger-btn" data-project="aural">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- PROJECT 4: Natively AI Copilot (Live Deployed) -->
-        <article class="project-card" data-category="ai">
-            <div class="project-top">
-                <div class="project-badge-group">
-                    <span class="badge-live" data-i18n="projects.liveBadge">🟢 Live App</span>
-                    <span class="badge-featured" data-i18n="projects.flagship">⭐ Flagship</span>
-                    <span class="project-category-tag">Local RAG & Copilot</span>
-                </div>
-                <span class="project-year">2026</span>
-            </div>
-
-            <h3 data-i18n="projects.natively.title">Natively: AI Meeting Copilot & Local RAG</h3>
-            
-            <p class="project-description" data-i18n="projects.natively.desc">
-                Privacy-first, open-source AI meeting assistant and interview copilot featuring real-time local transcription, zero cloud data leakage, and local vector RAG.
-            </p>
-
-            <div class="project-tags">
-                <span>Python</span>
-                <span>Local RAG</span>
-                <span>Whisper VAD</span>
-                <span>Ollama / BYOK</span>
-                <span>Desktop Overlay</span>
-                <span>Chromadb</span>
-            </div>
-
-            <ul class="project-bullets">
-                <li data-i18n="projects.natively.b1">Built real-time speech-to-text pipeline with Voice Activity Detection (VAD) and local Whisper transcription.</li>
-                <li data-i18n="projects.natively.b2">Implemented local RAG vector retrieval for documents and meeting context with 100% private on-device execution.</li>
-                <li data-i18n="projects.natively.b3">Engineered lightweight desktop overlay UI supporting stealth mode, keyboard shortcuts, and low-latency assistance.</li>
-                <li data-i18n="projects.natively.b4">Published open-source with live web product homepage and documentation at natively.software.</li>
-            </ul>
-
-            <div class="project-actions">
-                <a href="https://natively.software" target="_blank" rel="noopener noreferrer" class="project-btn live-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    <span data-i18n="projects.btnLive">Live Demo 🚀</span>
-                </a>
-                <a href="https://github.com/gandupradeep2026/natively-cluely-ai-assistant" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub Repository</span>
-                </a>
-                <button class="project-btn modal-trigger-btn" data-project="natively">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                    <span data-i18n="projects.btnArchitecture">View Architecture</span>
                 </button>
             </div>
         </article>
@@ -466,14 +318,14 @@
             <div class="project-actions">
                 <a href="https://gandupradeep2026.github.io/tuc-badminton-website/" target="_blank" rel="noopener noreferrer" class="project-btn live-btn">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    <span data-i18n="projects.btnLive">Live Demo 🚀</span>
+                    <span data-i18n="projects.btnLive">Live Demo</span>
                 </a>
                 <a href="https://github.com/gandupradeep2026/tuc-badminton-website" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                     <span data-i18n="projects.btnCode">GitHub Repository</span>
                 </a>
                 <button class="project-btn modal-trigger-btn" data-project="tucBadminton">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                    <span data-i18n="projects.btnArchitecture">View Architecture</span>
                 </button>
             </div>
         </article>
@@ -490,9 +342,7 @@
 
             <h3 data-i18n="projects.canbus.title">CAN-Bus Diagnostic & Health Simulator</h3>
             
-            <p class="project-description" data-i18n="projects.canbus.desc">
-                Production-quality in-vehicle network simulator implementing CAN DBC messaging, UDS diagnostic protocols (ISO 14229), fault injection, and a real-time Streamlit diagnostic tester.
-            </p>
+            <p class="project-description" data-i18n="projects.canbus.desc">In-vehicle network simulator implementing CAN DBC messaging, UDS diagnostic protocols (ISO 14229), fault injection and a real-time Streamlit diagnostic tester.</p>
 
             <div class="project-tags">
                 <span>python-can</span>
@@ -516,47 +366,8 @@
                     <span data-i18n="projects.btnCode">GitHub Repository</span>
                 </a>
                 <button class="project-btn modal-trigger-btn" data-project="canbus">
-                    <span data-i18n="projects.btnArchitecture">View Architecture 📐</span>
+                    <span data-i18n="projects.btnArchitecture">View Architecture</span>
                 </button>
-            </div>
-        </article>
-
-        <!-- PROJECT 7: ShuttleVision-AI -->
-        <article class="project-card" data-category="ai">
-            <div class="project-top">
-                <div class="project-badge-group">
-                    <span class="project-category-tag">Computer Vision</span>
-                </div>
-                <span class="project-year">2026</span>
-            </div>
-
-            <h3 data-i18n="projects.shuttle.title">ShuttleVision-AI: CV Player Tracking & Analytics</h3>
-            
-            <p class="project-description" data-i18n="projects.shuttle.desc">
-                AI-powered computer vision and deep-learning system tracking player movement, court positioning, and performance analytics from video streams.
-            </p>
-
-            <div class="project-tags">
-                <span>OpenCV</span>
-                <span>Python</span>
-                <span>Deep Learning</span>
-                <span>Player Tracking</span>
-                <span>2D Court Geometry</span>
-                <span>Video Analytics</span>
-            </div>
-
-            <ul class="project-bullets">
-                <li data-i18n="projects.shuttle.b1">Developed robust multi-object tracking pipelines using OpenCV and deep-learning detection architectures.</li>
-                <li data-i18n="projects.shuttle.b2">Mapped pixel coordinates to calibrated 2D court geometry for accurate velocity, distance, and heat-map analytics.</li>
-                <li data-i18n="projects.shuttle.b3">Engineered frame-by-frame player trajectory extraction with occlusion handling and temporal smoothing.</li>
-                <li data-i18n="projects.shuttle.b4">Open-sourced on GitHub with structured modular Python codebase and reproducibility guidelines.</li>
-            </ul>
-
-            <div class="project-actions">
-                <a href="https://github.com/gandupradeep2026/ShuttleVision-AI" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub Repository</span>
-                </a>
             </div>
         </article>
 
@@ -588,7 +399,7 @@
 
             <ul class="project-bullets">
                 <li data-i18n="projects.regression.b1">Engineered comparative ML pipelines evaluating Simple Linear, Polynomial (Deg 2), Multiple Linear, and Multi-Variable Polynomial algorithms on 150 business observations.</li>
-                <li data-i18n="projects.regression.b2">Built robust preprocessing workflows utilizing scikit-learn's PolynomialFeatures, StandardScaler, and Pipeline to prevent data leakage across 80/20 train-test splits.</li>
+                <li data-i18n="projects.regression.b2">Built preprocessing workflows utilizing scikit-learn's PolynomialFeatures, StandardScaler, and Pipeline to prevent data leakage across 80/20 train-test splits.</li>
                 <li data-i18n="projects.regression.b3">Benchmarked performance across R² Score, MAE, and RMSE: Simple Linear (R² = 0.85), Multi-Linear (R² = 0.88), Polynomial (R² = 0.93), and Multi-Polynomial (R² = 0.98, MAE 7.54, RMSE 10.04).</li>
                 <li data-i18n="projects.regression.b4">Generated publication-grade 3-panel comparative visualizations analyzing non-linear seasonal heat curves, multi-variable response surfaces, and 45° actual-vs-predicted parity plots.</li>
             </ul>
@@ -599,50 +410,7 @@
                     <span data-i18n="projects.btnCode">GitHub Repository</span>
                 </a>
                 <button class="project-btn modal-trigger-btn" data-project="regressionAnalysis">
-                    <span data-i18n="projects.btnArchitecture">View Methodology 📐</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- PROJECT 9: CARLA Master Thesis Pipeline -->
-        <article class="project-card" data-category="automotive cloud">
-            <div class="project-top">
-                <div class="project-badge-group">
-                    <span class="badge-research" data-i18n="projects.thesis.badge">🎓 Master Thesis</span>
-                    <span class="project-category-tag">Autonomous Driving</span>
-                </div>
-                <span class="project-year">TU Chemnitz</span>
-            </div>
-
-            <h3 data-i18n="projects.thesis.title">Scenario-Centric AD Dataset & Trajectory Pipeline</h3>
-            
-            <p class="project-description" data-i18n="projects.thesis.desc">
-                High-fidelity simulation and data pipeline in CARLA generating structured, annotated multi-agent trajectory datasets for environment prediction in automated driving.
-            </p>
-
-            <div class="project-tags">
-                <span>CARLA 0.9.x</span>
-                <span>ADAS</span>
-                <span>Python</span>
-                <span>3D Trajectories</span>
-                <span>OpenDRIVE</span>
-                <span>Parquet</span>
-            </div>
-
-            <ul class="project-bullets">
-                <li data-i18n="projects.thesis.b1">Generated complex highway lane-change and high-speed merge scenarios using CARLA Scenario Runner.</li>
-                <li data-i18n="projects.thesis.b2">Extracted synchronized ground-truth actor trajectories, velocities, headings, and road topology coordinates.</li>
-                <li data-i18n="projects.thesis.b3">Constructed automated pipeline transforming raw simulation sensor frames into structured JSON and Parquet schemas.</li>
-                <li data-i18n="projects.thesis.b4">Implemented strict temporal continuity and collision-free validation routines for ML training data readiness.</li>
-            </ul>
-
-            <div class="project-actions">
-                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub</span>
-                </a>
-                <button class="project-btn modal-trigger-btn primary-action" data-project="carla">
-                    <span data-i18n="projects.btnThesisDetails">Explore Thesis Architecture 📐</span>
+                    <span data-i18n="projects.btnArchitecture">View Methodology</span>
                 </button>
             </div>
         </article>
@@ -684,7 +452,7 @@
                     <span data-i18n="projects.btnCode">GitHub</span>
                 </a>
                 <button class="project-btn modal-trigger-btn primary-action" data-project="pyspark">
-                    <span data-i18n="projects.btnPipelineDetails">View Pipeline Workflow 📐</span>
+                    <span data-i18n="projects.btnPipelineDetails">View Pipeline Workflow</span>
                 </button>
             </div>
         </article>
@@ -693,42 +461,27 @@
         <article class="project-card" data-category="automotive ai">
             <div class="project-top">
                 <div class="project-badge-group">
-                    <span class="project-category-tag">ADAS & Simulation</span>
+                    <span class="project-category-tag">Research</span>
                 </div>
-                <span class="project-year">Completed</span>
+                <span class="project-year">10/2025 - 03/2026</span>
             </div>
 
-            <h3 data-i18n="projects.carlaScenarios.title">CARLA Autonomous Driving Scenario Development</h3>
+            <h3 data-i18n="projects.carlaScenarios.title">Research Internship: Autonomous Bus Parking System</h3>
             
-            <p class="project-description" data-i18n="projects.carlaScenarios.desc">
-                Engineered complex autonomous vehicle control logic and multi-agent simulation scenarios in CARLA including pedestrian detection, traffic-light interaction, and collision avoidance.
-            </p>
+            <p class="project-description" data-i18n="projects.carlaScenarios.desc">Multi-bus-stop parking system in CARLA with YOLOv8 at Technische Universität Chemnitz. Grade 1.7.</p>
 
             <div class="project-tags">
-                <span>CARLA Simulator</span>
-                <span>Python</span>
-                <span>ADAS Logic</span>
-                <span>Collision Avoidance</span>
-                <span>Traffic Flow</span>
-                <span>Vehicle Control</span>
+                <span>CARLA</span>
+                <span>YOLOv8</span>
+                <span>Computer Vision</span>
             </div>
 
             <ul class="project-bullets">
-                <li data-i18n="projects.carlaScenarios.b1">Developed multiple autonomous driving scenarios in CARLA: pedestrian crossing, traffic-light detection, and vehicle following.</li>
-                <li data-i18n="projects.carlaScenarios.b2">Implemented dynamic vehicle-control behaviour responding to road users, speed regulations, and emergency braking.</li>
-                <li data-i18n="projects.carlaScenarios.b3">Engineered overtaking, safe lane changing, and multi-bus-stop navigation and stopping sequences.</li>
-                <li data-i18n="projects.carlaScenarios.b4">Calibrated sensor inputs, weather models, and simulation maps for reproducible test scenarios.</li>
+                <li data-i18n="projects.carlaScenarios.b1">Built a system in which each bus parks at its own stop, in any arrival order.</li>
+                <li data-i18n="projects.carlaScenarios.b2">Detected bus stops and waiting passengers with YOLOv8, and held the bus until boarding finished.</li>
+                <li data-i18n="projects.carlaScenarios.b3">Matched bus and stop IDs, and overtook obstacles still blocking after a 3 to 4 s wait.</li>
+                <li data-i18n="projects.carlaScenarios.b4">Collected the datasets, trained and evaluated the models, and embedded the result in CARLA.</li>
             </ul>
-
-            <div class="project-actions">
-                <a href="https://github.com/gandupradeep2026" target="_blank" rel="noopener noreferrer" class="project-btn repo-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span data-i18n="projects.btnCode">GitHub</span>
-                </a>
-                <button class="project-btn modal-trigger-btn primary-action" data-project="carlaScenarios">
-                    <span data-i18n="projects.btnScenarioDetails">View Scenario Specs 📐</span>
-                </button>
-            </div>
         </article>
 
     </div>
@@ -752,7 +505,7 @@
             </p>
 
             <p data-i18n="about.p3">
-                My recent implementations include production-style GCP streaming pipelines (Pub/Sub, Beam, BigQuery, Airflow), CARLA autonomous driving scenario generation, CAN-Bus UDS diagnostic simulators, and explainable AI diagnostic systems audited on real OBD vehicle data.
+                My recent implementations include GCP streaming pipelines (Pub/Sub, Beam, BigQuery, Airflow), CARLA autonomous driving scenario generation, CAN-Bus UDS diagnostic simulators, and explainable AI diagnostic systems audited on real OBD vehicle data.
             </p>
         </div>
 
@@ -819,7 +572,6 @@
             <div class="tags">
                 <span>CARLA Simulator</span><span>ADAS</span><span>CAN-Bus</span>
                 <span>UDS (ISO 14229)</span><span>DBC Files</span><span>SocketCAN</span>
-                <span data-i18n="skills.auto.scenario">Scenario Runner</span>
                 <span data-i18n="skills.auto.trajectory">3D Trajectories</span>
                 <span data-i18n="skills.auto.annotation">Dataset Annotation</span>
             </div>
@@ -1094,7 +846,7 @@
     <div class="contact-container">
         <div class="contact-header">
             <p class="section-label light-label" data-i18n="contact.label">LET'S CONNECT</p>
-            <h2 data-i18n="contact.title">Ready to Add Value to Your Team</h2>
+            <h2 data-i18n="contact.title">Get in Touch</h2>
             <p data-i18n="contact.p1">
                 I am actively seeking full-time opportunities from January 2027 in Cloud Data Engineering, AI/ML, and Automotive Software Engineering across Germany.
             </p>
@@ -1162,7 +914,7 @@
     </div>
 </footer>
 
-<script src="script.js?v=1.1"></script>
+<script src="script.js?v=1.2"></script>
 
 </body>
 </html>
